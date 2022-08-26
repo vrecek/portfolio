@@ -1,0 +1,82 @@
+header.home-header {
+  height: 100vh;
+  position: relative;
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #261637); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #231235); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header.home-header div.wrap {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  padding: 84px 1em 1em 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header.home-header section.left-informations {
+  width: 40%;
+}
+header.home-header section.left-informations p {
+  margin: 0.25em 0 2em 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+header.home-header section.left-informations button {
+  padding: 1.5em 2.5em;
+  border-radius: 0.5em;
+  outline: 0;
+  border: 2px solid royalblue;
+  background: none;
+  cursor: pointer;
+}
+header.home-header section.left-informations button, header.home-header section.left-informations button > * {
+  transition: 0.3s;
+}
+header.home-header section.left-informations button label {
+  color: royalblue;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Sora", sans-serif;
+}
+header.home-header section.left-informations button:hover {
+  background: rgb(58, 94, 205);
+}
+header.home-header section.left-informations button:hover label {
+  color: rgb(245, 245, 245);
+}
+header.home-header section.left-informations div.headers {
+  position: relative;
+}
+header.home-header section.left-informations div.headers h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+header.home-header section.left-informations div.headers h1 span {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  margin-left: 0.35em;
+  word-spacing: -10px;
+  color: rgb(121, 154, 255);
+}
+header.home-header section.left-informations div.headers h1 svg {
+  display: block;
+  height: 55px;
+  width: 55px;
+  margin-left: 0.25em;
+}
+header.home-header figure {
+  width: 100%;
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.home-header figure img {
+  width: 100%;
+}

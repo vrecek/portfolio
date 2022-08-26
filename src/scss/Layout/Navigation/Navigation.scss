@@ -1,0 +1,70 @@
+@import '../../config';
+
+nav.layout-navigation {
+   @include Flex(sb, c);
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   padding: .75em 1.5em;
+   z-index: 3;
+
+   h1 {
+      &,
+      span {
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 700;
+         font-style: italic;
+         font-size: .9rem;
+      }
+      
+      span {
+         color: rgb(255, 176, 28);
+      }
+   }
+
+   ul {
+      display: flex;
+      list-style: none;
+      border: 1px solid #505050;
+      border-radius: .15em;
+      padding: .75em;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         right: 100%;
+         top: 50%;
+         transform: translateY(-50%);
+         height: 1px;
+         width: 69vw;
+         background: #505050;
+      }
+
+      li {
+         font-size: .9rem;
+         font-family: 'Roboto Mono', monospace;
+         &:not(:first-child) { margin-left: .75em; }
+         cursor: pointer;
+         font-weight: 400;
+         transition: .3s;
+         padding: .5em .75em;
+
+         &.mark {
+            background: rgb(42, 76, 177);
+            border-radius: .5em;
+
+            &:hover {
+               background: orangered;
+            }
+         }
+
+         &:not(.mark) {
+            &:hover {
+               color: rgb(114, 149, 255);
+            }
+         }
+      }
+   }
+}

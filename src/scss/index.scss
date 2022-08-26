@@ -1,0 +1,29 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-weight: 300;
+}
+
+// div.App { overflow-x: hidden; }
+
+body {
+   min-height: 100vh;
+   width: 100vw;
+   overflow-x: hidden;
+   color: white;
+   font-family: 'Sora', sans-serif;
+   background: #41295a;
+   background: -webkit-linear-gradient(to right, #2F0743, #2c1940);
+   background: linear-gradient(to right, #2F0743, #2d1f3c);
+
+   &::-webkit-scrollbar {
+      width: 4px;
+      background: #303030;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      width: 100%;
+      background: royalblue;
+   }
+}
