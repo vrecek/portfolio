@@ -1,0 +1,50 @@
+@import '../config';
+
+section.projects {
+   min-height: 100vh;
+   @include TopSeparator;
+
+   section.container {
+      @include Flex(sa, c);
+      flex-wrap: wrap;
+   }
+
+   p.project-para {
+      text-align: center;
+      font-weight: 200;
+      font-size: .9rem;
+      margin-bottom: 3em;
+
+      span {
+         color: rgb(125, 171, 255);
+         cursor: pointer;
+         transition: .3s;
+         font-weight: 300;
+         position: relative;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            transition: .3s;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            height: 1px;
+            width: 100%;
+            background: orange;
+         }
+
+         &:hover {
+            color: orange;
+            &::before { transform: translateX(-50%) scaleX(1) }
+         }
+      }
+   }
+
+   div.entry-info {
+      font-family: 'Roboto Mono', monospace;
+      padding: 2em 0 .5em 0 !important;
+
+      svg { @include FullSize; }
+   }
+}

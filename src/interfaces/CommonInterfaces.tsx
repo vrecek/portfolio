@@ -10,3 +10,15 @@ export interface ButtonType {
    additional?: JSX.Element | string | number, 
    cname?: string
 }
+
+export interface HeaderType {
+   children: string,
+   icon?: JSX.Element,
+   cname?: string
+}
+
+export interface Text {
+   children: string
+}
+
+export type Ref = React.RefObject<HTMLDivElement>

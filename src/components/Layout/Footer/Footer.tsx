@@ -1,11 +1,15 @@
 import React from 'react'
 import '../../../css/Footer.css'
+import Icons from './Icons'
+import TextSection from './TextSection'
 
 const Footer = () => {
    return (
       <footer className="layout-footer">
 
-         foo
+         <TextSection />
+
+         <Icons />
 
       </footer>
    )

@@ -1,0 +1,126 @@
+@import '../config';
+
+section.skills {
+   @include TopSeparator;
+   padding: 0 3em 3em 3em;
+
+   div.entry-info svg { @include FullSize; }
+
+   div.info-skill {
+      @include Flex(none, c);
+      margin-top: 2em;
+      width: max-content;
+      cursor: pointer;
+
+      h4 {
+         font-weight: 500;
+         pointer-events: none;
+      }
+
+      span {
+         @include Rectangle(30px);
+         transform: rotate(180deg);
+         margin-left: .5em;
+         pointer-events: none;
+         transition: .4s;
+
+         svg { @include FullSize; }
+      }
+   }
+
+   section.container {
+      @include Flex(sa, c);
+      margin-top: 1em;
+      flex-wrap: wrap;
+      overflow: hidden;
+      transition: .4s;
+
+      article {
+         width: 35%;
+         margin-bottom: 4em;
+         background: #202020;
+         padding: 1.5em;
+         padding-left: 2em;
+         border-radius: .25em;
+         border-left: 3px solid royalblue;
+
+         section.percent-bar {
+            margin-top: 2em;
+
+            div.bar {
+               width: 100%;
+               position: relative;
+               border-radius: .15em;
+               background: #303030;
+               height: 20px;
+
+               div.fill {
+                  @include Absolute(0, 0);
+                  height: 100%;
+                  background: orange;
+                  border-radius: .15em;
+                  width: 0%;
+                  transition: 2s;
+
+                  &::before {
+                     content: attr(data-fill);
+                     position: absolute;
+                     right: 0;
+                     bottom: 100%;
+                     transform: translateX(50%) translateY(-50%);
+                     background: #404040;
+                     font-size: .75rem;
+                     border-radius: .25em;
+                     padding: .5em;
+                     z-index: 2;
+                  }
+
+                  &::after {
+                     content: '';
+                     position: absolute;
+                     right: 0;
+                     @include Rectangle(15px);
+                     background: #404040;
+                     bottom: 100%;
+                     transform: translateY(-50%) translateX(50%) rotate(45deg);
+                  }
+               }
+            }
+
+            h3 {
+               text-transform: uppercase;
+               font-size: .9rem;
+               margin-bottom: .25em;
+               font-family: 'Roboto Mono', monospace;
+            }
+         }
+
+         div.info {
+            display: flex;
+
+            h4 {
+               display: flex;
+               font-weight: 200;
+               font-size: .9rem;
+
+               span {
+                  font-weight: 600;
+                  margin-right: .5em;
+                  white-space: nowrap;
+               }
+            }
+         }
+
+         h2 {
+            font-weight: 800;
+            margin: .25em 0 1em 0;
+         }
+
+         span.icon {
+            @include Rectangle(80px);
+
+            svg { @include FullSize; }
+         }
+      }
+   }
+}

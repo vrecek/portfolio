@@ -33,6 +33,38 @@ $clr-black: rgb(45, 45, 45);
    align-items: FlexFunc($align);
 }
 
+@mixin Center($percWidth, $marginSide: 0) {
+   width: $percWidth;
+   margin: $marginSide auto;
+}
+
+@mixin TopSeparator {
+   position: relative;
+   border-top: 1px solid #303030;
+
+   &::before,
+   &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      transform: translateY(-50%);
+      width: 8%;
+      padding: .75em 0;
+   }
+
+   &::before {
+      left: 0;
+      border-radius: 0 .2em .2em 0;
+      background:linear-gradient(to right, #161616, #222121, #4a4a4a);
+   }
+
+   &::after {
+      right: 0;
+      border-radius: .2em 0 0 .2em;
+      background:linear-gradient(to left, #161616, #222121, #4a4a4a);
+   }
+}
+
 // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 @function FlexFunc($val) {

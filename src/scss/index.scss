@@ -7,15 +7,16 @@
 
 // div.App { overflow-x: hidden; }
 
+@import './config';
+
 body {
    min-height: 100vh;
    width: 100vw;
    overflow-x: hidden;
    color: white;
    font-family: 'Sora', sans-serif;
-   background: #41295a;
-   background: -webkit-linear-gradient(to right, #2F0743, #2c1940);
-   background: linear-gradient(to right, #2F0743, #2d1f3c);
+   background: #181818;
+   scroll-behavior: smooth;
 
    &::-webkit-scrollbar {
       width: 4px;
@@ -25,5 +26,146 @@ body {
    &::-webkit-scrollbar-thumb {
       width: 100%;
       background: royalblue;
+   }
+}
+
+div.layout-arrow-top {
+   position: fixed;
+   bottom: 5px;
+   right: 5px;
+   @include Rectangle(25px);
+   background: royalblue;
+   z-index: 99;
+   border-radius: .25em;
+   @include Flex(c, c);
+   cursor: pointer;
+   transition: .3s;
+   opacity: 0;
+   pointer-events: none;
+
+   span {
+      transition: .3s;
+      @include FullSize(80%);
+      @include Flex(c, c);
+      transform: rotate(270deg) rotateX(180deg);
+
+      svg { @include FullSize; }
+   }
+
+   &:hover {
+      background: rgb(80, 135, 238);
+
+      span { transform: scale(.8) rotate(270deg) rotateX(180deg); }
+   }
+}
+
+article.project-small {
+   background: #171717;
+   width: 22%;
+   margin: 0 2em;
+   aspect-ratio: 1;
+   margin-bottom: 3em;
+   border-radius: .5em;
+
+   div.wrap {
+      height: 55%;
+      @include Flex(sb, none);
+      padding: .5em;
+      flex-direction: column;
+   }
+
+   section.tags {
+      @include Flex(sb, c);
+
+      button {
+         transition: .3s;
+         padding: .5em 1em;
+         border-radius: .15em;
+         outline: 0;
+         border: 0;
+         background: rgb(58, 93, 200);
+         transition: .3s;
+         cursor: pointer;
+
+         label {
+            color: $clr-white;
+            font-weight: 500;
+            font-size: .9rem;
+            font-family: 'Sora', sans-serif;
+         }
+
+         &:hover {
+            background: darken(royalblue, 15%);
+         }
+      }
+
+      ul {
+         list-style: none;
+         display: flex;
+
+         li {
+            margin-left: .5em;
+            position: relative;
+
+            &::before {
+               width: max-content;
+               content: attr(data-text);
+               padding: .25em .5em;
+               font-size: .8rem;
+               background: royalblue;
+               position: absolute;
+               top: calc(100% + 2px);
+               border-radius: .25em;
+               pointer-events: none;
+               opacity: 0;
+               transition: .5s;
+               left: 50%;
+               transform: translateX(-50%);
+            }
+
+            span {
+               @include Rectangle(30px);
+               @include Flex(c, c);
+               border-radius: 50%;
+               border: 1px solid $clr-white;
+               transition: .5s;
+
+               svg { @include FullSize(80%); }
+            }
+
+            &:hover {
+               &::before { opacity: 1; }
+
+               span {
+                  background: $clr-white;
+
+                  svg { color: $clr-black; }
+               }
+            }
+         }
+      }
+   }
+
+   h2 {
+      font-weight: 600;
+      margin: .2em 0;
+      font-size: 1.5rem;
+   }
+
+   p {
+      font-size: .9rem;
+      font-weight: 300;
+   }
+
+   figure {
+      width: 100%;
+      height: 45%;
+      overflow: hidden;
+
+      img {
+         @include FullSize;
+         object-fit: cover;
+         transition: .3s;
+      }
    }
 }

@@ -1,0 +1,67 @@
+section.projects {
+  min-height: 100vh;
+  position: relative;
+  border-top: 1px solid #303030;
+}
+section.projects::before, section.projects::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  transform: translateY(-50%);
+  width: 8%;
+  padding: 0.75em 0;
+}
+section.projects::before {
+  left: 0;
+  border-radius: 0 0.2em 0.2em 0;
+  background: linear-gradient(to right, #161616, #222121, #4a4a4a);
+}
+section.projects::after {
+  right: 0;
+  border-radius: 0.2em 0 0 0.2em;
+  background: linear-gradient(to left, #161616, #222121, #4a4a4a);
+}
+section.projects section.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.projects p.project-para {
+  text-align: center;
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin-bottom: 3em;
+}
+section.projects p.project-para span {
+  color: rgb(125, 171, 255);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 300;
+  position: relative;
+}
+section.projects p.project-para span::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  height: 1px;
+  width: 100%;
+  background: orange;
+}
+section.projects p.project-para span:hover {
+  color: orange;
+}
+section.projects p.project-para span:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+section.projects div.entry-info {
+  font-family: "Roboto Mono", monospace;
+  padding: 2em 0 0.5em 0 !important;
+}
+section.projects div.entry-info svg {
+  width: 100%;
+  height: 100%;
+}

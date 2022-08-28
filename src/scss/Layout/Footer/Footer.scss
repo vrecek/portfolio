@@ -1,5 +1,106 @@
 @import '../../config';
 
 footer.layout-footer {
-   background: yellow;
+   background: #121212;
+   @include Flex(c, c);
+   padding: 8em 0;
+   flex-direction: column;
+   color: rgb(141, 141, 141);
+   
+   div {
+      @include Flex(c, c);
+      color: $clr-white;
+      border-top: 2px solid grey;
+      padding-top: 2em;
+      @include Center(70%);
+
+      span.icon {
+         margin: 0 .5em;
+         @include Rectangle(35px);
+         cursor: pointer;
+         transition: .3s;
+         position: relative;
+
+         svg {
+            @include FullSize;
+            pointer-events: none;
+         }
+
+         &:not(.mail)::before,
+         &.mail span {
+            padding: .2em .4em;
+            background: #303030;
+            border-radius: .15em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            font-size: .8rem;
+            top: 0;
+            opacity: 0;
+            transition: .3s;
+            font-weight: 400;
+            text-transform: uppercase;
+         }
+
+         &:not(.mail) {
+            &::before { content: attr(data-txt); }
+
+            &:hover {
+               &::before {
+                  opacity: 1;
+                  top: 110%;
+               }
+            }
+         }
+
+         &.mail {
+            span { white-space: nowrap; }
+
+            &:hover span {
+               opacity: 1;
+               top: 110%;
+            }
+         }
+
+         &:hover {
+            svg { color: rgb(92, 133, 255); }
+         }
+      }
+   }
+
+   section.text-section {
+      @include Flex(sb, c);
+      @include Center(70%);
+      margin-bottom: 2em;
+
+      h1 {
+         font-size: 1rem;
+         font-weight: 700;
+         text-transform: uppercase;
+      }
+
+      section.lists {
+         display: flex;
+
+         ul {
+            list-style: none;
+            &:last-child { margin-left: 2.5em; }
+
+            li {
+               font-size: 1.5rem;
+               font-weight: 500;
+               font-family: 'Roboto Mono', monospace;
+               &:first-child { margin-bottom: .5em; }
+               cursor: pointer;
+               transition: .3s;
+
+               &:hover {
+                  color: royalblue;
+                  text-shadow: 0 0 2px cornflowerblue;
+               }
+            }
+         }
+      }
+   }
 }

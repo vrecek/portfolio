@@ -7,7 +7,9 @@ const LeftInformations = () => {
       <section className="left-informations">
 
          <HeaderText />
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ab, sunt asperiores doloremque reprehenderit labore blanditiis laboriosam repellat atque rem. Asperiores inventore reiciendis autem earum ipsa porro.</p>
+
+         <p>Are you looking for a web developer with passion? I'd like to be a freelancer, or a full time hired dev. Maybe you want to have a full stack web application? Maybe you need a small program? If yes, you have come to the right place. I'm vrecek and this is my portfolio. </p>
+
          <Button text='More about me' />
 
       </section>
