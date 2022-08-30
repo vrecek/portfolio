@@ -1,9 +1,9 @@
 import React from 'react'
-import { DiReact } from 'react-icons/di'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
+import { PSmallTags } from '../../../interfaces/ProjectInterface'
 import Button from '../Button'
 
-const ProjectTags = () => {
+const ProjectTags = ({ tags, id }: PSmallTags) => {
    const n: NavigateFunction = useNavigate()
 
    return (
@@ -11,21 +11,17 @@ const ProjectTags = () => {
 
          <ul>
 
-            <li data-text='ReactJS'>
-               <span><DiReact /></span>
-            </li>
-
-            <li>
-               <span><DiReact /></span>
-            </li>
-
-            <li>
-               <span><DiReact /></span>
-            </li>
+            {
+               tags.map((x, i) => (
+                  <li key={ i } data-text={ x.name }>
+                     <span>{ x.icon }</span>
+                  </li>
+               ))
+            }
 
          </ul>
 
-         <Button text='Details' action={ () => n('/project/name') } />
+         <Button text='Details' action={ () => n(`/project/${ id }`) } />
 
       </section>
    )

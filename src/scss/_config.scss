@@ -4,6 +4,8 @@
 $clr-white: rgb(245, 245, 245);
 $clr-black: rgb(45, 45, 45);
 
+$navHeight: 83.6px;
+
 @mixin FullSize($size: 100%) {
    width: $size;
    height: $size;

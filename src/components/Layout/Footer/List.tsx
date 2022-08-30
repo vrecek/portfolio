@@ -1,20 +1,23 @@
 import React from 'react'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
 
 const List = () => {
+   const n: NavigateFunction = useNavigate()
+
    return (
       <section className="lists">
 
          <ul>
 
-            <li>Homepage</li>
-            <li>Projects</li>        
+            <li onClick={ () => n('/') }>Homepage</li>
+            <li onClick={ () => n('/projects') }>Projects</li>        
 
          </ul>
 
          <ul>
 
-            <li>About me</li>
-            <li>Contact</li>
+            <li onClick={ () => n('/about') }>About me</li>
+            <li onClick={ () => n('/contact') }>Contact</li>
 
          </ul>
 

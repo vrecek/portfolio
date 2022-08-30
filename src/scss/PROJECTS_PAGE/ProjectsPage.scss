@@ -1,0 +1,92 @@
+@import '../config';
+
+main.projects-page {
+   min-height: 100vh;
+   padding-top: $navHeight;
+
+   section.filter {
+      background: #111111;
+      @include Center(90%);
+      margin-top: 1.5em;
+      margin-bottom: 3em;
+      padding: .5em;
+      @include Flex(none, c);
+
+      form.container {
+         display: flex;
+
+         div.select {
+            position: relative;
+            width: 170px;
+            border-radius: .4em;
+            border: 1px solid grey;
+            background: #101010;
+            &:not(:last-child) { margin-right: 1em; }
+
+            div.current {
+               @include Flex(sb, c);
+               cursor: pointer;
+               padding: .5em;
+
+               input {
+                  width: max-content;
+                  background: none;
+                  font-family: 'Roboto Mono', monospace; 
+                  font-size: .9rem; 
+                  outline: 0;
+                  border: 0;
+                  width: 80%;
+                  pointer-events: none;
+                  color: $clr-white;
+               }
+
+               span {
+                  @include Rectangle(20px);
+                  svg { @include FullSize; }
+               }
+
+               input, span { pointer-events: none; }
+            }
+
+            ul {
+               position: absolute;
+               top: 100%;
+               left: 0;
+               width: 100%;
+               display: none;
+               transition: .3s;
+               height: 0;
+               overflow: hidden;
+               background: #101010;
+               border: 1px solid grey;
+               border-top: 0;
+               border-radius: 0 0 .15em .15em;
+
+               li {
+                  padding: 1em .5em;
+                  font-size: .9rem;
+                  font-weight: 400;
+                  transition: .3s;
+                  cursor: pointer;
+
+                  &:hover {
+                     background: rgb(57, 94, 205);
+                  }
+               }
+            }
+         }
+      }
+
+      h1 {
+         font-size: .8rem;
+         font-weight: 500;
+         margin-right: 2em;
+         margin-left: 1.25em;
+      }
+   }
+
+   section.project-container {
+      @include Flex(sa, c);
+      flex-wrap: wrap;
+   }
+}

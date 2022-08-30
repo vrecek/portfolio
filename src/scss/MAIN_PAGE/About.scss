@@ -1,0 +1,12 @@
+@import '../config';
+
+section.about {
+   min-height: 100vh;
+   @include TopSeparator;
+
+   div.entry-info {
+      font-family: 'Roboto Mono', monospace;
+
+      svg { @include FullSize; }
+   }
+}

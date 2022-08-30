@@ -1,0 +1,81 @@
+@import '../config';
+
+main.contact-page {
+   min-height: 100vh;
+   @include Flex(sa, c);
+   padding-top: $navHeight;
+
+   section.contact-text {
+      section.contact-text { 
+         width: 100%; 
+
+         h2 { margin-bottom: 1em; }
+
+         &.social {
+            h4 {
+               font-size: .9rem;
+               font-weight: 700;
+               margin-bottom: .1em;
+               transition: .3s;
+               color:rgb(118, 118, 118);
+            }
+
+            div {
+               position: relative;
+
+               span {
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  @include Rectangle(25px);
+                  cursor: pointer;
+                  transition: .3s;
+                  
+                  svg { @include FullSize; }
+               
+                  &:hover { color: cornflowerblue; } 
+               }
+
+               h5 {
+                  font-size: 1rem;
+                  font-weight: 500;
+               }
+            }
+
+            ul {
+               list-style: none;
+               @include Flex(sa, c);
+               margin-bottom: 3em;
+
+               li {
+                  @include Flex(c, c);
+                  flex-direction: column;
+                  cursor: pointer;
+
+                  span {
+                     @include Rectangle(25px);
+                     transition: .3s;
+
+                     svg { @include FullSize; }
+                  }
+
+                  &:hover {
+                     h4 { color: royalblue; }
+
+                     span {
+                        transform: scale(1.1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      h3 {
+         font-weight: 800;
+         margin: 1.5em 0;
+         font-size: 1rem;
+      }
+   }
+}

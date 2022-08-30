@@ -1,11 +1,12 @@
 import React from 'react'
+import { PSmallText } from '../../../interfaces/ProjectInterface'
 
-const ProjectText = () => {
+const ProjectText = ({ title, para }: PSmallText) => {
    return (
       <section className="text">
 
-         <h2>Current weather application</h2>
-         <p>Displays weather information on a current city you search for</p>
+         <h2>{ title }</h2>
+         <p>{ para }</p>
 
       </section>
    )

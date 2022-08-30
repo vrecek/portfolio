@@ -1,10 +1,15 @@
 @import '../config';
 
-section.skills {
+section.home-skills {
    @include TopSeparator;
-   padding: 0 3em 3em 3em;
+   padding: 0 3em 5em 3em;
 
-   div.entry-info svg { @include FullSize; }
+   div.entry-info {
+      font-family: 'Roboto Mono', monospace;
+      padding: 2em 0 .5em 0 !important;
+
+      svg { @include FullSize; }
+   }
 
    div.info-skill {
       @include Flex(none, c);

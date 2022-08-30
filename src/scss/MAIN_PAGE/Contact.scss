@@ -1,0 +1,18 @@
+@import '../config';
+
+section.home-contact {
+   @include TopSeparator;
+   min-height: 100vh;
+
+   div.wrap {
+      @include Flex(sa, none);
+      padding: 0 2em;
+      margin-top: 2em;
+   }
+
+   div.entry-info {
+      font-family: 'Roboto Mono', monospace;
+
+      svg { @include FullSize; }
+   }
+}

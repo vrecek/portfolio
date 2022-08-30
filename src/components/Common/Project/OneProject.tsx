@@ -1,19 +1,19 @@
 import React from 'react'
 import FigureImage from '../FigureImage'
-import p from '../../../images/pp.png'
 import ProjectTags from './ProjectTags'
 import ProjectText from './ProjectText'
+import { PSmallType } from '../../../interfaces/ProjectInterface'
 
-const OneProject = () => {
+const OneProject = ({ imgSrc, tags, title, para, id }: PSmallType) => {
    return (
       <article className="project-small">
 
-         <FigureImage source={ p } altTxt='project' />
+         <FigureImage source={ imgSrc } altTxt='project' />
 
          <div className="wrap">
 
-            <ProjectText />
-            <ProjectTags />
+            <ProjectText title={ title } para={ para } />
+            <ProjectTags tags={ tags } id={ id } />
 
          </div>
 

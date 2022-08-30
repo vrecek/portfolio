@@ -22,3 +22,8 @@ export interface SkillSectionType {
    list: SkillType[],
    title: string
 }
+
+export interface AsideTable {
+   urlClass: string,
+   name: string
+}

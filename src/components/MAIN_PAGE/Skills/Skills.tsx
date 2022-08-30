@@ -93,7 +93,7 @@ const Skills = () => {
    ]
 
    return (
-      <section className="skills">
+      <section className="home-skills">
 
          <HeaderInfo cname='entry-info' icon={ <AiOutlineBarChart /> }>
             My skills
