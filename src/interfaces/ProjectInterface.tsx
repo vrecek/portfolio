@@ -7,7 +7,11 @@ export default interface ProjectType {
    language: string[],
    tags: TagType[],
    type: ProjectT,
-   date: number
+   date: number,
+   repository: string,
+   liveUrl?: string,
+   bugs: string[],
+   description: string
 }
 
 export type StackT = 'Frontend' | 'Backend' | 'Fullstack' | 'Other'

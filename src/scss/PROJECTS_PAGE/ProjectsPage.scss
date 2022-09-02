@@ -4,13 +4,27 @@ main.projects-page {
    min-height: 100vh;
    padding-top: $navHeight;
 
+   h1.number {
+      @include Center(90%);
+      margin-bottom: 1.5em;
+      font-size: 1.25rem;
+      font-weight: 600;
+   }
+
    section.filter {
       background: #111111;
       @include Center(90%);
       margin-top: 1.5em;
-      margin-bottom: 3em;
+      margin-bottom: 2em;
       padding: .5em;
       @include Flex(none, c);
+
+      h1 {
+         font-size: .8rem;
+         font-weight: 500;
+         margin-right: 2em;
+         margin-left: 1.25em;
+      }
 
       form.container {
          display: flex;
@@ -75,13 +89,6 @@ main.projects-page {
                }
             }
          }
-      }
-
-      h1 {
-         font-size: .8rem;
-         font-weight: 500;
-         margin-right: 2em;
-         margin-left: 1.25em;
       }
    }
 

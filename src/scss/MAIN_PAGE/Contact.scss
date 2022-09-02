@@ -4,6 +4,17 @@ section.home-contact {
    @include TopSeparator;
    min-height: 100vh;
 
+   section.contact-text { 
+      position: relative; 
+
+      span.background-icon {
+         width: 80%;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+
    div.wrap {
       @include Flex(sa, none);
       padding: 0 2em;

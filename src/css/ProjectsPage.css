@@ -2,16 +2,29 @@ main.projects-page {
   min-height: 100vh;
   padding-top: 83.6px;
 }
+main.projects-page h1.number {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 main.projects-page section.filter {
   background: #111111;
   width: 90%;
   margin: 0 auto;
   margin-top: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   padding: 0.5em;
   display: flex;
   justify-content: none;
   align-items: center;
+}
+main.projects-page section.filter h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 2em;
+  margin-left: 1.25em;
 }
 main.projects-page section.filter form.container {
   display: flex;
@@ -79,12 +92,6 @@ main.projects-page section.filter form.container div.select ul li {
 }
 main.projects-page section.filter form.container div.select ul li:hover {
   background: rgb(57, 94, 205);
-}
-main.projects-page section.filter h1 {
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-right: 2em;
-  margin-left: 1.25em;
 }
 main.projects-page section.project-container {
   display: flex;

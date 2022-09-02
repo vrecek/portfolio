@@ -1,11 +1,12 @@
 import React from 'react'
 import '../../../css/Skills.css'
 import HeaderInfo from '../../Common/HeaderInfo'
-import { AiOutlineBarChart, AiFillHtml5 } from 'react-icons/ai'
+import { AiOutlineBarChart, AiFillHtml5, AiOutlinePercentage } from 'react-icons/ai'
 import { SiTypescript, SiJavascript, SiReact, SiGimp, SiGit, SiNodedotjs } from 'react-icons/si'
 import { IoLogoSass, IoLogoPython, IoLogoCss3 } from 'react-icons/io'
 import { SkillType } from '../../../interfaces/HomepageInterfaces'
 import SkillSection from './SkillSection'
+import BackgroundIcon from '../../Common/BackgroundIcon'
 
 const Skills = () => {
    const languageSkills: SkillType[] = [
@@ -101,6 +102,8 @@ const Skills = () => {
 
          <SkillSection title='Languages' list={ languageSkills } />
          <SkillSection title='Other' list={ otherSkills } />
+
+         <BackgroundIcon icon={ <AiOutlinePercentage /> } />
 
       </section>
    )

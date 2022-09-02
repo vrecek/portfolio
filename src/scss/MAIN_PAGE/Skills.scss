@@ -3,6 +3,14 @@
 section.home-skills {
    @include TopSeparator;
    padding: 0 3em 5em 3em;
+   position: relative;
+
+   span.background-icon {
+      height: 50%;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+   }
 
    div.entry-info {
       font-family: 'Roboto Mono', monospace;

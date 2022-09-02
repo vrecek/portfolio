@@ -1,14 +1,11 @@
 import React from 'react'
-import { AiFillLinkedin } from 'react-icons/ai'
-import { BsFacebook, BsGithub } from 'react-icons/bs'
+import { BsGithub } from 'react-icons/bs'
 import { SocialListType } from '../../../interfaces/ContactInterfaces'
 import MailIcon from './MailIcon'
 
 const Icons = () => {
    const list: SocialListType[] = [
-      { icon: <BsGithub />, text: 'Github', url: 'https://github.com/vrecek' },
-      { icon: <BsFacebook />, text: 'Facebook', url: '' },
-      { icon: <AiFillLinkedin />, text: 'Linkedin', url: '' }
+      { icon: <BsGithub />, text: 'Github', url: 'https://github.com/vrecek' }
    ]
 
    return (

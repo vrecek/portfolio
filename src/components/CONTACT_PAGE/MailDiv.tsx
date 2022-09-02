@@ -1,8 +1,9 @@
 import React from 'react'
 import { HiOutlineClipboardCopy } from 'react-icons/hi'
+import MAIL_ADDRESS from '../../data/MAIL_ADDRESS'
 
 const MailDiv = () => {
-   const copyClipboard = () => window.navigator.clipboard.writeText('oktawiusz2002@gmail.com')
+   const copyClipboard = () => window.navigator.clipboard.writeText(MAIL_ADDRESS)
 
    return (
       <div>
@@ -11,7 +12,7 @@ const MailDiv = () => {
          </span>
          
          <h5>My mail:</h5>
-         <h4>oktawiusz2002@gmail.com</h4>
+         <h4>{ MAIL_ADDRESS }</h4>
 
       </div>
    )

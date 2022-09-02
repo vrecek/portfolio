@@ -59,6 +59,19 @@ div.layout-arrow-top {
    }
 }
 
+span.background-icon {
+   position: absolute;
+   aspect-ratio: 1;
+   z-index: -1;
+
+   svg {
+      color: #303030;
+      opacity: .1;
+      
+      @include FullSize;
+   }
+}
+
 // PROJECT - SMALL INFO
 article.project-small {
    background: #171717;
@@ -199,6 +212,7 @@ form.mail-form {
       font-size: .9rem;
       color: grey;
       transition: .5s;
+      pointer-events: none;
    }
 
    button {

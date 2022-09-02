@@ -1,11 +1,19 @@
 @import '../config';
 
-section.about {
+section.home-about {
    min-height: 100vh;
+   margin-bottom: 5em;
    @include TopSeparator;
+
+   div.wrap {
+      @include Flex(sb, none);
+
+      @include AboutStyle;
+   }
 
    div.entry-info {
       font-family: 'Roboto Mono', monospace;
+      margin-bottom: 1em;
 
       svg { @include FullSize; }
    }

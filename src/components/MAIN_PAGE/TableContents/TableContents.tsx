@@ -9,6 +9,7 @@ const TableContents = () => {
       { urlClass: 'home-header', name: 'Header intro' },
       { urlClass: 'home-projects', name: 'My projects' },
       { urlClass: 'home-skills', name: 'My skills' },
+      { urlClass: 'home-about', name: 'About me' },
       { urlClass: 'home-contact', name: 'Contact me' },
       { urlClass: 'layout-footer', name: 'Footer' },
    ]

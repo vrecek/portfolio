@@ -1,7 +1,132 @@
 @import '../config';
 
 main.one-project-page {
-   margin-top: $navHeight;
-   padding-top: 1em;
+   padding: 1em 0 4em 0;
    min-height: 100vh;
+   @include Center(70%);
+   margin-top: $navHeight;
+
+   article.container {
+      h2 {
+         text-transform: uppercase;
+         font-weight: 600;
+         font-size: .9rem;
+         margin-bottom: 1em;
+      }
+
+      section:not(.title-links) {
+         margin-top: 3.5em;
+         @include Flex(sb, c);
+         font-family: 'Roboto Mono', monospace;
+
+         div.wrap { width: 50%; }
+
+         span.icon {
+            @include Rectangle(60px);
+            svg { @include FullSize; }
+         }
+
+         p {
+            font-size: .95rem;
+            font-weight: 400;
+         }
+
+         ul {
+            list-style: none;
+
+            li {
+               font-weight: 400;
+               color: rgb(229, 229, 229);
+               position: relative;
+               font-size: .9rem;
+
+               &:not(.clear) {
+                  &::before {
+                     content: '';
+                     position: absolute;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     right: calc(100% + 6px);
+                     width: 8px;
+                     height: 2px;
+                     background: royalblue;
+                  }
+               }
+            }
+         }
+      }
+
+      section.title-links {
+         @include Flex(sb, c);
+         padding: 2em 2em;
+         background: #202020;
+
+         h1 {
+            font-size: 2rem;
+            width: 70%;
+            font-weight: 700;
+         }
+
+         div.links {
+            display: flex;
+
+            span.icon {
+               @include Rectangle(40px);
+               background: #303030;
+               border: 1px solid #505050;
+               border-radius: 50%;
+               transition: .3s;
+               cursor: pointer;
+               @include Flex(c, c);
+               position: relative;
+
+               &::before {
+                  content: attr(data-text);
+                  width: max-content;
+                  position: absolute;
+                  left: 50%;
+                  top: 105%;
+                  transform: translateX(-50%);
+                  font-size: .8rem;
+                  padding: .5em;
+                  background: #252525;
+                  border-radius: .15em;
+                  border: 1px solid #444444;
+                  opacity: 0;
+                  pointer-events: none;
+                  transition: .3s;
+               }
+
+               svg { @include FullSize(65%); transition: .3s; }
+
+               &:nth-child(2) {
+                  margin-left: .75em;
+
+                  svg { @include FullSize(55%); }
+               }
+
+               &:hover {
+                  color: rgb(208, 208, 208);
+                  background: #505050;
+                  svg { transform: scale(.9); }
+                  &::before { opacity: 1; }
+               }
+
+               &.red {
+                  cursor: auto;
+                  color: crimson;
+               }
+            }
+         }
+      }
+   }
+
+   section.thumbnail {
+      figure { 
+         @include FullSize; 
+         overflow: hidden;
+
+         img { width: 100%; }
+      }
+   }
 }

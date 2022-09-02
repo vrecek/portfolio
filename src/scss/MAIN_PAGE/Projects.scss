@@ -4,6 +4,13 @@ section.home-projects {
    min-height: 100vh;
    @include TopSeparator;
 
+   span.background-icon {
+      height: 95%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+
    section.container {
       @include Flex(sa, c);
       flex-wrap: wrap;

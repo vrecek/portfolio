@@ -21,6 +21,12 @@ section.home-projects::after {
   border-radius: 0.2em 0 0 0.2em;
   background: linear-gradient(to left, #161616, #222121, #4a4a4a);
 }
+section.home-projects span.background-icon {
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 section.home-projects section.container {
   display: flex;
   justify-content: space-around;

@@ -30,6 +30,7 @@ footer.layout-footer div span.icon svg {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  transition: 0.3s;
 }
 footer.layout-footer div span.icon:not(.mail)::before, footer.layout-footer div span.icon.mail span {
   padding: 0.2em 0.4em;
@@ -44,7 +45,6 @@ footer.layout-footer div span.icon:not(.mail)::before, footer.layout-footer div 
   opacity: 0;
   transition: 0.3s;
   font-weight: 400;
-  text-transform: uppercase;
 }
 footer.layout-footer div span.icon:not(.mail)::before {
   content: attr(data-txt);

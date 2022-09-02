@@ -27,3 +27,20 @@ export interface AsideTable {
    urlClass: string,
    name: string
 }
+
+export interface AboutIcon {
+   icon: JSX.Element,
+   url: string
+}
+
+export interface AboutElement {
+   date: string, 
+   text: string, 
+   chartNum: number,
+   moveXPerc?: number
+}
+
+export interface ChartType {
+   num: number,
+   moveXPerc?: number
+}

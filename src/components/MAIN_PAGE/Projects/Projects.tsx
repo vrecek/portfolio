@@ -7,6 +7,7 @@ import ParagraphInfo from './ParagraphInfo'
 import PROJECTS, { PROJECTS_LEN } from '../../../data/ALL_PROJECTS'
 import shuffleArray from '../../../functions/shuffleArray'
 import ProjectType from '../../../interfaces/ProjectInterface'
+import BackgroundIcon from '../../Common/BackgroundIcon'
 
 const Projects = () => {
    return (
@@ -33,6 +34,8 @@ const Projects = () => {
             }
 
          </section>
+
+         <BackgroundIcon icon={ <AiOutlineFundProjectionScreen /> } />
 
       </section>
    )

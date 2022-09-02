@@ -21,6 +21,8 @@ const PROJECTS_PAGE = () => {
 
          <Filters state={ setProjects } />
 
+         <h1 className='number'>Projects ({ projects.projects.length })</h1>
+
          <section className="project-container">
 
             {

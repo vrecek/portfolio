@@ -21,6 +21,15 @@ section.home-contact::after {
   border-radius: 0.2em 0 0 0.2em;
   background: linear-gradient(to left, #161616, #222121, #4a4a4a);
 }
+section.home-contact section.contact-text {
+  position: relative;
+}
+section.home-contact section.contact-text span.background-icon {
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 section.home-contact div.wrap {
   display: flex;
   justify-content: space-around;
