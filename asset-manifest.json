@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.842bfb5b.css",
+    "main.js": "/portfolio/static/js/main.a8f1d56d.js",
+    "static/js/787.a2cb61a6.chunk.js": "/portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/about1.jpg": "/portfolio/static/media/about1.777db3cee7868a47c7d5.jpg",
+    "static/media/hdr.jpg": "/portfolio/static/media/hdr.c390b6600c55d29c45ec.jpg",
+    "static/media/foodshop.png": "/portfolio/static/media/foodshop.603f511d93c43c7e677e.png",
+    "static/media/fooddelivery.png": "/portfolio/static/media/fooddelivery.1edddfa1098e09ba57b9.png",
+    "static/media/weather.png": "/portfolio/static/media/weather.48f0c1f50f0be25ffc59.png",
+    "static/media/clicker.png": "/portfolio/static/media/clicker.fdfa9d463119512ebfd7.png",
+    "static/media/blackjack.png": "/portfolio/static/media/blackjack.ac05794fcd4b01e2b72d.png",
+    "static/media/houses.png": "/portfolio/static/media/houses.fba2d4eaedfb84c6f332.png",
+    "static/media/poker.png": "/portfolio/static/media/poker.14da7c4e4f73cb0bfce4.png",
+    "static/media/tictactoe.png": "/portfolio/static/media/tictactoe.58d054c88c858396e58b.png",
+    "static/media/electronicshop.png": "/portfolio/static/media/electronicshop.4242205c24b3d69f9f6b.png",
+    "static/media/chess.png": "/portfolio/static/media/chess.271c4c044b5a26b91032.png",
+    "static/media/myblog.png": "/portfolio/static/media/myblog.5c8a24c95cf9f9b203b1.png",
+    "static/media/luxury.png": "/portfolio/static/media/luxury.911d6214bb515cc4375b.png",
+    "static/media/resize.png": "/portfolio/static/media/resize.db007394aa605bb8b510.png",
+    "static/media/vr.png": "/portfolio/static/media/vr.6306935aa47b8f7bcd42.png",
+    "index.html": "/portfolio/index.html",
+    "main.842bfb5b.css.map": "/portfolio/static/css/main.842bfb5b.css.map",
+    "main.a8f1d56d.js.map": "/portfolio/static/js/main.a8f1d56d.js.map",
+    "787.a2cb61a6.chunk.js.map": "/portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.842bfb5b.css",
+    "static/js/main.a8f1d56d.js"
+  ]
+}
