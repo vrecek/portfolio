@@ -14,10 +14,10 @@ main.contact-page {
          &.social {
             h4 {
                font-size: .9rem;
-               font-weight: 700;
+               font-weight: 600;
                margin-bottom: .1em;
                transition: .3s;
-               color:rgb(118, 118, 118);
+               color:rgb(160, 160, 160);
             }
 
             div {
@@ -26,8 +26,7 @@ main.contact-page {
                span {
                   position: absolute;
                   right: 0;
-                  top: 50%;
-                  transform: translateY(-50%);
+                  bottom: 0;
                   @include Rectangle(25px);
                   cursor: pointer;
                   transition: .3s;
@@ -77,5 +76,10 @@ main.contact-page {
          margin: 1.5em 0;
          font-size: 1rem;
       }
+   }
+
+   @media (max-width: 768px) {
+      flex-direction: column;
+      padding: calc($navHeight + 2em) 1em 1em 1em;
    }
 }

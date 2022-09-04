@@ -17,4 +17,9 @@ section.home-about {
 
       svg { @include FullSize; }
    }
+
+   @media (max-width: 768px) {
+      min-height: auto;
+      margin-bottom: 0;
+   }
 }

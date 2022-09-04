@@ -1,7 +1,7 @@
 section.home-skills {
   position: relative;
   border-top: 1px solid #303030;
-  padding: 0 3em 5em 3em;
+  padding: 0 clamp(0em, 4vw, 3em) 5em clamp(0em, 4vw, 3em);
   position: relative;
 }
 section.home-skills::before, section.home-skills::after {
@@ -65,17 +65,18 @@ section.home-skills section.container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-items: stretch;
   margin-top: 1em;
   flex-wrap: wrap;
   overflow: hidden;
   transition: 0.4s;
 }
 section.home-skills section.container article {
-  width: 35%;
+  width: 510px;
   margin-bottom: 4em;
   background: #202020;
-  padding: 1.5em;
-  padding-left: 2em;
+  padding: 1.5em clamp(0.5em, 5vw, 1.5em);
+  padding-left: clamp(0.5em, 5vw, 2em);
   border-radius: 0.25em;
   border-left: 3px solid royalblue;
 }
@@ -136,7 +137,7 @@ section.home-skills section.container article div.info {
 section.home-skills section.container article div.info h4 {
   display: flex;
   font-weight: 200;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
 }
 section.home-skills section.container article div.info h4 span {
   font-weight: 600;
@@ -145,14 +146,20 @@ section.home-skills section.container article div.info h4 span {
 }
 section.home-skills section.container article h2 {
   font-weight: 800;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   margin: 0.25em 0 1em 0;
 }
 section.home-skills section.container article span.icon {
   display: block;
-  height: 80px;
-  width: 80px;
+  height: clamp(50px, 17vw, 80px);
+  width: clamp(50px, 17vw, 80px);
 }
 section.home-skills section.container article span.icon svg {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 480px) {
+  section.home-skills {
+    padding: 0 0.1em 5em 0.1em;
+  }
 }

@@ -26,6 +26,7 @@ section.home-about div.wrap {
   display: flex;
   justify-content: space-between;
   align-items: none;
+  position: relative;
 }
 section.home-about div.wrap article.text {
   width: 55%;
@@ -43,7 +44,10 @@ section.home-about div.wrap figure {
 section.home-about div.wrap figure img {
   width: 100%;
   height: 100%;
+  transition: 3s;
   object-fit: cover;
+  display: block;
+  transform: scale(2);
 }
 section.home-about div.wrap section.timeline h3 {
   text-transform: uppercase;
@@ -53,7 +57,7 @@ section.home-about div.wrap section.timeline h3 {
   margin-bottom: 0.2em;
 }
 section.home-about div.wrap section.timeline div.wrap {
-  height: 225px;
+  min-height: 225px;
   border-radius: 0.25em;
   position: relative;
 }
@@ -71,6 +75,7 @@ section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving {
 section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving article.element {
   width: 100%;
   height: 100%;
+  min-height: 225px;
   flex-shrink: 0;
   background: rgb(29, 29, 29);
   padding: 1em;
@@ -79,6 +84,7 @@ section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving a
   display: flex;
   justify-content: space-between;
   align-items: none;
+  overflow: hidden;
   flex-direction: column;
 }
 section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving article.element h2 {
@@ -86,6 +92,7 @@ section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving a
   font-size: 1.25rem;
   border-left: 3px solid royalblue;
   padding-left: 0.4em;
+  margin-bottom: 1em;
 }
 section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving article.element p {
   color: whitesmoke;
@@ -99,6 +106,7 @@ section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving a
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 3em;
 }
 section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving article.element div.chart span.year {
   display: block;
@@ -113,7 +121,7 @@ section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving a
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 3vw, 0.8rem);
   font-weight: 600;
 }
 section.home-about div.wrap section.timeline div.wrap div.move-wrap div.moving article.element div.chart span.year.current {
@@ -178,11 +186,11 @@ section.home-about div.wrap section.icons span:hover {
   transform: scale(1.2);
 }
 section.home-about div.wrap section.author h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 800;
 }
 section.home-about div.wrap section.author h2 {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 5vw, 1.1rem);
   color: rgb(237, 237, 237);
   font-weight: 400;
   border-left: 3px solid royalblue;
@@ -198,14 +206,14 @@ section.home-about div.wrap section.author section.paragraph {
 }
 section.home-about div.wrap section.author section.paragraph p {
   font-family: "Roboto Mono", monospace;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
   font-weight: 500;
   color: rgb(226, 226, 226);
   position: relative;
   z-index: 4;
 }
 section.home-about div.wrap section.author section.paragraph span.quote {
-  height: 80%;
+  width: 15%;
   color: rgb(80, 80, 80);
   opacity: 0.2;
   position: absolute;
@@ -222,6 +230,41 @@ section.home-about div.wrap section.author section.paragraph span.quote:first-of
 section.home-about div.wrap section.author section.paragraph span.quote:last-of-type {
   right: 10%;
 }
+@media (max-width: 768px) {
+  section.home-about div.wrap {
+    padding: 2em 0;
+  }
+  section.home-about div.wrap figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.2);
+  }
+  section.home-about div.wrap figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section.home-about div.wrap article.text {
+    width: 100%;
+  }
+  section.home-about div.wrap section.timeline {
+    margin-top: 3.5em;
+  }
+}
+@media (max-width: 480px) {
+  section.home-about div.wrap {
+    padding: 1em 0 3em 0;
+  }
+  section.home-about div.wrap article.text {
+    padding: 1em;
+  }
+}
 section.home-about div.entry-info {
   font-family: "Roboto Mono", monospace;
   margin-bottom: 1em;
@@ -229,4 +272,10 @@ section.home-about div.entry-info {
 section.home-about div.entry-info svg {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  section.home-about {
+    min-height: auto;
+    margin-bottom: 0;
+  }
 }

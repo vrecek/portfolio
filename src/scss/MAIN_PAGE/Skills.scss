@@ -2,7 +2,7 @@
 
 section.home-skills {
    @include TopSeparator;
-   padding: 0 3em 5em 3em;
+   padding: 0 clamp(0em, 4vw, 3em) 5em clamp(0em, 4vw, 3em);
    position: relative;
 
    span.background-icon {
@@ -43,17 +43,18 @@ section.home-skills {
 
    section.container {
       @include Flex(sa, c);
+      align-items: stretch;
       margin-top: 1em;
       flex-wrap: wrap;
       overflow: hidden;
       transition: .4s;
 
       article {
-         width: 35%;
+         width: 510px;
          margin-bottom: 4em;
          background: #202020;
-         padding: 1.5em;
-         padding-left: 2em;
+         padding: 1.5em clamp(.5em, 5vw, 1.5em);
+         padding-left:  clamp(.5em, 5vw, 2em);
          border-radius: .25em;
          border-left: 3px solid royalblue;
 
@@ -114,7 +115,7 @@ section.home-skills {
             h4 {
                display: flex;
                font-weight: 200;
-               font-size: .9rem;
+               @include Clamp(.8, 4, .9);
 
                span {
                   font-weight: 600;
@@ -126,14 +127,19 @@ section.home-skills {
 
          h2 {
             font-weight: 800;
+            @include Clamp(1.25, 4, 1.5);
             margin: .25em 0 1em 0;
          }
 
          span.icon {
-            @include Rectangle(80px);
+            @include Rectangle(clamp(50px, 17vw, 80px));
 
             svg { @include FullSize; }
          }
       }
+   }
+
+   @media (max-width: 480px) {
+      padding: 0 .1em 5em .1em;
    }
 }

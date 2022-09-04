@@ -5,8 +5,12 @@ import '../../../css/About.css'
 import FigureImage from '../../Common/FigureImage'
 import img1 from '../../../images/about1.jpg'
 import ArticleText from './ArticleText'
+import ImageHandler from './ImageHandler'
+import handleViewport from 'react-in-viewport'
 
 const About = () => {
+   const AuthorImage = handleViewport(ImageHandler)
+
    return (
       <section className="home-about">
 
@@ -16,7 +20,7 @@ const About = () => {
 
          <div className="wrap first-info">
 
-            <FigureImage source={ img1 } altTxt='img' />
+            <AuthorImage />
             
             <ArticleText />
 

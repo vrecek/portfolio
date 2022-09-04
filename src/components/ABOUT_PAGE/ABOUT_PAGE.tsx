@@ -6,7 +6,7 @@ import '../../css/AboutPage.css'
 
 const ABOUT_PAGE = () => {
    window.scrollTo(0, 0)
-   
+
    return (
       <main className="about-page">
 

@@ -37,6 +37,17 @@ section.home-contact div.wrap {
   padding: 0 2em;
   margin-top: 2em;
 }
+@media (max-width: 768px) {
+  section.home-contact div.wrap {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  section.home-contact div.wrap {
+    padding: 0 0.5em;
+    margin-top: 1em;
+  }
+}
 section.home-contact div.entry-info {
   font-family: "Roboto Mono", monospace;
 }

@@ -22,12 +22,12 @@ main.one-project-page {
          div.wrap { width: 50%; }
 
          span.icon {
-            @include Rectangle(60px);
+            @include Rectangle(clamp(30px, 8vw, 60px));
             svg { @include FullSize; }
          }
 
          p {
-            font-size: .95rem;
+            @include Clamp(.85, 4, .95);
             font-weight: 400;
          }
 
@@ -38,7 +38,7 @@ main.one-project-page {
                font-weight: 400;
                color: rgb(229, 229, 229);
                position: relative;
-               font-size: .9rem;
+               @include Clamp(.85, 4, .9);
 
                &:not(.clear) {
                   &::before {
@@ -58,11 +58,11 @@ main.one-project-page {
 
       section.title-links {
          @include Flex(sb, c);
-         padding: 2em 2em;
+         padding: 2em;
          background: #202020;
 
          h1 {
-            font-size: 2rem;
+            @include Clamp(1.25, 6, 2);
             width: 70%;
             font-weight: 700;
          }
@@ -71,7 +71,7 @@ main.one-project-page {
             display: flex;
 
             span.icon {
-               @include Rectangle(40px);
+               @include Rectangle(clamp(35px, 8vw, 40px));
                background: #303030;
                border: 1px solid #505050;
                border-radius: 50%;
@@ -127,6 +127,33 @@ main.one-project-page {
          overflow: hidden;
 
          img { width: 100%; }
+      }
+   }
+
+   @media (max-width: 768px) {
+      width: 95%;
+
+      article.container {
+         section.title-links {
+            flex-direction: column;
+            padding: 1em .5em;
+
+            h1 {
+               width: 100%;
+               text-align: center;
+               margin-bottom: 1em;
+            }
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      article.container {
+         section:not(.title-links) {
+            div.wrap { width: 80%; }
+
+            padding: 0 .75em;
+         }
       }
    }
 }

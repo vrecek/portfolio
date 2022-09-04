@@ -3,20 +3,25 @@
 footer.layout-footer {
    background: #121212;
    @include Flex(c, c);
-   padding: 8em 0;
+   padding: clamp(4em, 15vw, 8em) 0;
    flex-direction: column;
    color: rgb(141, 141, 141);
+
+   div,
+   section.text-section {
+      @include Center(1050px);
+      max-width: 90%;
+   }
    
    div {
       @include Flex(c, c);
       color: $clr-white;
       border-top: 2px solid grey;
       padding-top: 2em;
-      @include Center(70%);
 
       span.icon {
          margin: 0 .5em;
-         @include Rectangle(35px);
+         @include Rectangle(clamp(28px, 6vw, 35px));
          cursor: pointer;
          transition: .3s;
          position: relative;
@@ -71,11 +76,10 @@ footer.layout-footer {
 
    section.text-section {
       @include Flex(sb, c);
-      @include Center(70%);
       margin-bottom: 2em;
 
       h1 {
-         font-size: 1rem;
+         @include Clamp(.8, 3, 1);
          font-weight: 700;
          text-transform: uppercase;
       }
@@ -88,7 +92,7 @@ footer.layout-footer {
             &:last-child { margin-left: 2.5em; }
 
             li {
-               font-size: 1.5rem;
+               @include Clamp(.9, 4, 1.5);
                font-weight: 500;
                font-family: 'Roboto Mono', monospace;
                &:first-child { margin-bottom: .5em; }
@@ -100,6 +104,12 @@ footer.layout-footer {
                }
             }
          }
+      }
+
+      @media (max-width: 480px) {
+         flex-direction: column;
+
+         h1 { margin-bottom: 2em; }
       }
    }
 }

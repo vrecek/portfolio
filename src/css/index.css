@@ -5,6 +5,10 @@
   font-weight: 300;
 }
 
+div.App {
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
   width: 100vw;
@@ -75,9 +79,10 @@ span.background-icon svg {
 
 article.project-small {
   background: #171717;
-  width: 22%;
-  margin: 0 2em;
+  width: 338px;
+  margin: 0 1.5em;
   aspect-ratio: 1;
+  min-height: 260px;
   margin-bottom: 3em;
   border-radius: 0.5em;
 }
@@ -107,7 +112,7 @@ article.project-small section.tags button {
 article.project-small section.tags button label {
   color: rgb(245, 245, 245);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
   font-family: "Sora", sans-serif;
 }
 article.project-small section.tags button:hover {
@@ -118,8 +123,10 @@ article.project-small section.tags ul {
   display: flex;
 }
 article.project-small section.tags ul li {
-  margin-left: 0.5em;
   position: relative;
+}
+article.project-small section.tags ul li:not(:first-child) {
+  margin-left: 0.5em;
 }
 article.project-small section.tags ul li::before {
   width: max-content;
@@ -138,8 +145,8 @@ article.project-small section.tags ul li::before {
 }
 article.project-small section.tags ul li span {
   display: block;
-  height: 30px;
-  width: 30px;
+  height: clamp(23px, 7vw, 30px);
+  width: clamp(23px, 7vw, 30px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,10 +170,10 @@ article.project-small section.tags ul li:hover span svg {
 article.project-small h2 {
   font-weight: 600;
   margin: 0.2em 0;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 6vw, 1.5rem);
 }
 article.project-small p {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
   font-weight: 300;
 }
 article.project-small figure {
@@ -198,18 +205,19 @@ form.mail-form input {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   transition: 0.3s;
+  font-size: clamp(0.75rem, 4vw, 1rem);
 }
 form.mail-form label.input-label {
   position: absolute;
   left: 0;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 4vw, 0.9rem);
   color: grey;
   transition: 0.5s;
   pointer-events: none;
 }
 form.mail-form button {
-  width: 25%;
+  width: 180px;
   height: 55px;
   outline: 0;
   margin-top: 1.5em;
@@ -243,7 +251,7 @@ form.mail-form button::after {
   transform: translateY(-50%);
 }
 form.mail-form button label {
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 4vw, 1rem);
   font-family: "Sora", sans-serif;
   font-weight: 400;
   color: rgb(81, 122, 247);
@@ -335,15 +343,43 @@ form.mail-form div.div-wrap div.input-div {
 section.contact-text {
   width: 28%;
 }
+section.contact-text h6 {
+  color: red;
+  font-size: 0.8rem;
+}
 section.contact-text p {
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 4vw, 0.95rem);
   color: rgb(207, 207, 207);
 }
 section.contact-text h2 {
   font-weight: 700;
   margin-bottom: 2em;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   text-transform: uppercase;
   font-family: "Roboto Mono", monospace;
+}
+
+@media (max-width: 768px) {
+  section.contact-text,
+form.mail-form {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  section.contact-text {
+    margin-bottom: 2em;
+  }
+}
+@media (max-width: 480px) {
+  form.mail-form {
+    padding: 1.5em 0.5em;
+  }
+  form.mail-form div.div-wrap {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  form.mail-form div.div-wrap div.input-div {
+    width: 100%;
+    margin-bottom: 2.2em;
+  }
 }

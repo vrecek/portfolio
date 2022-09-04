@@ -1,3 +1,5 @@
+import { ViewportHandlerType } from "./CommonInterfaces"
+
 export interface SkillDivType {
    icon?: JSX.Element,
    what: string,
@@ -12,9 +14,7 @@ export interface SkillType {
    percentSkill: number
 }
 
-export interface PercentBarType {
-   forwardedRef: any,
-   inViewport: boolean,
+export interface PercentBarType extends ViewportHandlerType {
    percent: number
 }
 

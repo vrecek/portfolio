@@ -3,9 +3,15 @@ footer.layout-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8em 0;
+  padding: clamp(4em, 15vw, 8em) 0;
   flex-direction: column;
   color: rgb(141, 141, 141);
+}
+footer.layout-footer div,
+footer.layout-footer section.text-section {
+  width: 1050px;
+  margin: 0 auto;
+  max-width: 90%;
 }
 footer.layout-footer div {
   display: flex;
@@ -14,14 +20,12 @@ footer.layout-footer div {
   color: rgb(245, 245, 245);
   border-top: 2px solid grey;
   padding-top: 2em;
-  width: 70%;
-  margin: 0 auto;
 }
 footer.layout-footer div span.icon {
   margin: 0 0.5em;
   display: block;
-  height: 35px;
-  width: 35px;
+  height: clamp(28px, 6vw, 35px);
+  width: clamp(28px, 6vw, 35px);
   cursor: pointer;
   transition: 0.3s;
   position: relative;
@@ -67,12 +71,10 @@ footer.layout-footer section.text-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
-  margin: 0 auto;
   margin-bottom: 2em;
 }
 footer.layout-footer section.text-section h1 {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -86,7 +88,7 @@ footer.layout-footer section.text-section section.lists ul:last-child {
   margin-left: 2.5em;
 }
 footer.layout-footer section.text-section section.lists ul li {
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 4vw, 1.5rem);
   font-weight: 500;
   font-family: "Roboto Mono", monospace;
   cursor: pointer;
@@ -97,4 +99,12 @@ footer.layout-footer section.text-section section.lists ul li:first-child {
 }
 footer.layout-footer section.text-section section.lists ul li:hover {
   color: royalblue;
+}
+@media (max-width: 480px) {
+  footer.layout-footer section.text-section {
+    flex-direction: column;
+  }
+  footer.layout-footer section.text-section h1 {
+    margin-bottom: 2em;
+  }
 }

@@ -21,4 +21,9 @@ export interface Text {
    children: string
 }
 
+export interface ViewportHandlerType {
+   forwardedRef: any,
+   inViewport: boolean,
+}
+
 export type Ref = React.RefObject<HTMLDivElement>

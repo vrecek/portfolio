@@ -1,7 +1,6 @@
 import React from 'react'
 import AboutIcons from './AboutIcons'
 import Author from './Author'
-import Paragrapgh from './Paragrapgh'
 import Timeline from './Timeline'
 
 const ArticleText = () => {

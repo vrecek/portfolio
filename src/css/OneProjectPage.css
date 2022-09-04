@@ -23,15 +23,15 @@ main.one-project-page article.container section:not(.title-links) div.wrap {
 }
 main.one-project-page article.container section:not(.title-links) span.icon {
   display: block;
-  height: 60px;
-  width: 60px;
+  height: clamp(30px, 8vw, 60px);
+  width: clamp(30px, 8vw, 60px);
 }
 main.one-project-page article.container section:not(.title-links) span.icon svg {
   width: 100%;
   height: 100%;
 }
 main.one-project-page article.container section:not(.title-links) p {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 4vw, 0.95rem);
   font-weight: 400;
 }
 main.one-project-page article.container section:not(.title-links) ul {
@@ -41,7 +41,7 @@ main.one-project-page article.container section:not(.title-links) ul li {
   font-weight: 400;
   color: rgb(229, 229, 229);
   position: relative;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 4vw, 0.9rem);
 }
 main.one-project-page article.container section:not(.title-links) ul li:not(.clear)::before {
   content: "";
@@ -57,11 +57,11 @@ main.one-project-page article.container section.title-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 2em;
+  padding: 2em;
   background: #202020;
 }
 main.one-project-page article.container section.title-links h1 {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 6vw, 2rem);
   width: 70%;
   font-weight: 700;
 }
@@ -70,8 +70,8 @@ main.one-project-page article.container section.title-links div.links {
 }
 main.one-project-page article.container section.title-links div.links span.icon {
   display: block;
-  height: 40px;
-  width: 40px;
+  height: clamp(35px, 8vw, 40px);
+  width: clamp(35px, 8vw, 40px);
   background: #303030;
   border: 1px solid #505050;
   border-radius: 50%;
@@ -131,4 +131,26 @@ main.one-project-page section.thumbnail figure {
 }
 main.one-project-page section.thumbnail figure img {
   width: 100%;
+}
+@media (max-width: 768px) {
+  main.one-project-page {
+    width: 95%;
+  }
+  main.one-project-page article.container section.title-links {
+    flex-direction: column;
+    padding: 1em 0.5em;
+  }
+  main.one-project-page article.container section.title-links h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 480px) {
+  main.one-project-page article.container section:not(.title-links) {
+    padding: 0 0.75em;
+  }
+  main.one-project-page article.container section:not(.title-links) div.wrap {
+    width: 80%;
+  }
 }

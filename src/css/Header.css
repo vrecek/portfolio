@@ -6,19 +6,43 @@ header.home-header {
   align-items: center;
 }
 header.home-header section.left-informations {
-  width: 40%;
-  margin-left: 4em;
+  width: 640px;
+  max-width: 100%;
+  margin-left: clamp(0em, 4vw, 4em);
   z-index: 2;
   padding-left: 2em;
-  border-left: 3px solid royalblue;
+  border-left: 3px solid transparent;
+  overflow: hidden;
+  animation: border 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+@keyframes border {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: royalblue;
+  }
 }
 header.home-header section.left-informations p {
-  margin: 0.25em 0 2em 0;
-  font-size: 0.95rem;
+  margin: 0.25em 0.5em 2em 0;
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
   font-weight: 400;
+  animation: rightBlend 2s;
+  animation-fill-mode: forwards;
+  transform: translateX(200%);
+}
+@keyframes rightBlend {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 header.home-header section.left-informations button {
-  padding: 1.5em 2.5em;
+  padding: clamp(0.5em, 5vw, 1.5em) clamp(1.5em, 5vw, 2.5em);
   border-radius: 0.5em;
   outline: 0;
   border: 2px solid royalblue;
@@ -31,7 +55,7 @@ header.home-header section.left-informations button, header.home-header section.
 header.home-header section.left-informations button label {
   color: royalblue;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 4vw, 1.1rem);
   font-family: "Sora", sans-serif;
 }
 header.home-header section.left-informations button:hover {
@@ -44,11 +68,17 @@ header.home-header section.left-informations div.headers {
   position: relative;
 }
 header.home-header section.left-informations div.headers h1 {
-  font-size: 3.5rem;
+  font-size: clamp(1.75rem, 7vw, 3.5rem);
   font-weight: 600;
   display: flex;
   justify-content: none;
   align-items: center;
+  animation: leftBlend 2s;
+  animation-fill-mode: forwards;
+  transform: translateX(-200%);
+}
+header.home-header section.left-informations div.headers h1:nth-child(2) {
+  animation-delay: 0.5s;
 }
 header.home-header section.left-informations div.headers h1 span {
   font-family: "Roboto Mono", monospace;
@@ -59,9 +89,17 @@ header.home-header section.left-informations div.headers h1 span {
 }
 header.home-header section.left-informations div.headers h1 svg {
   display: block;
-  height: 55px;
-  width: 55px;
-  margin-left: 0.25em;
+  height: clamp(23px, 6vw, 55px);
+  width: clamp(23px, 6vw, 55px);
+  margin-left: clamp(0.1em, 1vw, 0.25em);
+}
+@keyframes leftBlend {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 header.home-header figure {
   position: absolute;
@@ -71,10 +109,19 @@ header.home-header figure {
   right: auto;
   width: 100%;
   height: 100%;
+  background: rgb(12, 17, 17);
 }
 header.home-header figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0 0;
+}
+@media (max-width: 480px) {
+  header.home-header section.left-informations {
+    padding: 0;
+    border: 0;
+  }
+  header.home-header section.left-informations div.headers {
+    text-align: center;
+  }
 }

@@ -6,20 +6,38 @@ header.home-header {
    @include Flex(fs, c);
 
    section.left-informations {
-      width: 40%;
-      margin-left: 4em;
+      width: 640px;
+      max-width: 100%;
+      margin-left: clamp(0em, 4vw, 4em);
       z-index: 2;
       padding-left: 2em;
-      border-left: 3px solid royalblue;
+      border-left: 3px solid transparent;
+      overflow: hidden;
+      animation: border 2s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+
+      @keyframes border {
+         0% { border-color: transparent; }
+         100% { border-color: royalblue; }
+      }
 
       p {
-         margin: .25em 0 2em 0;
-         font-size: .95rem;
+         margin: .25em .5em 2em 0;
+         @include Clamp(.8, 2.5, .95);
          font-weight: 400;
+         animation: rightBlend 2s;
+         animation-fill-mode: forwards;
+         transform: translateX(200%);
+
+         @keyframes rightBlend {
+            0% { transform: translateX(200%); }
+            100% { transform: translateX(0); }
+         }
       }
 
       button {
-         padding: 1.5em 2.5em;
+         padding: clamp(.5em, 5vw, 1.5em) clamp(1.5em, 5vw, 2.5em);
          border-radius: .5em;
          outline: 0;
          border: 2px solid royalblue;
@@ -30,7 +48,7 @@ header.home-header {
          label {
             color: royalblue;
             font-weight: 500;
-            font-size: 1.1rem;
+            @include Clamp(.9, 4, 1.1);
             font-family: 'Sora', sans-serif;
          }
 
@@ -44,9 +62,17 @@ header.home-header {
          position: relative;
 
          h1 {
-            font-size: 3.5rem;
-            font-weight: 600;@include Flex(none, c);
+            @include Clamp(1.75, 7, 3.5);
+            font-weight: 600;
+            @include Flex(none, c);
+            animation: leftBlend 2s;
+            animation-fill-mode: forwards;
+            transform: translateX(-200%);
    
+            &:nth-child(2) {
+               animation-delay: .5s;
+            }
+
             span {
                font-family: 'Roboto Mono', monospace;
                font-weight: 700;
@@ -56,9 +82,14 @@ header.home-header {
             }
 
             svg {
-               @include Rectangle(55px);
-               margin-left: .25em;
+               @include Rectangle(clamp(23px, 6vw, 55px));
+               margin-left: clamp(.1em, 1vw, .25em);
             }
+         }
+
+         @keyframes leftBlend {
+            0% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
          }
       }
    }
@@ -66,11 +97,22 @@ header.home-header {
    figure {
       @include Absolute(0, 0);
       @include FullSize;
+      background: rgb(12, 17, 17);
 
       img {
          @include FullSize;
          object-fit: cover;
-         object-position: 0 0;
+      }
+   }
+
+   @media (max-width: 480px) {
+      section.left-informations {
+         padding: 0;
+         border: 0;
+
+         div.headers {
+            text-align: center;
+         }
       }
    }
 }

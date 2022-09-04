@@ -12,6 +12,8 @@ nav.layout-navigation {
    h1 {
       border-radius: .2em;
       padding: .25em;
+      position: relative;
+      z-index: 3;
       
       &,
       span {
@@ -46,7 +48,7 @@ nav.layout-navigation {
       }
 
       li {
-         font-size: .9rem;
+         @include Clamp(.75, 2.5, .9);
          font-family: 'Roboto Mono', monospace;
          &:not(:first-child) { margin-left: .75em; }
          cursor: pointer;
@@ -68,6 +70,20 @@ nav.layout-navigation {
                color: rgb(114, 149, 255);
             }
          }
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: .25em;
+      h1 { display: none; }
+
+      ul {
+         padding: .25;
+         border: 0;
+         width: 100%;
+         justify-content: flex-end;
+
+         &::before { display: none; }
       }
    }
 }

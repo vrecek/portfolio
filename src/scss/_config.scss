@@ -83,6 +83,8 @@ $navHeight: 83.6px;
 }
 
 @mixin AboutStyle {
+   position: relative;
+
    article.text {
       width: 55%;
       padding: 1em 2em 2em 2em;
@@ -97,7 +99,10 @@ $navHeight: 83.6px;
 
       img {
          @include FullSize;
+         transition: 3s;
          object-fit: cover;
+         display: block;
+         transform: scale(2);
       }
    }
 
@@ -112,7 +117,7 @@ $navHeight: 83.6px;
          }
 
          div.wrap {
-            height: 225px;
+            min-height: 225px;
             border-radius: .25em;
             position: relative;
 
@@ -127,12 +132,14 @@ $navHeight: 83.6px;
 
                   article.element {
                      @include FullSize(100%);
+                     min-height: 225px;
                      flex-shrink: 0;
                      background: rgb(29, 29, 29);
                      padding: 1em;
                      padding-bottom: 2.5em;
                      border-radius: .25em;
                      @include Flex(sb, none);
+                     overflow: hidden;
                      flex-direction: column;
 
                      h2 {
@@ -140,6 +147,7 @@ $navHeight: 83.6px;
                         font-size: 1.25rem;
                         border-left: 3px solid royalblue;
                         padding-left: .4em;
+                        margin-bottom: 1em;
                      }
 
                      p {
@@ -153,6 +161,7 @@ $navHeight: 83.6px;
                         height: 3px;
                         background: $clr-white;
                         @include Flex(sa, c);
+                        margin-top: 3em;
                         
                         span.year {
                            display: block;
@@ -167,7 +176,7 @@ $navHeight: 83.6px;
                               bottom: 100%;
                               left: 50%;
                               transform: translateX(-50%);
-                              font-size: .8rem;
+                              @include Clamp(.7, 3, .8);
                               font-weight: 600;
                            }
 
@@ -240,12 +249,12 @@ $navHeight: 83.6px;
 
       &.author {
          h1 {
-            font-size: 3rem;
+            @include Clamp(2, 8, 3);
             font-weight: 800;
          }
 
          h2 {
-            font-size: 1.1rem;
+            @include Clamp(.95, 5, 1.1);
             color: rgb(237, 237, 237);
             font-weight: 400;
             border-left: 3px solid royalblue;
@@ -262,7 +271,7 @@ $navHeight: 83.6px;
 
             p {
                font-family: 'Roboto Mono', monospace;
-               font-size: .95rem;
+               @include Clamp(.8, 4, .9);
                font-weight: 500;
                color: rgb(226, 226, 226);
                position: relative;
@@ -270,7 +279,7 @@ $navHeight: 83.6px;
             }
 
             span.quote {
-               height: 80%;
+               width: 15%;
                color: rgb(80, 80, 80);
                opacity: .2;
                position: absolute;
@@ -288,6 +297,38 @@ $navHeight: 83.6px;
                }
             }
          }
+      }
+   }
+
+   @media (max-width: 768px) {
+      padding: 2em 0;
+
+      figure {
+         @include Absolute(0, 0);
+         @include FullSize;
+         z-index: -1;
+         filter: brightness(.2);
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+         }
+      }
+
+      article.text {
+         width: 100%;  
+      }
+
+      section.timeline {
+         margin-top: 3.5em;
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: 1em 0 3em 0;
+
+      article.text {
+         padding: 1em;
       }
    }
 }
