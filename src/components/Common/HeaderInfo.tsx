@@ -10,7 +10,7 @@ const HeaderInfo = ({ children, icon, cname }: HeaderType) => {
    }
 
    const hStyle: CSSProperties = {
-      fontSize: '1.1rem',
+      fontSize: 'clamp(.95rem, 4vw, 1.2rem)',
       fontWeight: '700',
       letterSpacing: '1px'
    }
@@ -18,7 +18,8 @@ const HeaderInfo = ({ children, icon, cname }: HeaderType) => {
    const sStyle: CSSProperties = {
       width: '23px',
       height: '23px',
-      marginLeft: '.75em'
+      marginLeft: '.75em',
+      color: 'rgb(85, 85, 85)'
    }
 
    const signStyle: CSSProperties = {

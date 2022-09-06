@@ -4,6 +4,43 @@ section.home-projects {
    min-height: 100vh;
    @include TopSeparator;
 
+   div.text-wrap {
+      @include Flex(sb, fe);
+      padding: 0 clamp(1em, 7vw, 5em);
+      margin-bottom: 3.5em;
+      margin-top: 1.5em;
+
+      button {
+         border-radius: .15em;
+         padding: .75em 2em;
+         text-transform: uppercase;
+         outline: 0;
+         border: 0;
+         background: crimson;
+         cursor: pointer;
+         transition: .5s;
+
+         label {
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Sora', sans-serif;
+            color: $clr-white;
+            @include Clamp(.75, 4, .9);
+         }
+
+         &:hover {
+            background: darken(crimson, 10%);
+         }
+      }
+
+      @media (max-width: 480px) {
+         align-items: center;
+         flex-direction: column;
+
+         button { margin-top: .5em; }
+      }
+   }
+
    span.background-icon {
       height: 95%;
       top: 50%;

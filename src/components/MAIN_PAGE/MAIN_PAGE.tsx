@@ -1,4 +1,5 @@
 import React from 'react'
+import Abilities from './Abilities/Abilities'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Header from './Header/Header'
@@ -14,6 +15,7 @@ const MAIN_PAGE = () => {
 
          <Header />
          <Projects />
+         <Abilities />
          <Skills />
          <About />
          <Contact />

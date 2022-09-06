@@ -14,24 +14,40 @@ main.projects-page {
    section.filter {
       background: #111111;
       @include Center(90%);
-      margin-top: 1.5em;
+      margin-top: .5em;
       margin-bottom: 2em;
       padding: .5em;
-      @include Flex(none, c);
+      display: flex;
+      position: relative;
+      flex-direction: column;
 
-      h1 {
-         font-size: .8rem;
-         font-weight: 500;
-         margin-right: 2em;
-         margin-left: 1.25em;
+      div.filter-text {
+         @include Flex(none, c);
+         width: max-content;
+         margin-bottom: .5em;
+
+         h1,span.icon { pointer-events: none; }
+
+         h1 {
+            font-size: .9rem;
+            font-weight: 500;
+         }
+
+         span.icon {
+            @include Rectangle(20px);
+            display: none;
+            transition: .3s;
+
+            svg { @include FullSize; }
+         }
       }
 
       form.container {
          display: flex;
+         transition: .3s;
 
          div.select {
             position: relative;
-            width: 170px;
             border-radius: .4em;
             border: 1px solid grey;
             background: #101010;
@@ -46,7 +62,7 @@ main.projects-page {
                   width: max-content;
                   background: none;
                   font-family: 'Roboto Mono', monospace; 
-                  font-size: .9rem; 
+                  @include Clamp(.7, 2, .9);
                   outline: 0;
                   border: 0;
                   width: 80%;
@@ -75,10 +91,12 @@ main.projects-page {
                border: 1px solid grey;
                border-top: 0;
                border-radius: 0 0 .15em .15em;
+               z-index: 9;
+               list-style: none;
 
                li {
                   padding: 1em .5em;
-                  font-size: .9rem;
+                  @include Clamp(.7, 2, .9);
                   font-weight: 400;
                   transition: .3s;
                   cursor: pointer;
@@ -88,6 +106,28 @@ main.projects-page {
                   }
                }
             }
+         }
+      }
+
+      @media (max-width: 480px) {
+         align-items: center;
+
+         form.container {
+            flex-direction: column;
+            width: 100%;
+            height: 0;
+            display: none;
+            overflow: hidden;
+
+            div.select {
+               width: 100%;
+            }
+         }
+
+         div.filter-text {
+            cursor: pointer;
+
+            span.icon { display: block; }
          }
       }
    }

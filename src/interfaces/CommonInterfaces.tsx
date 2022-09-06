@@ -12,7 +12,7 @@ export interface ButtonType {
 }
 
 export interface HeaderType {
-   children: string,
+   children: any,
    icon?: JSX.Element,
    cname?: string
 }

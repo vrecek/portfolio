@@ -28,14 +28,12 @@ export default class DropDown {
       this.activeList = null
    }
 
+   // overflow: hidden
+   // height: 0
+   // display: none
+   // IF FIRST
 
-   /*
-      list MUST BE:
-         -height: 0
-         -display: none
-         -overflow: hidden
-   */
-   public expandMenu(hiddenList: HTMLElement, display?: DisplayType): void {
+   public expandMenu(yourTransitionSecs: number, hiddenList: HTMLElement, display?: DisplayType): void {
       if(!this.active) return
       
       const height: number = this.returnHeight(hiddenList, display)
@@ -46,6 +44,8 @@ export default class DropDown {
          this.activeList = hiddenList
 
          hiddenList.style.height = `${ height }px`
+
+         setTimeout(() => hiddenList.style.overflow = 'visible', yourTransitionSecs * 1000)
       }, 5);
    }
 
@@ -55,6 +55,7 @@ export default class DropDown {
          const height: number = this.returnHeight(hiddenList, display)
 
          hiddenList.style.height = `${ height }px`
+         hiddenList.style.overflow = 'hidden'
 
          setTimeout(() => {
             hiddenList.style.height = `0px`
@@ -71,6 +72,7 @@ export default class DropDown {
 
       const item = this.activeList
 
+      item.style.overflow = 'hidden'
       item.style.height = '0px'
       this.activeList = null
 

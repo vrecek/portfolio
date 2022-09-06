@@ -1,0 +1,105 @@
+@import '../config';
+
+section.home-abilities {
+   @include TopSeparator;
+   position: relative;
+
+   span.background-icon {
+      height: 1%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 2s;
+      
+      svg { color: white; transition: 2s; }
+   }
+
+   div.container {
+      @include Flex(sa, c);
+      align-items: stretch;
+      position: relative;
+      margin-bottom: 3.5em;
+      flex-wrap: wrap;
+
+      article.ability {
+         width: 30%;
+         min-width: 450px;
+         background: #252525;
+         padding: clamp(1.5em, 6vw, 2.5em);
+         margin: 0 .5em;
+         margin-bottom: 1.5em;
+         border-radius: 1em;
+         @include Flex(sb, none);
+         flex-direction: column;
+         transition: .3s;
+
+         div {
+            margin-top: 1.5em;
+            @include Flex(none, c);
+            cursor: pointer;
+            transition: .3s;
+            width: max-content;
+
+            h3, span { pointer-events: none; }
+
+            h3 {
+               text-transform: uppercase;
+               @include Clamp(.8, 5, .9);
+               font-weight: 700;
+            }
+
+            span {
+               @include Rectangle(25px);
+               margin-left: .5em;
+
+               svg { @include FullSize; }
+            }
+
+            &:hover {
+               transform: translateX(5%);
+            }
+         }
+
+         p {
+            font-weight: 300;
+            @include Clamp(.8, 4, .9);
+         }
+
+         h2 {
+            text-transform: uppercase;
+            font-weight: 800;
+            @include Clamp(1.25, 4, 1.5);
+            margin-bottom: .75em;
+            margin-top: .15em;
+         }
+
+         span.icon {
+            display: block;
+            width: 20%;
+            aspect-ratio: 1;
+
+            svg {
+               @include FullSize;
+            }
+         }
+      }
+   }
+
+   div.entry-info {
+      font-family: 'Roboto Mono', monospace;
+
+      svg { @include FullSize; }
+   }
+
+   @media (max-width: 768px) {
+      div.container {
+         position: static;
+
+         article.ability {
+            min-width: auto;
+            width: 100%;
+            background: #25252560;
+         }
+      }
+   }
+}

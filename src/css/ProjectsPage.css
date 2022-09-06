@@ -13,25 +13,44 @@ main.projects-page section.filter {
   background: #111111;
   width: 90%;
   margin: 0 auto;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   margin-bottom: 2em;
   padding: 0.5em;
   display: flex;
+  position: relative;
+  flex-direction: column;
+}
+main.projects-page section.filter div.filter-text {
+  display: flex;
   justify-content: none;
   align-items: center;
+  width: max-content;
+  margin-bottom: 0.5em;
 }
-main.projects-page section.filter h1 {
-  font-size: 0.8rem;
+main.projects-page section.filter div.filter-text h1, main.projects-page section.filter div.filter-text span.icon {
+  pointer-events: none;
+}
+main.projects-page section.filter div.filter-text h1 {
+  font-size: 0.9rem;
   font-weight: 500;
-  margin-right: 2em;
-  margin-left: 1.25em;
+}
+main.projects-page section.filter div.filter-text span.icon {
+  display: block;
+  height: 20px;
+  width: 20px;
+  display: none;
+  transition: 0.3s;
+}
+main.projects-page section.filter div.filter-text span.icon svg {
+  width: 100%;
+  height: 100%;
 }
 main.projects-page section.filter form.container {
   display: flex;
+  transition: 0.3s;
 }
 main.projects-page section.filter form.container div.select {
   position: relative;
-  width: 170px;
   border-radius: 0.4em;
   border: 1px solid grey;
   background: #101010;
@@ -50,7 +69,7 @@ main.projects-page section.filter form.container div.select div.current input {
   width: max-content;
   background: none;
   font-family: "Roboto Mono", monospace;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   outline: 0;
   border: 0;
   width: 80%;
@@ -82,16 +101,39 @@ main.projects-page section.filter form.container div.select ul {
   border: 1px solid grey;
   border-top: 0;
   border-radius: 0 0 0.15em 0.15em;
+  z-index: 9;
+  list-style: none;
 }
 main.projects-page section.filter form.container div.select ul li {
   padding: 1em 0.5em;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   font-weight: 400;
   transition: 0.3s;
   cursor: pointer;
 }
 main.projects-page section.filter form.container div.select ul li:hover {
   background: rgb(57, 94, 205);
+}
+@media (max-width: 480px) {
+  main.projects-page section.filter {
+    align-items: center;
+  }
+  main.projects-page section.filter form.container {
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    display: none;
+    overflow: hidden;
+  }
+  main.projects-page section.filter form.container div.select {
+    width: 100%;
+  }
+  main.projects-page section.filter div.filter-text {
+    cursor: pointer;
+  }
+  main.projects-page section.filter div.filter-text span.icon {
+    display: block;
+  }
 }
 main.projects-page section.project-container {
   display: flex;

@@ -1,6 +1,7 @@
 import React from 'react'
 import DropDown from '../../functions/DropdownClass'
 import { FilterState } from '../../interfaces/ProjectPageInterfaces'
+import FiltersDropdown from './FiltersDropdown'
 import FilterType from './FilterType'
 
 const Filters = ({ state }: FilterState) => {
@@ -12,16 +13,16 @@ const Filters = ({ state }: FilterState) => {
       ['Default', 'Oldest', 'Newest']
    ]
    const initialTxts: string[] = [
-      'By stack', 
-      'By type', 
-      'By language', 
-      'By date'
+      'Stack', 
+      'Type', 
+      'Language', 
+      'Date'
    ]
 
    return (
       <section className="filter">
 
-         <h1>FILTER</h1>
+         <FiltersDropdown />
 
          <form className="container">
 

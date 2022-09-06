@@ -35,7 +35,7 @@ const PROJECTS: ProjectType[] = [
    {
       id: 'weather-app',
       thumbnail: weather,
-      name: "Current weather application",
+      name: "Current weather",
       stack: "Frontend",
       shortPara: 'Displays weather information on a current city you search for',
       language: ["HTML", "Typescript", "SCSS"],
@@ -55,7 +55,7 @@ const PROJECTS: ProjectType[] = [
    {
       id: 'holdem-poker',
       thumbnail: poker,
-      name: "Texas Hold'em Poker game",
+      name: "Texas Hold'em Poker",
       stack: "Frontend",
       shortPara: 'Play VS computer for a high stakes in a poker game.',
       language: ["HTML", "Typescript", "SCSS"],

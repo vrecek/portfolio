@@ -1,22 +1,18 @@
 import React from 'react'
 import '../../../css/Projects.css'
-import HeaderInfo from '../../Common/HeaderInfo'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import OneProject from '../../Common/Project/OneProject'
-import ParagraphInfo from './ParagraphInfo'
-import PROJECTS, { PROJECTS_LEN } from '../../../data/ALL_PROJECTS'
+import PROJECTS from '../../../data/ALL_PROJECTS'
 import shuffleArray from '../../../functions/shuffleArray'
 import ProjectType from '../../../interfaces/ProjectInterface'
 import BackgroundIcon from '../../Common/BackgroundIcon'
+import EntryText from './EntryText'
 
 const Projects = () => {
    return (
       <section className="home-projects">
 
-         <HeaderInfo icon={ <AiOutlineFundProjectionScreen /> } cname='entry-info'>
-            My projects
-         </HeaderInfo>
-         <ParagraphInfo>{ PROJECTS_LEN }</ParagraphInfo>
+         <EntryText />
 
          <section className="container">
 

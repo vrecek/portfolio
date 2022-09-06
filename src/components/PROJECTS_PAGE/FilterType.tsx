@@ -1,9 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import ProjectType from '../../interfaces/ProjectInterface'
-import { FilterSelect } from '../../interfaces/ProjectPageInterfaces'
+import { FilterSelect, ILocation } from '../../interfaces/ProjectPageInterfaces'
 import CurrentFilter from './CurrentFilter'
 
 const FilterType = ({ initialTxt, options, dd, state }: FilterSelect) => {
+   const filterLoc: ILocation = useLocation().state as ILocation
+
    const changeFilter = (e: React.MouseEvent, str: string): void => {
       const t: HTMLElement = e.target as HTMLElement
 

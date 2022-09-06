@@ -160,6 +160,6 @@ section.home-skills section.container article span.icon svg {
 }
 @media (max-width: 480px) {
   section.home-skills {
-    padding: 0 0.1em 5em 0.1em;
+    padding: 0 0.4em 5em 0.4em;
   }
 }

@@ -44,3 +44,7 @@ export interface ChartType {
    num: number,
    moveXPerc?: number
 }
+
+export interface AbilityType extends SkillDivType {
+   type: string
+}

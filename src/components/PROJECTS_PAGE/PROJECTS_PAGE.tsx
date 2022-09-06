@@ -1,23 +1,42 @@
 import React from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import '../../css/ProjectsPage.css'
 import PROJECTS from '../../data/ALL_PROJECTS'
 import shuffleArray from '../../functions/shuffleArray'
+import { Ref } from '../../interfaces/CommonInterfaces'
 import ProjectType from '../../interfaces/ProjectInterface'
-import { ProjectState } from '../../interfaces/ProjectPageInterfaces'
+import { ILocation, ProjectState } from '../../interfaces/ProjectPageInterfaces'
 import OneProject from '../Common/Project/OneProject'
 import Filters from './Filters'
 
 const PROJECTS_PAGE = () => {
-   React.useEffect(() => window.scrollTo(0, 0), [])
-
-   const stateDefault: ProjectState = {
+   const mainRef: Ref = React.useRef<HTMLDivElement>(null)
+   const [projects, setProjects] = React.useState<ProjectState>({
       original: PROJECTS,
       projects: shuffleArray<ProjectType>(PROJECTS)
-   }
-   const [projects, setProjects] = React.useState<ProjectState>(stateDefault)
+   })
+   const initialFilter: ILocation = useLocation().state as ILocation
+
+   React.useEffect(() => {
+      window.scrollTo(0, 0)
+
+      if(!initialFilter) return
+
+      const filteredProjects: ProjectType[] = PROJECTS.filter(x => x.type === initialFilter)
+      const c: HTMLElement = mainRef.current!;
+
+      const inp: HTMLInputElement = c.children[0].children[1].children[1].children[0].children[0] as HTMLInputElement
+      inp.value = initialFilter
+      inp.setAttribute('data-select', initialFilter)
+
+      setProjects({
+         original: PROJECTS,
+         projects: shuffleArray<ProjectType>(filteredProjects)
+      })
+   }, [])
 
    return (
-      <main className="projects-page">
+      <main ref={ mainRef } className="projects-page">
 
          <Filters state={ setProjects } />
 

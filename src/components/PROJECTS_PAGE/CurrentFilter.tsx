@@ -8,7 +8,7 @@ const CurrentFilter = ({ text, dd }: FilterCurrent) => {
       const list: HTMLElement = t.parentElement!.children[1] as HTMLElement
 
       dd.switchActive()
-      dd.getActive ? dd.expandMenu(list) : dd.shrinkMenu(.3)
+      dd.getActive ? dd.expandMenu(.3, list) : dd.shrinkMenu(.3)
    }
 
    return (

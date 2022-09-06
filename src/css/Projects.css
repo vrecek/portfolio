@@ -21,6 +21,43 @@ section.home-projects::after {
   border-radius: 0.2em 0 0 0.2em;
   background: linear-gradient(to left, #161616, #222121, #4a4a4a);
 }
+section.home-projects div.text-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 clamp(1em, 7vw, 5em);
+  margin-bottom: 3.5em;
+  margin-top: 1.5em;
+}
+section.home-projects div.text-wrap button {
+  border-radius: 0.15em;
+  padding: 0.75em 2em;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  background: crimson;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section.home-projects div.text-wrap button label {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Sora", sans-serif;
+  color: rgb(245, 245, 245);
+  font-size: clamp(0.75rem, 4vw, 0.9rem);
+}
+section.home-projects div.text-wrap button:hover {
+  background: #ad102f;
+}
+@media (max-width: 480px) {
+  section.home-projects div.text-wrap {
+    align-items: center;
+    flex-direction: column;
+  }
+  section.home-projects div.text-wrap button {
+    margin-top: 0.5em;
+  }
+}
 section.home-projects span.background-icon {
   height: 95%;
   top: 50%;

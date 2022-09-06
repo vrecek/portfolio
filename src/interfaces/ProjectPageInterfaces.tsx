@@ -20,3 +20,5 @@ export interface ProjectState {
 export interface FilterState {
    state: React.Dispatch<React.SetStateAction<ProjectState>>
 }
+
+export type ILocation = string | null

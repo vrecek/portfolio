@@ -11,7 +11,7 @@ const SkillHeader = ({ children }: Text) => {
       const cont: HTMLElement = t.parentElement!.children[1] as HTMLElement
       const arrow: HTMLElement = t.children[1] as HTMLElement
       
-      dd.getActive ? dd.expandMenu(cont, 'flex') : dd.shrinkMenu(.4, cont, 'flex')
+      dd.getActive ? dd.expandMenu(.4, cont, 'flex') : dd.shrinkMenu(.4, cont, 'flex')
       dd.rotateArrow(arrow)
 
       dd.switchActive()

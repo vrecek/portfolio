@@ -7,6 +7,7 @@ import { scroller } from 'react-scroll'
 const TableContents = () => {
    const links: AsideTable[] = [
       { urlClass: 'home-header', name: 'Header intro' },
+      { urlClass: 'home-abilities', name: 'Abilities' },
       { urlClass: 'home-projects', name: 'My projects' },
       { urlClass: 'home-skills', name: 'My skills' },
       { urlClass: 'home-about', name: 'About me' },
