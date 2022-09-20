@@ -4,9 +4,9 @@ import { DiReact } from 'react-icons/di'
 import { IoGameController } from 'react-icons/io5'
 import { FaRobot } from 'react-icons/fa'
 import { IoIosMan } from 'react-icons/io'
-import { GiRobotGrab } from 'react-icons/gi'
+import { GiClick, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
-import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp } from 'react-icons/md'
+import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdWifiTetheringErrorRounded } from 'react-icons/md'
 import { BsFillMicFill, BsFillTerminalFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
 
@@ -26,12 +26,54 @@ import foodshop from '../images/projects/foodshop.png'
 import luxury from '../images/projects/luxury.png'
 import houses from '../images/projects/houses.png'
 import fooddelivery from '../images/projects/fooddelivery.png'
+import courses from '../images/projects/courses.png'
+import calculator from '../images/projects/calculator.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
 import { ImTextColor } from 'react-icons/im'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'calculator',
+      thumbnail: calculator,
+      name: "Basic calculator",
+      stack: "Frontend",
+      shortPara: 'Regular, responsive calculator with a basic arithmetics',
+      language: ["HTML", "Typescript", "SCSS"],
+      type: 'App',
+      tags: [
+         { name: "ReactJS", icon: <DiReact /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Interactivity", icon: <GiClick /> }
+      ],
+      date: 18,
+      repository: 'https://github.com/vrecek/calculator',
+      liveUrl: 'https://vrecek.github.io/calculator/',
+      bugs: ["No negative numbers"],
+      description: ''
+   },
+
+   {
+      id: 'courses',
+      thumbnail: courses,
+      name: "Online courses",
+      stack: "Frontend",
+      shortPara: 'Multipage about online courses, local storage used as a "backend"',
+      language: ["HTML", "Typescript", "SCSS"],
+      type: 'Website',
+      tags: [
+         { name: "Fake backend", icon: <MdWifiTetheringErrorRounded /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Hardcoded data", icon: <VscJson /> },
+      ],
+      date: 17,
+      repository: 'https://github.com/vrecek/courses',
+      liveUrl: 'https://vrecek.github.io/courses/',
+      bugs: [],
+      description: ''
+   },
+
    {
       id: 'weather-app',
       thumbnail: weather,
