@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2be290de.css",
-    "main.js": "/portfolio/static/js/main.57049c46.js",
+    "main.js": "/portfolio/static/js/main.bf5ed78d.js",
     "static/js/787.a2cb61a6.chunk.js": "/portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/courses.png": "/portfolio/static/media/courses.ad779fd6179391746c80.png",
     "static/media/about1.jpg": "/portfolio/static/media/about1.777db3cee7868a47c7d5.jpg",
     "static/media/hdr.jpg": "/portfolio/static/media/hdr.c390b6600c55d29c45ec.jpg",
     "static/media/foodshop.png": "/portfolio/static/media/foodshop.603f511d93c43c7e677e.png",
@@ -17,15 +18,16 @@
     "static/media/chess.png": "/portfolio/static/media/chess.271c4c044b5a26b91032.png",
     "static/media/myblog.png": "/portfolio/static/media/myblog.5c8a24c95cf9f9b203b1.png",
     "static/media/luxury.png": "/portfolio/static/media/luxury.911d6214bb515cc4375b.png",
+    "static/media/calculator.png": "/portfolio/static/media/calculator.89811a005ea23c253723.png",
     "static/media/resize.png": "/portfolio/static/media/resize.db007394aa605bb8b510.png",
     "static/media/vr.png": "/portfolio/static/media/vr.6306935aa47b8f7bcd42.png",
     "index.html": "/portfolio/index.html",
     "main.2be290de.css.map": "/portfolio/static/css/main.2be290de.css.map",
-    "main.57049c46.js.map": "/portfolio/static/js/main.57049c46.js.map",
+    "main.bf5ed78d.js.map": "/portfolio/static/js/main.bf5ed78d.js.map",
     "787.a2cb61a6.chunk.js.map": "/portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2be290de.css",
-    "static/js/main.57049c46.js"
+    "static/js/main.bf5ed78d.js"
   ]
 }
