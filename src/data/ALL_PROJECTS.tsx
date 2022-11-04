@@ -28,12 +28,54 @@ import houses from '../images/projects/houses.png'
 import fooddelivery from '../images/projects/fooddelivery.png'
 import courses from '../images/projects/courses.png'
 import calculator from '../images/projects/calculator.png'
+import hangman from '../images/projects/hangman.png'
+import clothings from '../images/projects/clothings.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
 import { ImTextColor } from 'react-icons/im'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'clothing-shop',
+      thumbnail: clothings,
+      name: "Clothing shop",
+      stack: "Fullstack",
+      shortPara: 'Fullstack e-commence clothing shop',
+      language: ["HTML", "Typescript", "SCSS"],
+      type: 'Website',
+      tags: [
+         { name: "Fullstack", icon: <AiOutlineCloudServer /> },
+         { name: "E-commence", icon: <AiFillDollarCircle /> },
+         { name: "Full system", icon: <MdAdminPanelSettings /> }
+      ],
+      date: 20,
+      repository: 'https://github.com/vrecek/clothing',
+      liveUrl: 'https://react-clothing-shop-heroku.herokuapp.com/',
+      bugs: [],
+      description: ''
+   },
+
+   {
+      id: 'hangman',
+      thumbnail: hangman,
+      name: "Hangman game",
+      stack: "Frontend",
+      shortPara: 'Regular responsive hangman game',
+      language: ["HTML", "Typescript", "SCSS"],
+      type: 'Game',
+      tags: [
+         { name: "ReactJS", icon: <DiReact /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Game", icon: <IoGameController /> }
+      ],
+      date: 19,
+      repository: 'https://github.com/vrecek/hangman',
+      liveUrl: 'https://vrecek.github.io/hangman/',
+      bugs: [],
+      description: ''
+   },
+
    {
       id: 'calculator',
       thumbnail: calculator,
