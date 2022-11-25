@@ -2,11 +2,12 @@ import React from 'react'
 import '../../../css/Skills.css'
 import HeaderInfo from '../../Common/HeaderInfo'
 import { AiOutlineBarChart, AiFillHtml5, AiOutlinePercentage } from 'react-icons/ai'
-import { SiTypescript, SiJavascript, SiReact, SiGimp, SiGit, SiNodedotjs } from 'react-icons/si'
+import { SiTypescript, SiJavascript, SiReact, SiGimp, SiGit, SiNodedotjs, SiGnubash } from 'react-icons/si'
 import { IoLogoSass, IoLogoPython, IoLogoCss3 } from 'react-icons/io'
 import { SkillType } from '../../../interfaces/HomepageInterfaces'
 import SkillSection from './SkillSection'
 import BackgroundIcon from '../../Common/BackgroundIcon'
+import { DiLinux } from 'react-icons/di'
 
 const Skills = () => {
    const languageSkills: SkillType[] = [
@@ -57,11 +58,19 @@ const Skills = () => {
          usedFor: 'Automating tasks like resizing images; desktop apps with Tkinter',
          sinceWhen: 'April 2022'
       },
+
+      {
+         percentSkill: 55,
+         name: 'Bash',
+         icon: <SiGnubash />,
+         usedFor: 'Mostly for moving files',
+         sinceWhen: 'November 2022'
+      }
    ]
 
    const otherSkills: SkillType[] = [
       {
-         percentSkill: 80,
+         percentSkill: 85,
          name: 'Git',
          icon: <SiGit />,
          usedFor: 'Version control, storing all projects',
@@ -85,11 +94,11 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 60,
-         name: 'Gimp',
-         icon: <SiGimp />,
-         usedFor: 'Ocasionally when there is need to cut the image',
-         sinceWhen: '2022'
+         percentSkill: 85,
+         name: 'Linux',
+         icon: <DiLinux />,
+         usedFor: 'Ubuntu. My everyday operating system. Including terminal commands.',
+         sinceWhen: 'October 2022'
       }
    ]
 

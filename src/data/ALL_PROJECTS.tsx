@@ -9,6 +9,7 @@ import { VscJson } from 'react-icons/vsc'
 import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdWifiTetheringErrorRounded } from 'react-icons/md'
 import { BsFillMicFill, BsFillTerminalFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
+import {TiCloudStorageOutline} from 'react-icons/ti'
 
 import weather from '../images/projects/weather.png'
 import poker from '../images/projects/poker.png'
@@ -30,12 +31,52 @@ import courses from '../images/projects/courses.png'
 import calculator from '../images/projects/calculator.png'
 import hangman from '../images/projects/hangman.png'
 import clothings from '../images/projects/clothings.png'
+import cm from '../images/projects/cm.png'
+import blog from '../images/projects/blog.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
 import { ImTextColor } from 'react-icons/im'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'second-blog',
+      thumbnail: blog,
+      name: "Second online blog",
+      stack: "Fullstack",
+      shortPara: 'Second and better version of a blog',
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Fullstack", icon: <AiOutlineCloudServer /> },
+         { name: "Blog", icon: <BiNews /> },
+         { name: "Full system", icon: <MdAdminPanelSettings /> },
+      ],
+      date: 22,
+      repository: 'https://github.com/vrecek/blog',
+      liveUrl: 'https://react-web-blog-heroku.herokuapp.com/',
+      bugs: [],
+      description: 'My second blog about tutorials / news. It focuses on a programming topics. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
+   },
+
+   {
+      id: 'credentials-manager',
+      thumbnail: cm,
+      name: "Credentials manager",
+      stack: "Backend",
+      shortPara: 'Store and read your data objects',
+      language: ["Typescript"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Database storage", icon: <TiCloudStorageOutline /> }
+      ],
+      date: 21,
+      repository: 'https://github.com/vrecek/credential-manager',
+      bugs: [],
+      description: 'Create, read and delete data, presumably credentials. NO HASHING! Required MongoDB database'
+   },
+
    {
       id: 'clothing-shop',
       thumbnail: clothings,
@@ -53,7 +94,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/clothing',
       liveUrl: 'https://react-clothing-shop-heroku.herokuapp.com/',
       bugs: [],
-      description: ''
+      description: 'Online e-commence clothing shop. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
    },
 
    {
@@ -73,7 +114,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/hangman',
       liveUrl: 'https://vrecek.github.io/hangman/',
       bugs: [],
-      description: ''
+      description: 'Regular hangman game. Words have maximum 15 characters. Win or lose.'
    },
 
    {
@@ -93,7 +134,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/calculator',
       liveUrl: 'https://vrecek.github.io/calculator/',
       bugs: ["No negative numbers"],
-      description: ''
+      description: 'Online calculator. It offers basic arithmetic operations'
    },
 
    {
@@ -113,7 +154,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/courses',
       liveUrl: 'https://vrecek.github.io/courses/',
       bugs: [],
-      description: ''
+      description: 'Frontend, online courses. Local storage is imitating backend. You can login or register and then buy some course'
    },
 
    {
@@ -133,7 +174,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/weather-app',
       liveUrl: 'https://vrecek.github.io/weather-app/',
       bugs: ["Sometimes user's location is not detected"],
-      description: ''
+      description: 'Online weather app. Displays basic informations about city you searched for. Different images/styles for a different weather conditions.'
    },
 
    {
@@ -153,7 +194,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/poker',
       liveUrl: 'https://vrecek.github.io/poker/',
       bugs: ['Instant enemy fold', 'Buttons do not dissapear after finish'],
-      description: ''
+      description: 'Card game - Texas Holdem Poker. Bet money and play against computer.'
    },
 
    {
@@ -173,7 +214,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/chess',
       liveUrl: 'https://vrecek.github.io/chess/',
       bugs: ['Some path problems', 'Some path problems when check'],
-      description: ''
+      description: 'Chess game. It does not have any kind of AI.'
    },
 
    {
@@ -193,7 +234,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/TicTacToe',
       liveUrl: 'https://vrecek.github.io/TicTacToe/',
       bugs: [],
-      description: ''
+      description: 'Tic tac toe game. It does not have any kind of AI. Game contains menu where you can change name for players.'
    },
 
    {
@@ -213,7 +254,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/blackjack',
       liveUrl: 'https://vrecek.github.io/blackjack/',
       bugs: [],
-      description: ''
+      description: 'Card game - blackjack. Play against computer. Choose your bet and pray for luck.'
    },
 
    {
@@ -233,7 +274,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/adventure-clicker',
       liveUrl: 'https://vrecek.github.io/adventure-clicker/',
       bugs: ['No support for mobile phones'],
-      description: ''
+      description: 'Clicker game. You can buy upgrades and use special abilities which have cooldowns. Small screen is not supported.'
    },
 
    {
@@ -241,7 +282,7 @@ const PROJECTS: ProjectType[] = [
       thumbnail: vr,
       name: "Voice recorder",
       stack: "Frontend",
-      shortPara: "Record any sound from your microphone and start listening it.",
+      shortPara: "Record any sound from your microphone",
       language: ["HTML", "Typescript", "CSS"],
       type: 'App',
       tags: [
@@ -253,7 +294,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/voice-recorder',
       liveUrl: 'https://vrecek.github.io/voice-recorder/',
       bugs: [],
-      description: ''
+      description: 'Record your voice and listen it. You cannot save it on your device.'
    },
 
    {
@@ -272,7 +313,7 @@ const PROJECTS: ProjectType[] = [
       date: 14,
       repository: 'https://github.com/vrecek/resize-images',
       bugs: [],
-      description: ''
+      description: 'Python image resizer. Enter x and y and wait. Only images in a current directory will be resized. Original files will be copied to a new directory.'
    },
 
    {
@@ -291,7 +332,7 @@ const PROJECTS: ProjectType[] = [
       date: 11,
       repository: 'https://github.com/vrecek/auto-clicker',
       bugs: [],
-      description: ''
+      description: 'Clicker with a GUI. Select mouse click speed, hotkey and press Start.'
    },
 
    {
@@ -310,7 +351,7 @@ const PROJECTS: ProjectType[] = [
       date: 10,
       repository: 'https://github.com/vrecek/encryptor',
       bugs: [],
-      description: ''
+      description: 'Encrypt and decrypt your files and images. It works recursively, which means files in a directories will be changed! Do not use it if you do not know what you are doing.'
    },
 
    {
@@ -330,13 +371,13 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/electronic-shop',
       liveUrl: 'https://react-electronic-shop-heroku.herokuapp.com/',
       bugs: ['Cookie popup do not dissapear'],
-      description: ''
+      description: 'E-commence shop. It offers any kind of electronics, kitchen equipment etc. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
    },
 
    {
-      id: 'personal-blog',
+      id: 'blog',
       thumbnail: myblog,
-      name: "My personal blog",
+      name: "Online blog",
       stack: "Fullstack",
       shortPara: "Fullstack blog about all sort of news / tutorials from computer world",
       language: ["HTML", 'Typescript', 'SCSS'],
@@ -350,7 +391,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/vrec-blog',
       liveUrl: 'https://react-vrec-blog-heroku.herokuapp.com/',
       bugs: [],
-      description: ''
+      description: 'Online, fullstack blog. It focuses on a programming topics. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
    },
 
    {
@@ -369,8 +410,8 @@ const PROJECTS: ProjectType[] = [
       date: 13,
       repository: 'https://github.com/vrecek/food-shop',
       liveUrl: 'https://vrecek.github.io/food-shop/',
-      bugs: [],
-      description: ''
+      bugs: ['Bad performance'],
+      description: 'Frontend website, focuses on ordering food. You can add products to cart and "order" them.'
    },
 
    {
@@ -390,7 +431,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/luxury-clothes',
       liveUrl: 'https://vrecek.github.io/luxury-clothes/',
       bugs: [],
-      description: ''
+      description: 'Unfinished project about clothings.'
    },
 
    {
@@ -410,7 +451,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/house-services',
       liveUrl: 'https://vrecek.github.io/house-services/',
       bugs: ['Images are too heavy'],
-      description: ''
+      description: 'Unfinished project about clothings.'
    },
 
    {
@@ -430,7 +471,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/react-food-delivery',
       liveUrl: 'https://vrecek.github.io/react-food-delivery/',
       bugs: [],
-      description: ''
+      description: 'First, single-page website'
    }
 ]
 

@@ -122,11 +122,18 @@ main.one-project-page {
    }
 
    section.thumbnail {
+      width: 100%;
+      aspect-ratio: 2;
+      min-height: 200px;
+
       figure { 
          @include FullSize; 
          overflow: hidden;
 
-         img { width: 100%; }
+         img {
+            @include FullSize;
+            object-fit: cover;
+         }
       }
    }
 
