@@ -8,9 +8,12 @@ export interface TitleAndLinks {
    repo: string
 }
 
-export interface InfoType {
+export type InfoType = ProjectText &  {
    icon: JSX.Element,
-   header: string,
-   text: string | JSX.Element,
    cname: string
+}
+
+export type ProjectText = {
+   header: string
+   text: string | JSX.Element
 }

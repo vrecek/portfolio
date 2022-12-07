@@ -1,14 +1,15 @@
-import { AiFillDollarCircle, AiFillWarning, AiOutlineApi, AiOutlineCloudServer } from 'react-icons/ai'
+import { AiFillDollarCircle, AiFillSave, AiFillWarning, AiFillWechat, AiOutlineApi, AiOutlineCloudServer } from 'react-icons/ai'
 import { BiCog, BiNews, BiPaint } from 'react-icons/bi'
 import { DiReact } from 'react-icons/di'
 import { IoGameController } from 'react-icons/io5'
-import { FaRobot } from 'react-icons/fa'
-import { IoIosMan } from 'react-icons/io'
+import { FaPeopleArrows, FaRobot } from 'react-icons/fa'
+import { IoIosMan, IoLogoGameControllerB } from 'react-icons/io'
 import { GiClick, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
-import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdWifiTetheringErrorRounded } from 'react-icons/md'
+import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
 import { BsFillMicFill, BsFillTerminalFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
+import { ImTextColor } from 'react-icons/im'
 import {TiCloudStorageOutline} from 'react-icons/ti'
 
 import weather from '../images/projects/weather.png'
@@ -33,12 +34,67 @@ import hangman from '../images/projects/hangman.png'
 import clothings from '../images/projects/clothings.png'
 import cm from '../images/projects/cm.png'
 import blog from '../images/projects/blog.png'
+import quizzes from '../images/projects/quizzes.png'
+import chat from '../images/projects/chat.png'
+
+import chatreg from '../images/description/chatregister.png'
+import chatadd from '../images/description/chatadd.png'
+import blogart from '../images/description/blogarticle.png'
+import blogcont from '../images/description/blogcontact.png'
+import bloghead from '../images/description/blogheader.png'
+import cm1 from '../images/description/cm1.png'
+import cm2 from '../images/description/cm2.png'
+import clothesdaily from '../images/description/clothesdaily.png'
+import clothesprod from '../images/description/clothesprod.png'
+import clothesreg from '../images/description/clothesreg.png'
+import elecprod from '../images/description/elecprod.png'
+import elecbasket from '../images/description/elecbasket.png'
+import elecsearch from '../images/description/elecsearch.png'
+import vrecblogreg from '../images/description/vrecblogreg.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
-import { ImTextColor } from 'react-icons/im'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'live-chat',
+      thumbnail: chat,
+      name: "Real-time chat",
+      stack: "Fullstack",
+      shortPara: 'Chat online with your friends',
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'App',
+      tags: [
+         { name: "Real-time", icon: <AiFillWechat /> },
+         { name: "Fullstack", icon: <AiOutlineCloudServer /> },
+         { name: "Communication", icon: <FaPeopleArrows /> },
+      ],
+      date: 24,
+      repository: 'https://github.com/vrecek/chat',
+      bugs: [],
+      description: `Chat using this real-time chat app. [[${chatreg}]] Create account [[${chatadd}]] Add your registered friend, and finally make a conversation!`
+   },
+
+   {
+      id: 'quizzes',
+      thumbnail: quizzes,
+      name: "Online quizzes",
+      stack: "Frontend",
+      shortPara: 'Play quizzes of a different categories',
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Game',
+      tags: [
+         { name: "Progress", icon: <AiFillSave /> },
+         { name: "Scores", icon: <MdSportsScore /> },
+         { name: "Replayability", icon: <IoLogoGameControllerB /> },
+      ],
+      date: 23,
+      repository: 'https://github.com/vrecek/quizzys',
+      liveUrl: 'https://vrecek.github.io/quizzys',
+      bugs: [],
+      description: 'Online quizzes. Choose maximum questions, category, then play! Time is limited. Correct answers will be summed and displayed'
+   },
+
    {
       id: 'second-blog',
       thumbnail: blog,
@@ -54,9 +110,9 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 22,
       repository: 'https://github.com/vrecek/blog',
-      liveUrl: 'https://react-web-blog-heroku.herokuapp.com/',
+      // liveUrl: 'https://react-web-blog-heroku.herokuapp.com/',
       bugs: [],
-      description: 'My second blog about tutorials / news. It focuses on a programming topics. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
+      description: `My second blog about tutorials / news. It focuses on a programming topics. Uses MongoDB. [[${bloghead}]] [[${blogart}]] [[${blogcont}]]`
    },
 
    {
@@ -74,7 +130,7 @@ const PROJECTS: ProjectType[] = [
       date: 21,
       repository: 'https://github.com/vrecek/credential-manager',
       bugs: [],
-      description: 'Create, read and delete data, presumably credentials. NO HASHING! Required MongoDB database'
+      description: `Create, read and delete data, presumably credentials. NO HASHING! Required MongoDB database [[${cm1}]] [[${cm2}]]`
    },
 
    {
@@ -94,7 +150,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/clothing',
       liveUrl: 'https://react-clothing-shop-heroku.herokuapp.com/',
       bugs: [],
-      description: 'Online e-commence clothing shop. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
+      description: `Online e-commence clothing shop. Uses MongoDB. Includes "purchasing" products when you add them to the basket. [[${clothesdaily}]] [[${clothesprod}]] [[${clothesreg}]]`
    },
 
    {
@@ -134,7 +190,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/calculator',
       liveUrl: 'https://vrecek.github.io/calculator/',
       bugs: ["No negative numbers"],
-      description: 'Online calculator. It offers basic arithmetic operations'
+      description: `Online calculator. It offers basic arithmetic operations.`
    },
 
    {
@@ -369,9 +425,9 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 15,
       repository: 'https://github.com/vrecek/electronic-shop',
-      liveUrl: 'https://react-electronic-shop-heroku.herokuapp.com/',
+      // liveUrl: 'https://react-electronic-shop-heroku.herokuapp.com/',
       bugs: ['Cookie popup do not dissapear'],
-      description: 'E-commence shop. It offers any kind of electronics, kitchen equipment etc. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
+      description: `E-commence shop. It offers any kind of electronics, kitchen equipment etc. Uses MongoDB. [[${elecprod}]] [[${elecbasket}]] [[${elecsearch}]]`
    },
 
    {
@@ -389,9 +445,9 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 9,
       repository: 'https://github.com/vrecek/vrec-blog',
-      liveUrl: 'https://react-vrec-blog-heroku.herokuapp.com/',
+      // liveUrl: 'https://react-vrec-blog-heroku.herokuapp.com/',
       bugs: [],
-      description: 'Online, fullstack blog. It focuses on a programming topics. Uses MongoDB. It is hosted on Heroku, so preview unfortunately will not be available'
+      description: `Online, fullstack blog. It focuses on a programming topics. Uses MongoDB. [[${vrecblogreg}]]`
    },
 
    {

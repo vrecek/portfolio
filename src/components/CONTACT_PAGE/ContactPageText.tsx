@@ -1,4 +1,5 @@
 import React from 'react'
+import Socials from '../MAIN_PAGE/Contact/Socials/Socials'
 import Text from '../MAIN_PAGE/Contact/Text'
 import ContactPageSocial from './ContactPageSocial'
 
@@ -8,7 +9,7 @@ const ContactPageText = () => {
 
          <Text />
          <h3>OR</h3>
-         <ContactPageSocial />
+         <Socials />
 
       </section>
    )

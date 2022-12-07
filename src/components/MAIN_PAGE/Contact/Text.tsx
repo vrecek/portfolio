@@ -1,16 +1,19 @@
 import React from 'react'
 import { AiFillContacts } from 'react-icons/ai'
 import BackgroundIcon from '../../Common/BackgroundIcon'
+import ContactText from './ContactText/ContactText'
+import Socials from './Socials/Socials'
 
-const Text = () => {
+const Text = ({showSocials}: {showSocials?: boolean}) => {
    return (
       <section className="contact-text">
 
-         <h2>Contact me directly by sending the e-mail</h2>
+         <ContactText />
 
-         <p>Do you want to send me a message, or you have any business? Then please contact me through this form. I will recieve your message and I will read it.</p>
-
-         <h6>Sorry! It doesn't work at this moment because it's hosted on a Github Pages.</h6>
+         {
+            showSocials
+               && <Socials />
+         }
 
          <BackgroundIcon icon={ <AiFillContacts /> } />
 

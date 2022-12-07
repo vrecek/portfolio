@@ -16,10 +16,11 @@ const ONE_PROJECT_PAGE = () => {
 
    const [project, setProject] = React.useState<ProjectType | null>(null)
 
-   const { id } = useParams()
-   const n: NavigateFunction = useNavigate()
-   const l = useLocation()
+   const { id } = useParams(),
+         n: NavigateFunction = useNavigate(),
+         l = useLocation()
 
+         
    React.useEffect(() => {
       if(!PROJECTS.some(x => x.id === id)) {
          n('/', { replace: true })

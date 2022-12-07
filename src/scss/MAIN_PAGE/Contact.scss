@@ -6,12 +6,22 @@ section.home-contact {
 
    section.contact-text { 
       position: relative; 
+      @include Flex(sb, none);
+      flex-direction: column;
 
       span.background-icon {
          width: 80%;
          bottom: 0;
          left: 50%;
          transform: translateX(-50%);
+      }
+   }
+
+   section.socials {
+      margin-top: 5em;
+
+      @media (max-width: 480px) {
+         margin-top: 2.5em;
       }
    }
 

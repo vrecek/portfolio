@@ -152,7 +152,7 @@ $navHeight: 83.6px;
 
                      p {
                         color: whitesmoke;
-                        font-size: .9rem;
+                        font-size: 1rem;
                         font-weight: 200;
                      }
 
@@ -271,11 +271,21 @@ $navHeight: 83.6px;
 
             p {
                font-family: 'Roboto Mono', monospace;
-               @include Clamp(.8, 4, .9);
+               @include Clamp(.8, 4, 1.1);
                font-weight: 500;
                color: rgb(226, 226, 226);
                position: relative;
                z-index: 4;
+               font-style: italic;
+
+               span {
+                  font-style: normal;
+                  display: block;
+                  color: $clr-white;
+                  margin-top: 1em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+               }
             }
 
             span.quote {

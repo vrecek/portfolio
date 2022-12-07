@@ -348,10 +348,42 @@ form.mail-form {
 }
 section.contact-text {
    width: 28%;
+   @include Flex(sb);
+   flex-direction: column;
+   height: 100%;
+
+   section.socials {
+      @include Flex(sa, c);
+
+      span {
+         cursor: pointer;
+         width: 15%;
+         min-width: 60px;
+         aspect-ratio: 1;
+         border-radius: .25em;
+         border: 2px solid grey;
+         @include Flex(c, c);
+         transition: .3s;
+         
+         svg {
+            @include FullSize(70%);
+            pointer-events: none;
+            transition: .3s;
+         }
+
+         &:hover {
+            rotate: 45deg;
+
+            svg {
+               rotate: -45deg;
+            }
+         }
+      }
+   }
 
    h6 {
       color: red;
-      font-size: .8rem;
+      font-size: .9rem;
    }
 
    p {

@@ -8,10 +8,11 @@ const Navigation = () => {
    const navRef: Ref = React.useRef<HTMLDivElement>(null)
    
    React.useEffect(() => {
-      const curr: HTMLElement = navRef.current!
-      const list: HTMLElement = curr.children[1] as HTMLElement
-      const logo: HTMLElement = curr.children[0] as HTMLElement
+      const curr: HTMLElement = navRef.current!,
+            list: HTMLElement = curr.children[1] as HTMLElement,
+            logo: HTMLElement = curr.children[0] as HTMLElement
 
+            
       let visible: boolean = false
 
       window.addEventListener('scroll', () => {

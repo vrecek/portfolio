@@ -15,7 +15,7 @@ const Contact = () => {
 
          <div className="wrap">
 
-            <Text />
+            <Text showSocials={true} />
             <Form />
 
          </div>

@@ -6,7 +6,8 @@ const Paragrapgh = () => {
       <section className="paragraph">
 
          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum veritatis blanditiis sint. Labore reprehenderit dicta tempore odit sapiente esse praesentium maiores ex, minus ut maxime nemo ratione blanditiis suscipit. 
+            The key of persistence opens all doors closed by resistance
+            <span>John Di Lemme</span>
          </p>
 
          <span className="quote"><FaQuoteLeft /></span>
