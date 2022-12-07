@@ -12,6 +12,8 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "gh-pages": "^4.0.0",
+    "loader-utils": "^3.2.1",
+    "minimatch": "^5.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
