@@ -8,6 +8,7 @@ import { SkillType } from '../../../interfaces/HomepageInterfaces'
 import SkillSection from './SkillSection'
 import BackgroundIcon from '../../Common/BackgroundIcon'
 import { DiLinux } from 'react-icons/di'
+import { IoLogoElectron } from 'react-icons/io5'
 
 const Skills = () => {
    const languageSkills: SkillType[] = [
@@ -70,7 +71,7 @@ const Skills = () => {
 
    const otherSkills: SkillType[] = [
       {
-         percentSkill: 85,
+         percentSkill: 80,
          name: 'Git',
          icon: <SiGit />,
          usedFor: 'Version control, storing all projects',
@@ -78,27 +79,35 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 90,
+         percentSkill: 95,
          name: 'React JS',
          icon: <SiReact />,
-         usedFor: 'Library for building websites, only way to do it',
+         usedFor: 'Library for building websites.',
          sinceWhen: 'October 2021'
       },
 
       {
-         percentSkill: 90,
+         percentSkill: 95,
          name: 'Node JS',
          icon: <SiNodedotjs />,
-         usedFor: 'Creating server side applications with express and mongoose',
+         usedFor: 'Creating server side applications and desktop apps with Electron',
          sinceWhen: 'December 2021'
       },
 
       {
-         percentSkill: 85,
+         percentSkill: 90,
          name: 'Linux',
          icon: <DiLinux />,
-         usedFor: 'Ubuntu. My everyday operating system. Including terminal commands.',
+         usedFor: 'Ubuntu, my everyday operating system. Including terminal commands.',
          sinceWhen: 'October 2022'
+      },
+
+      {
+         percentSkill: 85,
+         name: 'Electron JS',
+         icon: <IoLogoElectron />,
+         usedFor: 'Framework for building desktop applications with Typescript/Javascript',
+         sinceWhen: 'December 2022'
       }
    ]
 

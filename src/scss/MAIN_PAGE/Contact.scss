@@ -2,7 +2,8 @@
 
 section.home-contact {
    @include TopSeparator;
-   min-height: 100vh;
+   // min-height: 100vh;
+   padding: 2em 0 6em 0;
 
    section.contact-text { 
       position: relative; 

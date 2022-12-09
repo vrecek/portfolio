@@ -1,7 +1,7 @@
 import { AiFillDollarCircle, AiFillSave, AiFillWarning, AiFillWechat, AiOutlineApi, AiOutlineCloudServer } from 'react-icons/ai'
 import { BiCog, BiNews, BiPaint } from 'react-icons/bi'
 import { DiReact } from 'react-icons/di'
-import { IoGameController } from 'react-icons/io5'
+import { IoGameController, IoLogoElectron } from 'react-icons/io5'
 import { FaPeopleArrows, FaRobot } from 'react-icons/fa'
 import { IoIosMan, IoLogoGameControllerB } from 'react-icons/io'
 import { GiClick, GiRobotGrab } from 'react-icons/gi'
@@ -36,6 +36,7 @@ import cm from '../images/projects/cm.png'
 import blog from '../images/projects/blog.png'
 import quizzes from '../images/projects/quizzes.png'
 import chat from '../images/projects/chat.png'
+import resizeapp from '../images/projects/resizeapp.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -51,11 +52,31 @@ import elecprod from '../images/description/elecprod.png'
 import elecbasket from '../images/description/elecbasket.png'
 import elecsearch from '../images/description/elecsearch.png'
 import vrecblogreg from '../images/description/vrecblogreg.png'
+import resizeappoutput from '../images/description/resizeappoutput.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'image-resizer',
+      thumbnail: resizeapp,
+      name: "Image resizer app",
+      stack: "Other",
+      shortPara: 'Electron resizer application',
+      language: ["Typescript", "SCSS", "HTML", "Javascript"],
+      type: 'App',
+      tags: [
+         { name: "GUI", icon: <MdOutlineDesignServices /> },
+         { name: "ElectronJS", icon: <IoLogoElectron /> },
+         { name: "Automation", icon: <GiRobotGrab /> },
+      ],
+      date: 25,
+      repository: 'https://github.com/vrecek/image-resizer',
+      bugs: [],
+      description: `Image resizer app built in Electron. It has simple interface. Select image and provide X value (if Y value is present, aspect ratio will be ignored). Then you can download your resized image. [[${resizeappoutput}]]`
+   },
+
    {
       id: 'live-chat',
       thumbnail: chat,
