@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiFillContacts } from 'react-icons/ai'
 import BackgroundIcon from '../../Common/BackgroundIcon'
+import MailInfo from '../../Common/MailInfo'
 import ContactText from './ContactText/ContactText'
 import Socials from './Socials/Socials'
 
@@ -12,7 +13,11 @@ const Text = ({showSocials}: {showSocials?: boolean}) => {
 
          {
             showSocials
-               && <Socials />
+               && 
+               <>
+                  <Socials />
+                  <MailInfo />
+               </>
          }
 
          <BackgroundIcon icon={ <AiFillContacts /> } />

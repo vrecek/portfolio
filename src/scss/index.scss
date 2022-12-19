@@ -192,6 +192,7 @@ form.mail-form {
    border-radius: .2em;
    border: 1px solid #303030;
    padding: 2em;
+   height: max-content;
 
    textarea,
    input {
@@ -352,6 +353,33 @@ section.contact-text {
    flex-direction: column;
    height: 100%;
 
+   section.mail-info {
+      margin-top: 4em;
+
+      p {
+         @include Clamp(1, 5, 1.2);
+
+         &.mail-header {
+            font-weight: 800;
+            margin-bottom: .5em;
+            color: $clr-white;
+
+            span {
+               font-size: .95rem;
+               color: #909090;
+            }
+         }
+
+         &.mail-text {
+            font-family: 'Roboto Mono', monospace;
+            padding: .5em;
+            background: #252525;
+            border-radius: .25em;
+            color: rgba(245, 245, 245, .6);
+         }
+      }
+   }
+
    section.socials {
       @include Flex(sa, c);
 
@@ -406,6 +434,10 @@ section.contact-text {
 
    section.contact-text {
       margin-bottom: 2em;
+
+      section.mail-info {
+         margin-bottom: 2em;
+      }
    }
 }
 

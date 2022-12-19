@@ -37,6 +37,7 @@ import blog from '../images/projects/blog.png'
 import quizzes from '../images/projects/quizzes.png'
 import chat from '../images/projects/chat.png'
 import resizeapp from '../images/projects/resizeapp.png'
+import gym from '../images/projects/gym.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -59,6 +60,26 @@ import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
    {
+      id: 'gym',
+      thumbnail: gym,
+      name: "Gym website",
+      stack: "Frontend",
+      shortPara: "Gym's static website",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Lorem ipsum", icon: <ImTextColor /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Hardcoded data", icon: <VscJson /> }
+      ],
+      date: 26,
+      repository: 'https://github.com/vrecek/gymstick',
+      liveUrl: 'https://vrecek.github.io/gymstick/',
+      bugs: [],
+      description: `Gym website that is created using React. It contains pages like a shop and a blog which are using harcoded data. It is frontend only. It also has basic features like slider, dropdown menus and a aside navigation.`
+   },
+
+   {
       id: 'image-resizer',
       thumbnail: resizeapp,
       name: "Image resizer app",
@@ -69,7 +90,7 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "GUI", icon: <MdOutlineDesignServices /> },
          { name: "ElectronJS", icon: <IoLogoElectron /> },
-         { name: "Automation", icon: <GiRobotGrab /> },
+         { name: "Automation", icon: <GiRobotGrab /> }
       ],
       date: 25,
       repository: 'https://github.com/vrecek/image-resizer',
@@ -88,7 +109,7 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "Real-time", icon: <AiFillWechat /> },
          { name: "Fullstack", icon: <AiOutlineCloudServer /> },
-         { name: "Communication", icon: <FaPeopleArrows /> },
+         { name: "Communication", icon: <FaPeopleArrows /> }
       ],
       date: 24,
       repository: 'https://github.com/vrecek/chat',
