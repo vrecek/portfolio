@@ -2,12 +2,12 @@ import { AiFillDollarCircle, AiFillSave, AiFillWarning, AiFillWechat, AiOutlineA
 import { BiCog, BiNews, BiPaint } from 'react-icons/bi'
 import { DiReact } from 'react-icons/di'
 import { IoGameController, IoLogoElectron } from 'react-icons/io5'
-import { FaPeopleArrows, FaRobot } from 'react-icons/fa'
+import { FaHandsHelping, FaPeopleArrows, FaRobot } from 'react-icons/fa'
 import { IoIosMan, IoLogoGameControllerB } from 'react-icons/io'
-import { GiClick, GiRobotGrab } from 'react-icons/gi'
+import { GiClick, GiProgression, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
 import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
-import { BsFillMicFill, BsFillTerminalFill } from 'react-icons/bs'
+import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
 import {TiCloudStorageOutline} from 'react-icons/ti'
@@ -38,6 +38,8 @@ import quizzes from '../images/projects/quizzes.png'
 import chat from '../images/projects/chat.png'
 import resizeapp from '../images/projects/resizeapp.png'
 import gym from '../images/projects/gym.png'
+import clickergame from '../images/projects/clickergame.png'
+import mousecolor from '../images/projects/mousecolor.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -59,6 +61,45 @@ import ProjectType from '../interfaces/ProjectInterface'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'mouse-color',
+      thumbnail: mousecolor,
+      name: "Mouse illumination",
+      stack: "Other",
+      shortPara: "Change steelseries mouse illumination",
+      language: ["Bash"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Device effect", icon: <BsFillMouseFill /> },
+         { name: "Helper", icon: <FaHandsHelping /> }
+      ],
+      date: 28,
+      repository: 'https://github.com/vrecek/mouse-color',
+      bugs: [],
+      description: "Change your steelseries mouse illumination. This was made by using rivalcfg python library. List of all informations, eg. every supported device, are in rivalcfg's repository which is here: https://github.com/flozz/rivalcfg"
+   },
+
+   {
+      id: 'clicker-game',
+      thumbnail: clickergame,
+      name: "Full clicker game",
+      stack: "Frontend",
+      shortPara: "Advanced version of a clicker game",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Game',
+      tags: [
+         { name: "Game", icon: <IoGameController /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Progression", icon: <GiProgression /> }
+      ],
+      date: 27,
+      repository: 'https://github.com/vrecek/clicker',
+      liveUrl: 'https://vrecek.github.io/clicker/',
+      bugs: [],
+      description: `Play a clicker game. Buy upgrades, get new levels and do quests. Some features are unlocked when you hit a certaing level.`
+   },
+
    {
       id: 'gym',
       thumbnail: gym,
