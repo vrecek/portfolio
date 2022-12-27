@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fa39677d.css",
-    "main.js": "/portfolio/static/js/main.630189f9.js",
+    "main.js": "/portfolio/static/js/main.50e9e98f.js",
     "static/js/787.a2cb61a6.chunk.js": "/portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/about1.jpg": "/portfolio/static/media/about1.777db3cee7868a47c7d5.jpg",
+    "static/media/clickergame.png": "/portfolio/static/media/clickergame.191e1d31e484e64982ed.png",
     "static/media/hdr.jpg": "/portfolio/static/media/hdr.c390b6600c55d29c45ec.jpg",
     "static/media/foodshop.png": "/portfolio/static/media/foodshop.603f511d93c43c7e677e.png",
     "static/media/gym.png": "/portfolio/static/media/gym.59a21c7db1f910922485.png",
@@ -34,6 +35,7 @@
     "static/media/blogcontact.png": "/portfolio/static/media/blogcontact.9ff7430a38901886fea8.png",
     "static/media/elecbasket.png": "/portfolio/static/media/elecbasket.143ee479ae81bc03ab91.png",
     "static/media/clothesreg.png": "/portfolio/static/media/clothesreg.98761522dc1ec8f518c3.png",
+    "static/media/mousecolor.png": "/portfolio/static/media/mousecolor.05a5b48a0bfbe1e40e42.png",
     "static/media/quizzes.png": "/portfolio/static/media/quizzes.297765c453602cb3ef32.png",
     "static/media/cm1.png": "/portfolio/static/media/cm1.ac0718cb67f10ded5750.png",
     "static/media/chatregister.png": "/portfolio/static/media/chatregister.1c6d173488ac110d8377.png",
@@ -45,11 +47,11 @@
     "static/media/cm.png": "/portfolio/static/media/cm.956066485f3a5093b68a.png",
     "index.html": "/portfolio/index.html",
     "main.fa39677d.css.map": "/portfolio/static/css/main.fa39677d.css.map",
-    "main.630189f9.js.map": "/portfolio/static/js/main.630189f9.js.map",
+    "main.50e9e98f.js.map": "/portfolio/static/js/main.50e9e98f.js.map",
     "787.a2cb61a6.chunk.js.map": "/portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa39677d.css",
-    "static/js/main.630189f9.js"
+    "static/js/main.50e9e98f.js"
   ]
 }
