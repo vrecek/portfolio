@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fa39677d.css",
-    "main.js": "/portfolio/static/js/main.50e9e98f.js",
+    "main.js": "/portfolio/static/js/main.9e0a6836.js",
     "static/js/787.a2cb61a6.chunk.js": "/portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/rapmusic.png": "/portfolio/static/media/rapmusic.8b793c940dc0942c5ad2.png",
     "static/media/about1.jpg": "/portfolio/static/media/about1.777db3cee7868a47c7d5.jpg",
     "static/media/clickergame.png": "/portfolio/static/media/clickergame.191e1d31e484e64982ed.png",
     "static/media/hdr.jpg": "/portfolio/static/media/hdr.c390b6600c55d29c45ec.jpg",
@@ -40,6 +41,7 @@
     "static/media/cm1.png": "/portfolio/static/media/cm1.ac0718cb67f10ded5750.png",
     "static/media/chatregister.png": "/portfolio/static/media/chatregister.1c6d173488ac110d8377.png",
     "static/media/hangman.png": "/portfolio/static/media/hangman.d7eb1af78c795598e6a2.png",
+    "static/media/ytdwn.png": "/portfolio/static/media/ytdwn.6a009af12125ae81c200.png",
     "static/media/calculator.png": "/portfolio/static/media/calculator.89811a005ea23c253723.png",
     "static/media/cm2.png": "/portfolio/static/media/cm2.3d7ee3154cad2b0e99ca.png",
     "static/media/resize.png": "/portfolio/static/media/resize.db007394aa605bb8b510.png",
@@ -47,11 +49,11 @@
     "static/media/cm.png": "/portfolio/static/media/cm.956066485f3a5093b68a.png",
     "index.html": "/portfolio/index.html",
     "main.fa39677d.css.map": "/portfolio/static/css/main.fa39677d.css.map",
-    "main.50e9e98f.js.map": "/portfolio/static/js/main.50e9e98f.js.map",
+    "main.9e0a6836.js.map": "/portfolio/static/js/main.9e0a6836.js.map",
     "787.a2cb61a6.chunk.js.map": "/portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa39677d.css",
-    "static/js/main.50e9e98f.js"
+    "static/js/main.9e0a6836.js"
   ]
 }
