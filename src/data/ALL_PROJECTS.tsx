@@ -1,5 +1,5 @@
-import { AiFillDollarCircle, AiFillSave, AiFillWarning, AiFillWechat, AiOutlineApi, AiOutlineCloudServer } from 'react-icons/ai'
-import { BiCog, BiNews, BiPaint } from 'react-icons/bi'
+import { AiFillDollarCircle, AiFillSave, AiFillWarning, AiFillWechat, AiOutlineApi, AiOutlineCloudServer, AiOutlineDownload } from 'react-icons/ai'
+import { BiCog, BiNews, BiPaint, BiWorld } from 'react-icons/bi'
 import { DiReact } from 'react-icons/di'
 import { IoGameController, IoLogoElectron } from 'react-icons/io5'
 import { FaHandsHelping, FaPeopleArrows, FaRobot } from 'react-icons/fa'
@@ -56,11 +56,51 @@ import elecbasket from '../images/description/elecbasket.png'
 import elecsearch from '../images/description/elecsearch.png'
 import vrecblogreg from '../images/description/vrecblogreg.png'
 import resizeappoutput from '../images/description/resizeappoutput.png'
+import ytdwn from '../images/description/ytdwn.png'
+import rapmusic from '../images/description/rapmusic.png'
 
 import ProjectType from '../interfaces/ProjectInterface'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'rap-music',
+      thumbnail: rapmusic,
+      name: "Polish rap music",
+      stack: "Frontend",
+      shortPara: "Explore polish rap music",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Hardcoded data", icon: <VscJson /> },
+         { name: "Real data", icon: <BiWorld /> },
+         { name: "Frontend", icon: <BiPaint /> }
+      ],
+      date: 30,
+      repository: 'https://github.com/vrecek/rapmusic',
+      liveUrl: 'https://vrecek.github.io/rapmusic',
+      bugs: [],
+      description: "Website about polish rap music. There are listed artists with their tracks. Also contains 'blog' with dummy articles. All artists and tracks are real and can be found on the YouTube"
+   },
+
+   {
+      id: 'yt-downloader',
+      thumbnail: ytdwn,
+      name: "YouTube downloader",
+      stack: "Other",
+      shortPara: "Download videos from the YouTube",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Download", icon: <AiOutlineDownload /> }
+      ],
+      date: 29,
+      repository: 'https://github.com/vrecek/yt-downloader',
+      bugs: [],
+      description: "Just regular app that downloads videos from the YouTube. Uses pytube."
+   },
+
    {
       id: 'mouse-color',
       thumbnail: mousecolor,
@@ -131,7 +171,7 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "GUI", icon: <MdOutlineDesignServices /> },
          { name: "ElectronJS", icon: <IoLogoElectron /> },
-         { name: "Automation", icon: <GiRobotGrab /> }
+         { name: "Download", icon: <AiOutlineDownload /> }
       ],
       date: 25,
       repository: 'https://github.com/vrecek/image-resizer',
