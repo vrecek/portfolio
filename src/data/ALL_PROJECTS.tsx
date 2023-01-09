@@ -40,6 +40,8 @@ import resizeapp from '../images/projects/resizeapp.png'
 import gym from '../images/projects/gym.png'
 import clickergame from '../images/projects/clickergame.png'
 import mousecolor from '../images/projects/mousecolor.png'
+import ytdwn from '../images/projects/ytdwn.png'
+import rapmusic from '../images/projects/rapmusic.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -56,8 +58,7 @@ import elecbasket from '../images/description/elecbasket.png'
 import elecsearch from '../images/description/elecsearch.png'
 import vrecblogreg from '../images/description/vrecblogreg.png'
 import resizeappoutput from '../images/description/resizeappoutput.png'
-import ytdwn from '../images/description/ytdwn.png'
-import rapmusic from '../images/description/rapmusic.png'
+
 
 import ProjectType from '../interfaces/ProjectInterface'
 
