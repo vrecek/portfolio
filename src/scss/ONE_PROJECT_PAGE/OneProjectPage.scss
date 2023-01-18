@@ -26,10 +26,14 @@ main.one-project-page {
             svg { @include FullSize; }
          }
 
+         &.description p {
+            white-space: pre-line;
+         }
+
          p {
             @include Clamp(.85, 4, .95);
             font-weight: 400;
-            
+
             figure {
                width: 100%;
                margin: .5em 0;

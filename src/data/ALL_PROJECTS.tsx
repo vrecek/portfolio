@@ -42,6 +42,7 @@ import clickergame from '../images/projects/clickergame.png'
 import mousecolor from '../images/projects/mousecolor.png'
 import ytdwn from '../images/projects/ytdwn.png'
 import rapmusic from '../images/projects/rapmusic.png'
+import paint from '../images/projects/paint.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -64,6 +65,32 @@ import ProjectType from '../interfaces/ProjectInterface'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'paint',
+      thumbnail: paint,
+      name: "Paint application",
+      stack: "Other",
+      shortPara: "Electron drawing application",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'App',
+      tags: [
+         { name: "ElectronJS", icon: <IoLogoElectron /> },
+         { name: "Interactivity", icon: <GiClick /> },
+         { name: "GUI", icon: <MdOutlineDesignServices /> }
+      ],
+      date: 31,
+      repository: 'https://github.com/vrecek/paint',
+      bugs: ["Fill tool takes long time to finish"],
+      description: `Drawing application made using Electron JS. It has 6 tools: brush, rectangle, circle, rubber, line and fill. It also has options like changing thickess, color and fill mode. 
+      
+      Install: 
+      1. Clone repository
+      2. Run npm install
+      3. Run npm run package
+      4. Copy 'images' directory to out/paint* directory
+      5. Run paint.exe`
+   },
+
    {
       id: 'rap-music',
       thumbnail: rapmusic,

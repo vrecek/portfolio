@@ -16,13 +16,13 @@ const ONE_PROJECT_PAGE = () => {
 
    const [project, setProject] = React.useState<ProjectType | null>(null)
 
-   const { id } = useParams(),
+   const {id} = useParams(),
          n: NavigateFunction = useNavigate(),
          l = useLocation()
 
          
    React.useEffect(() => {
-      if(!PROJECTS.some(x => x.id === id)) {
+      if (!PROJECTS.some(x => x.id === id)) {
          n('/', { replace: true })
          return
       }
@@ -30,7 +30,8 @@ const ONE_PROJECT_PAGE = () => {
       setProject(PROJECTS.filter(x => x.id === id)[0])
    }, [l])
 
-   if(project) {
+   
+   if (project) {
       const displayBugs = (): JSX.Element => {
          return (
             <ul>
