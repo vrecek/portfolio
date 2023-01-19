@@ -1,32 +1,35 @@
 import React from 'react'
-import { MdArrowDropDown } from 'react-icons/md'
-import DropDown from '../../functions/DropdownClass'
+import { GoSettings } from 'react-icons/go'
+
 
 const FiltersDropdown = () => {
-   const [dd] = React.useState<DropDown>(new DropDown())
-
    const toggleFilter = (e: React.MouseEvent): void => {
-      const t: HTMLElement = e.target as HTMLElement
+      const t: HTMLElement = e.currentTarget as HTMLElement,
+            parent: HTMLElement = t.parentElement! as HTMLElement
 
-      if(document.body.clientWidth > 480) return
-
-      const list: HTMLElement = t.parentElement!.children[1] as HTMLElement
-      const arrow: HTMLElement = t.children[1] as HTMLElement
-
-      dd.switchActive()
       
-      dd.getActive ? dd.expandMenu(.3, list, 'flex') : dd.shrinkMenu(.3, list, 'flex')
+      t.classList.toggle('active')
 
-      dd.rotateArrow(arrow)
+      if (t.classList.contains('active')) {
+         parent.style.translate = '0 0'
+         t.style.translate = '-100% 0'
+         t.style.top = '0'
+
+         return
+      }
+
+      parent.style.translate = '-100% 0'
+      t.style.translate = '0 -50%'
+      t.style.top = '50%'
    }
 
+
    return (
-      <div onClick={ toggleFilter } className="filter-text">
+      <span onClick={ toggleFilter } className="filter-icon">
 
-         <h1>FILTERS</h1>
-         <span className="icon"><MdArrowDropDown /></span>
+         <GoSettings />
 
-      </div>
+      </span>
    )
 }
 

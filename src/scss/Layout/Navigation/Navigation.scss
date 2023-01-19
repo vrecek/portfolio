@@ -48,7 +48,7 @@ nav.layout-navigation {
       }
 
       li {
-         @include Clamp(.75, 2.5, .9);
+         @include Clamp(.85, 2.5, .9);
          font-family: 'Roboto Mono', monospace;
          &:not(:first-child) { margin-left: .75em; }
          cursor: pointer;

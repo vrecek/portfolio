@@ -9,7 +9,7 @@ const Filters = ({ state }: FilterState) => {
    const options: string[][] = [
       ['Default', 'Fullstack', 'Frontend', 'Backend', 'Other'],
       ['Default', 'Website', 'Game', 'App'],
-      ['Default', 'Javascript', 'Typescript', 'CSS', 'SCSS', 'Python'],
+      ['Default', 'Javascript', 'Typescript', 'CSS', 'SCSS', 'Python', 'Bash'],
       ['Default', 'Oldest', 'Newest']
    ]
    const initialTxts: string[] = [
@@ -19,10 +19,13 @@ const Filters = ({ state }: FilterState) => {
       'Date'
    ]
 
+
    return (
       <section className="filter">
 
          <FiltersDropdown />
+
+         <p className="text">Filters</p>
 
          <form className="container">
 
@@ -30,6 +33,7 @@ const Filters = ({ state }: FilterState) => {
                dropdowns.map((x, i) => (
                   <FilterType 
                      key={ i }
+                     allDds={ dropdowns }
                      state={ state } 
                      dd={ x } 
                      options={ options[i] } 

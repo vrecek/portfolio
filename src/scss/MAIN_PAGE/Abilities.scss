@@ -62,7 +62,7 @@ section.home-abilities {
 
          p {
             font-weight: 300;
-            @include Clamp(.8, 4, .9);
+            @include Clamp(.85, 4, .95);
          }
 
          h2 {

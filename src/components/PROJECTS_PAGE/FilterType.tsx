@@ -1,38 +1,41 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
 import ProjectType from '../../interfaces/ProjectInterface'
-import { FilterSelect, ILocation } from '../../interfaces/ProjectPageInterfaces'
-import CurrentFilter from './CurrentFilter'
+import { FilterSelect } from '../../interfaces/ProjectPageInterfaces'
+import FilterSelectContainer from './FilterSelectContainer'
 
-const FilterType = ({ initialTxt, options, dd, state }: FilterSelect) => {
-   const filterLoc: ILocation = useLocation().state as ILocation
 
+const FilterType = ({ initialTxt, options, dd, state, allDds }: FilterSelect) => {
    const changeFilter = (e: React.MouseEvent, str: string): void => {
-      const t: HTMLElement = e.target as HTMLElement
+      const t: HTMLElement = e.currentTarget as HTMLElement
 
+      // Get all filter's input fields (including current one)
       const inp: HTMLInputElement = t.parentElement!.parentElement!.children[0].children[0] as HTMLInputElement
       const elems: HTMLInputElement[] = Array.from(
-         (t.parentElement!.parentElement!.parentElement! as HTMLFormElement) // Form
+         (t.parentElement!.parentElement!.parentElement!.parentElement! as HTMLFormElement)
          .elements as HTMLCollectionOf<HTMLInputElement>
       )
 
+      // Set clicked input's filter text and set it to an attribute 
       inp.value = str
       inp.setAttribute('data-select', str)
 
+      // Get all 4 filters
       const [stack, type, lang, date] = elems.map(x => x.getAttribute('data-select')!)
 
+      // Shrink menu if clicked
       dd.switchActive()
       dd.shrinkMenu(.3)
 
       state((curr: any) => {
          let copy: ProjectType[] = [...curr.original]
 
-         if(type !== 'Default') copy = copy.filter(x => x.type === type)
-         if(stack !== 'Default') copy = copy.filter(x => x.stack === stack)
-         if(date !== 'Default') {
+         // Apply filter if value is different than 'Default'
+         if (type !== 'Default') copy = copy.filter(x => x.type === type)
+         if (stack !== 'Default') copy = copy.filter(x => x.stack === stack)
+         if (date !== 'Default') 
             copy = copy.sort((a, b) => date === 'Oldest' ? a.date - b.date : b.date - a.date)
-         }
-         if(lang !== 'Default') copy = copy.filter(x => x.language.includes(lang))
+         
+         if (lang !== 'Default') copy = copy.filter(x => x.language.includes(lang))
 
          curr.projects = copy
 
@@ -41,19 +44,17 @@ const FilterType = ({ initialTxt, options, dd, state }: FilterSelect) => {
    }
 
    return (
-      <div className="select">
+      <div className="filter-wrap">
 
-         <CurrentFilter dd={ dd } text={ initialTxt } />
+         <p className='by-info'>By {initialTxt.toLowerCase()}</p>
 
-         <ul>
-            {
-               options.map((x, i) => (
-                  <li onClick={ (e) => changeFilter(e, x) } key={ i }>
-                     { x }
-                  </li>
-               ))
-            }
-         </ul>
+         <FilterSelectContainer 
+            allDds={allDds}
+            changeFilter={changeFilter}
+            dd={dd}
+            initialTxt={initialTxt}
+            options={options}
+         />
 
       </div>
    )

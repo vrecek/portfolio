@@ -1,13 +1,21 @@
 import DropDown from "../functions/DropdownClass";
 import ProjectType from "./ProjectInterface";
 
-export interface FilterSelect extends FilterState {
-   initialTxt: string,
-   options: string[],
+type FilterDropdowns = {
    dd: DropDown
+   allDds: DropDown[]
 }
 
-export interface FilterCurrent {
+export interface FilterSelect extends FilterState, FilterDropdowns {
+   initialTxt: string
+   options: string[]
+}
+
+export type FilterDropdownContainer = Omit<FilterSelect, 'state'> & {
+   changeFilter: (e: React.MouseEvent, str: string) => void
+}
+
+export interface FilterCurrent extends FilterDropdowns {
    dd: DropDown,
    text: string
 }

@@ -8,6 +8,7 @@ aside.table-contents {
    transform: translateY(-50%) translateX(-100%);
    background: #161616;
    border: 1px solid #404040;
+   border-left: 0;
    border-radius: 0 .2em .2em 0;
    transition: .3s;
    padding: 2em 1.5em;
@@ -16,7 +17,7 @@ aside.table-contents {
 
    h1 {
       text-transform: uppercase;
-      font-size: .85rem;
+      font-size: 1rem;
       margin-bottom: 2em;
       font-weight: 700;
       border-left: 2px solid orange;
@@ -29,7 +30,7 @@ aside.table-contents {
       li {
          font-family: 'Roboto Mono', monospace;
          font-weight: 400;
-         @include Clamp(.8, 4, .9);
+         @include Clamp(.85, 4, .95);
          padding: .25em 0;
          transition: .3s;
          color: rgb(219, 219, 219);

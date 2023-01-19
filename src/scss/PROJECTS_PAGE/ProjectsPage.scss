@@ -2,40 +2,71 @@
 
 main.projects-page {
    min-height: 100vh;
-   padding-top: $navHeight;
+   padding-top: calc($navHeight + 3em);
+   position: relative;
 
    h1.number {
       @include Center(90%);
-      margin-bottom: 1.5em;
-      font-size: 1.25rem;
+      margin-bottom: 1em;
       font-weight: 600;
+      @include Clamp(1.5, 8, 2);
    }
 
    section.filter {
-      background: #111111;
-      @include Center(90%);
-      margin-top: .5em;
-      margin-bottom: 2em;
-      padding: .5em;
-      display: flex;
-      position: relative;
-      flex-direction: column;
+      height: 100vh;
+      background: #282828;
+      z-index: 99;
+      translate: -100% 0;
+      transition: .5s;
+      position: fixed;
+      width: 30%;
+      min-width: 480px;
+      left: 0;
+      top: 0;
+      padding: 2em 1.5em;
+
+      p.text {
+         font-size: 2rem;
+         margin-bottom: 2em;
+         font-weight: 600;
+      }
+
+      span.filter-icon {
+         @include Rectangle(clamp(30px, 10vw, 50px));
+         @include Flex(c, c);
+         background: royalblue;
+         border-radius: .1em;
+         transition: .3s;
+         cursor: pointer;
+         position: absolute;
+         left: 100%;
+         top: 50%;
+         translate: 0 -50%;
+
+         svg {
+            @include FullSize(60%);
+         }
+
+         &:hover { background: darken(royalblue, 10%) }
+      }
 
       div.filter-text {
          @include Flex(none, c);
          width: max-content;
-         margin-bottom: .5em;
+         // margin-bottom: .5em;
+         padding-left: .5em;
+         cursor: pointer;
 
          h1,span.icon { pointer-events: none; }
 
          h1 {
-            font-size: .9rem;
+            font-size: 1.25rem;
             font-weight: 500;
          }
 
          span.icon {
-            @include Rectangle(20px);
-            display: none;
+            @include Rectangle(30px);
+            // display: none;
             transition: .3s;
 
             svg { @include FullSize; }
@@ -43,26 +74,31 @@ main.projects-page {
       }
 
       form.container {
-         display: flex;
          transition: .3s;
 
+         p.by-info {
+            margin-bottom: .25em;
+            font-weight: 600;
+         }
+
          div.select {
+            width: 100%;
             position: relative;
-            border-radius: .4em;
+            border-radius: .2em;
             border: 1px solid grey;
-            background: #101010;
-            &:not(:last-child) { margin-right: 1em; }
+            background: #202020;
+            margin-bottom: 1.5em;
 
             div.current {
                @include Flex(sb, c);
                cursor: pointer;
-               padding: .5em;
+               padding: 1em;
 
                input {
                   width: max-content;
                   background: none;
                   font-family: 'Roboto Mono', monospace; 
-                  @include Clamp(.7, 2, .9);
+                  font-size: .9rem;
                   outline: 0;
                   border: 0;
                   width: 80%;
@@ -71,7 +107,8 @@ main.projects-page {
                }
 
                span {
-                  @include Rectangle(20px);
+                  @include Rectangle(25px);
+                  transition: .3s;
                   svg { @include FullSize; }
                }
 
@@ -96,7 +133,7 @@ main.projects-page {
 
                li {
                   padding: 1em .5em;
-                  @include Clamp(.7, 2, .9);
+                  font-size: .9rem;
                   font-weight: 400;
                   transition: .3s;
                   cursor: pointer;
@@ -110,30 +147,24 @@ main.projects-page {
       }
 
       @media (max-width: 480px) {
-         align-items: center;
-
-         form.container {
-            flex-direction: column;
-            width: 100%;
-            height: 0;
-            display: none;
-            overflow: hidden;
-
-            div.select {
-               width: 100%;
-            }
-         }
-
-         div.filter-text {
-            cursor: pointer;
-
-            span.icon { display: block; }
-         }
+         min-width: 100%;
+         width: 100%;
+         padding: 2em .75em;
+         background: rgba(40, 40, 40, 0.95)
       }
    }
 
    section.project-container {
       @include Flex(sa, c);
       flex-wrap: wrap;
+      align-items: stretch;
+      @include Center(90%);
+      padding: 2em 1em;
+      background: #202020;
+
+      @media (max-width: 480px) {
+         width: 100%;
+         padding: 2em 0;
+      }
    }
 }

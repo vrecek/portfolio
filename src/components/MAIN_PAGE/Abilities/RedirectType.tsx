@@ -9,13 +9,16 @@ const RedirectType = ({ type }: { type: string }) => {
       const t: HTMLElement = e.target as HTMLElement
       const parent: HTMLElement = t.parentElement as HTMLElement
 
-      parent.style.background = type === 'hover' ? 'rgb(163, 11, 41)' : '#252525'
+      parent.style.background = type === 'hover' ? 'rgb(48, 80, 177)' : '#252525'
    }
 
    const state: string = 
-   type === 'website' ? 'Website'
-   : type === 'program' ? 'App'
-   : ''
+   type === 'website' 
+      ? 'Website'
+      : type === 'program' 
+         ? 'App'
+         : ''
+
 
    return (
       <div onClick={ () => n(`/projects`, { state }) } onMouseEnter={ (e) => mouseEv('hover', e) } onMouseLeave={ (e) => mouseEv('blur', e) }>

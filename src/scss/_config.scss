@@ -233,7 +233,7 @@ $navHeight: 83.6px;
          @include Flex(none, c);
          
          span {
-            @include Rectangle(25px);
+            @include Rectangle(35px);
             color: rgb(236, 236, 236);
             transition: .3s;
             cursor: pointer;
@@ -255,7 +255,7 @@ $navHeight: 83.6px;
 
          h2 {
             @include Clamp(.95, 5, 1.1);
-            color: rgb(237, 237, 237);
+            color: rgb(179, 179, 179);
             font-weight: 400;
             border-left: 3px solid royalblue;
             padding-left: .5em;
@@ -273,7 +273,7 @@ $navHeight: 83.6px;
                font-family: 'Roboto Mono', monospace;
                @include Clamp(.8, 4, 1.1);
                font-weight: 500;
-               color: rgb(226, 226, 226);
+               color: rgb(175, 175, 175);
                position: relative;
                z-index: 4;
                font-style: italic;
@@ -282,28 +282,29 @@ $navHeight: 83.6px;
                   font-style: normal;
                   display: block;
                   color: $clr-white;
-                  margin-top: 1em;
+                  margin-top: 3em;
                   text-transform: uppercase;
                   font-weight: 700;
                }
             }
 
             span.quote {
-               width: 15%;
+               width: 10%;
                color: rgb(80, 80, 80);
                opacity: .2;
                position: absolute;
                top: 50%;
-               transform: translateY(-50%);
+               translate: 0 -50%;
 
                svg { @include FullSize; }
 
                &:first-of-type {
-                  left: 10%;
+                  translate: -100% -50%;
+                  right: 5%;
                }
 
                &:last-of-type {
-                  right: 10%;
+                  right: 2%;
                }
             }
          }

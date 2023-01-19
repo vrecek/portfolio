@@ -100,4 +100,9 @@ export default class DropDown {
    public get getActive(): boolean { 
       return this.active 
    }
+
+
+   public get getActiveList(): HTMLElement | null {
+      return this.activeList
+   }
 }
