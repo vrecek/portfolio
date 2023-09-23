@@ -27,6 +27,18 @@ const Projects = () => {
                   />
                ))
             }
+            {/* {
+               PROJECTS.slice(0, 6).map(x => (
+                  <OneProject 
+                     key={ x.id }
+                     imgSrc={ x.thumbnail }
+                     tags={ x.tags }
+                     id={ x.id }
+                     title={ x.name }
+                     para={ x.shortPara }
+                  />
+               ))
+            } */}
 
          </section>
 

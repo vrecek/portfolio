@@ -26,12 +26,9 @@ const TextParagraph = ({text}: {text: string | JSX.Element}) => {
 
         for(let i = 0; i < start.length; i++) {
             const src: string = text.slice(start[i] + 2, end[i]),
-                  isBase64: boolean = src.includes('base64'),
-                  figure: string = isBase64
-                                    ? `<figure><img src='${src}' alt='Image' /></figure>`
-                                    : `<figure><img src='${window.location.protocol}//${window.location.host}${src}' alt='Image' /></figure>`
+                  figure = `<figure><img src='${src}' alt='Image' /></figure>`
 
-
+                  
             textCopy = textCopy.replace(`[[${src}`, figure)
                                .replace(']]', '')
         }

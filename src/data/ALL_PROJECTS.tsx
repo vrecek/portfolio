@@ -11,6 +11,7 @@ import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill } from 'react-icons/
 import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
 import {TiCloudStorageOutline} from 'react-icons/ti'
+import { SiNextdotjs } from 'react-icons/si'
 
 import weather from '../images/projects/weather.png'
 import poker from '../images/projects/poker.png'
@@ -66,10 +67,7 @@ import fashprod from '../images/description/fash_prod.png'
 import fashsearch from '../images/description/fash_search.png'
 import fashtiles from '../images/description/fash_tiles.png'
 
-
 import ProjectType from '../interfaces/ProjectInterface'
-import { SiNextdotjs } from 'react-icons/si'
-
 
 const PROJECTS: ProjectType[] = [
    {
