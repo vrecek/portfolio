@@ -1,4 +1,3 @@
-import React from 'react'
 import FigureImage from '../FigureImage'
 import ProjectTags from './ProjectTags'
 import ProjectText from './ProjectText'

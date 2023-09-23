@@ -15,7 +15,7 @@ const SliderButtons = ({ radioNum }: { radioNum: number }) => {
       <div className="buttons">
 
          {
-            [...Array(radioNum)].map((x, i) => (
+            [...Array(radioNum)].map((_, i) => (
                <span key={ i } onClick={ (e) => changeSlide(e, i) } className={`radio ${ i === 0 ? 'active' : '' }`}>
                </span>
             ))

@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
 import { PSmallTags } from '../../../interfaces/ProjectInterface'
 import Button from '../Button'

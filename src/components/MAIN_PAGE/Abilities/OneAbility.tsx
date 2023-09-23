@@ -1,4 +1,3 @@
-import React from 'react'
 import { AbilityType } from '../../../interfaces/HomepageInterfaces'
 import RedirectType from './RedirectType'
 

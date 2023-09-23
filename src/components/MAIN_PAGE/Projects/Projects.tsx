@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../../css/Projects.css'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import OneProject from '../../Common/Project/OneProject'

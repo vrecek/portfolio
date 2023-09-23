@@ -1,4 +1,3 @@
-import React from 'react'
 import { ThumbnailType } from '../../interfaces/OneProjectPageInterfaces'
 import FigureImage from '../Common/FigureImage'
 

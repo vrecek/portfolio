@@ -1,4 +1,3 @@
-import React from 'react'
 import FigureImage from '../../Common/FigureImage'
 import header from '../../../images/hdr.jpg'
 import '../../../css/Header.css'

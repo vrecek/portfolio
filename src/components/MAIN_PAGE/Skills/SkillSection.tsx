@@ -1,4 +1,3 @@
-import React from 'react'
 import { SkillSectionType } from '../../../interfaces/HomepageInterfaces'
 import OneSkill from './OneSkill'
 import SkillHeader from './SkillHeader'

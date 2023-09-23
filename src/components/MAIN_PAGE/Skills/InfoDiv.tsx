@@ -1,7 +1,6 @@
-import React from 'react'
 import { SkillDivType } from '../../../interfaces/HomepageInterfaces'
 
-const InfoDiv = ({ what, info, icon }: SkillDivType) => {
+const InfoDiv = ({ what, info }: SkillDivType) => {
    return (
       <div className="info">
 

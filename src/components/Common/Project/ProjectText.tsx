@@ -1,4 +1,3 @@
-import React from 'react'
 import { PSmallText } from '../../../interfaces/ProjectInterface'
 
 const ProjectText = ({ title, para }: PSmallText) => {

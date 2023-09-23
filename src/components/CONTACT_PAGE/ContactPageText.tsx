@@ -1,4 +1,3 @@
-import React from 'react'
 import MailInfo from '../Common/MailInfo'
 import Socials from '../MAIN_PAGE/Contact/Socials/Socials'
 import Text from '../MAIN_PAGE/Contact/Text'

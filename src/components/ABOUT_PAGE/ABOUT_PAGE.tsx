@@ -1,4 +1,3 @@
-import React from 'react'
 import FigureImage from '../Common/FigureImage'
 import ArticleText from '../MAIN_PAGE/About/ArticleText'
 import img1 from '../../images/about1.jpg'

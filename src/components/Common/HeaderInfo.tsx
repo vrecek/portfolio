@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import { CSSProperties } from 'react'
 import { HeaderType } from '../../interfaces/CommonInterfaces'
 
 const HeaderInfo = ({ children, icon, cname }: HeaderType) => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import Paragrapgh from './Paragrapgh'
 
 const Author = () => {

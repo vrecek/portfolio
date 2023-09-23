@@ -1,4 +1,3 @@
-import React from 'react'
 import HeaderInfo from '../../Common/HeaderInfo'
 import { FcAbout } from 'react-icons/fc'
 import '../../../css/About.css'

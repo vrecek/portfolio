@@ -1,4 +1,3 @@
-import React from 'react'
 import { FilterDropdownContainer } from '../../interfaces/ProjectPageInterfaces'
 import CurrentFilter from './CurrentFilter'
 

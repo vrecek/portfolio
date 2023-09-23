@@ -1,4 +1,3 @@
-import React from 'react'
 import AboutIcons from './AboutIcons'
 import Author from './Author'
 import Timeline from './Timeline'

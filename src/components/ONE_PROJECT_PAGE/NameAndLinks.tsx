@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { GoRepo } from 'react-icons/go'
 import { TitleAndLinks } from '../../interfaces/OneProjectPageInterfaces'

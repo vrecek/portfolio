@@ -7,7 +7,7 @@ class AppendResult {
    private isElementAppended: boolean
 
    private appendedElement: Element | null
-   private timeout: NodeJS.Timer | null
+   private timeout: number | null
 
    public constructor(element: ElementsType, cname?: string) {
       this.message = 'No message set'

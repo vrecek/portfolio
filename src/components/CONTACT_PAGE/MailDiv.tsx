@@ -1,4 +1,3 @@
-import React from 'react'
 import { HiOutlineClipboardCopy } from 'react-icons/hi'
 import MAIL_ADDRESS from '../../data/MAIL_ADDRESS'
 

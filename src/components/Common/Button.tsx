@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import { CSSProperties } from 'react'
 import { ButtonType } from '../../interfaces/CommonInterfaces'
 
 const Button = ({ text, action, additional, cname }: ButtonType) => {

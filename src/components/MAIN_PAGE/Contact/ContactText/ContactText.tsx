@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ContactText = () => {
     return (
         <section className="text">

@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiFillContacts } from 'react-icons/ai'
 import BackgroundIcon from '../../Common/BackgroundIcon'
 import MailInfo from '../../Common/MailInfo'

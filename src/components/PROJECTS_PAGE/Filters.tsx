@@ -5,7 +5,7 @@ import FiltersDropdown from './FiltersDropdown'
 import FilterType from './FilterType'
 
 const Filters = ({ state }: FilterState) => {
-   const [dropdowns] = React.useState<DropDown[]>([...Array(4)].map(x => new DropDown()))
+   const [dropdowns] = React.useState<DropDown[]>([...Array(4)].map(() => new DropDown()))
    const options: string[][] = [
       ['Default', 'Fullstack', 'Frontend', 'Backend', 'Other'],
       ['Default', 'Website', 'Game', 'App'],

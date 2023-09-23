@@ -1,4 +1,3 @@
-import React from 'react'
 import Form from '../MAIN_PAGE/Contact/Form'
 import '../../css/ContactPage.css'
 import ContactPageText from './ContactPageText'

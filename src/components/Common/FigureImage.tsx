@@ -1,4 +1,3 @@
-import React from 'react'
 import { FigureType } from '../../interfaces/CommonInterfaces'
 
 const FigureImage = ({ source, cname, altTxt }: FigureType) => {

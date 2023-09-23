@@ -1,4 +1,3 @@
-import React from 'react'
 import MailDiv from './MailDiv'
 import SocialList from './SocialList'
 

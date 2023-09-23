@@ -1,4 +1,3 @@
-import React from 'react'
 import { BsLaptop } from 'react-icons/bs'
 
 export const HeaderText = () => {

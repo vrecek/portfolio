@@ -1,4 +1,3 @@
-import React from 'react'
 import HeaderInfo from '../../Common/HeaderInfo'
 import '../../../css/Abilities.css'
 import { FiUserCheck } from 'react-icons/fi'

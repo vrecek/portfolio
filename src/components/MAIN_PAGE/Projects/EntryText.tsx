@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { NavigateFunction, useNavigate } from 'react-router-dom'
 import { PROJECTS_LEN } from '../../../data/ALL_PROJECTS'

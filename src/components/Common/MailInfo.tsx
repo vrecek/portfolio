@@ -1,4 +1,3 @@
-import React from 'react'
 import MAIL_ADDRESS from '../../data/MAIL_ADDRESS'
 
 const MailInfo = () => {

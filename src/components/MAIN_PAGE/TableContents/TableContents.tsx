@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../../css/TableContents.css'
 import { AsideTable } from '../../../interfaces/HomepageInterfaces'
 import ExpandArrow from './ExpandArrow'

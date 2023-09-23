@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import '../../css/ProjectsPage.css'
 import PROJECTS from '../../data/ALL_PROJECTS'
 import shuffleArray from '../../functions/shuffleArray'

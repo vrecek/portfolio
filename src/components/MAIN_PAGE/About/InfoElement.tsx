@@ -1,4 +1,3 @@
-import React from 'react'
 import { AboutElement } from '../../../interfaces/HomepageInterfaces'
 import Chart from './Chart'
 
