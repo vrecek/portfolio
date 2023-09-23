@@ -43,6 +43,7 @@ import mousecolor from '../images/projects/mousecolor.png'
 import ytdwn from '../images/projects/ytdwn.png'
 import rapmusic from '../images/projects/rapmusic.png'
 import paint from '../images/projects/paint.png'
+import fashionista from '../images/projects/fashionista.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -60,11 +61,36 @@ import elecsearch from '../images/description/elecsearch.png'
 import vrecblogreg from '../images/description/vrecblogreg.png'
 import resizeappoutput from '../images/description/resizeappoutput.png'
 
+import fashbasket from '../images/description/fash_basket.png'
+import fashprod from '../images/description/fash_prod.png'
+import fashsearch from '../images/description/fash_search.png'
+import fashtiles from '../images/description/fash_tiles.png'
+
 
 import ProjectType from '../interfaces/ProjectInterface'
+import { SiNextdotjs } from 'react-icons/si'
 
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'fashionista',
+      thumbnail: fashionista,
+      name: "Fashionista shop",
+      stack: "Fullstack",
+      shortPara: "Fullstack NextJS clothing shop",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Fullstack", icon: <AiOutlineCloudServer /> },
+         { name: "Full system", icon: <MdAdminPanelSettings /> },
+         { name: "NextJS", icon: <SiNextdotjs /> }
+      ],
+      date: 32,
+      repository: 'https://github.com/vrecek/shopping',
+      bugs: [],
+      description: `Fullstack NextJS e-commence application. Includes every option that normal and functioning online shop should need, for example  the order process. Uses the MongoDB as a database and the express as a custom Next server. [[${fashbasket}]] [[${fashprod}]] [[${fashsearch}]] [[${fashtiles}]]` 
+   },
+
    {
       id: 'paint',
       thumbnail: paint,

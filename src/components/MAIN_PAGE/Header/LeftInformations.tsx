@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '../../Common/Button'
 import { HeaderText } from './HeaderText'
 import { scroller } from 'react-scroll'

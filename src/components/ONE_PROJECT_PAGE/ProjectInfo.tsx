@@ -1,13 +1,7 @@
-import React from 'react'
 import { InfoType } from '../../interfaces/OneProjectPageInterfaces'
 import TextInformations from './TextInformations'
 
 const ProjectInfo = ({ cname, header, text, icon }: InfoType) => {
-   const convertToImage = (): void => {
-
-   }
-
-
    return (
       <section className={ cname }>
 

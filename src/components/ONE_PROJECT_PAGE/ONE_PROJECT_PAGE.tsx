@@ -38,11 +38,11 @@ const ONE_PROJECT_PAGE = () => {
                {
                   project.bugs.length
                   ?
-                  project.bugs.map((x, i) => (
-                     <li key={ i }>{ x }</li>
-                  ))
+                     project.bugs.map((x, i) => (
+                        <li key={ i }>{ x }</li>
+                     ))
                   :
-                  <li className="clear">No problems found</li>
+                      <li className="clear">No problems found</li>
                }
             </ul>
          )

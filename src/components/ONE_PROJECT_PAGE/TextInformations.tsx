@@ -1,4 +1,3 @@
-import React from 'react'
 import { ProjectText } from '../../interfaces/OneProjectPageInterfaces'
 import TextParagraph from './TextParagraph'
 

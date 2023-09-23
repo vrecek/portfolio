@@ -7,7 +7,7 @@ import handleViewport from 'react-in-viewport'
 const PercentContext = React.createContext<number>(0)
 
 const OneSkill = ({ name, sinceWhen, usedFor, icon, percentSkill }: SkillType) => {
-   const PercentsBar = handleViewport(PercentBar)
+   const PercentsBar = handleViewport(PercentBar as any)
 
    return (
       <article className="skill">

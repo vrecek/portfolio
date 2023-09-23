@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoSettings } from 'react-icons/go'
+import { AiFillSetting } from 'react-icons/ai'
 
 
 const FiltersDropdown = () => {
@@ -27,7 +27,7 @@ const FiltersDropdown = () => {
    return (
       <span onClick={ toggleFilter } className="filter-icon">
 
-         <GoSettings />
+         <AiFillSetting />
 
       </span>
    )
