@@ -6,7 +6,7 @@ import { FaHandsHelping, FaPeopleArrows, FaRobot } from 'react-icons/fa'
 import { IoIosMan, IoLogoGameControllerB } from 'react-icons/io'
 import { GiClick, GiProgression, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
-import { MdAdminPanelSettings, MdFileDownloadOff, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
+import { MdAdminPanelSettings, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
 import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
@@ -513,19 +513,19 @@ const PROJECTS: ProjectType[] = [
       thumbnail: vr,
       name: "Voice recorder",
       stack: "Frontend",
-      shortPara: "Record any sound from your microphone",
+      shortPara: "Record the sound from your microphone",
       language: ["HTML", "Typescript", "CSS"],
       type: 'App',
       tags: [
          { name: "Recorder", icon: <BsFillMicFill /> },
          { name: "Frontend", icon: <BiPaint /> },
-         { name: "No download", icon: <MdFileDownloadOff /> }
+         { name: "Download", icon: <AiOutlineDownload /> }
       ],
       date: 3,
       repository: 'https://github.com/vrecek/voice-recorder',
       liveUrl: 'https://vrecek.github.io/voice-recorder/',
       bugs: [],
-      description: 'Record your voice and listen it. You cannot save it on your device.'
+      description: 'Record your voice. You can also save it on your device.'
    },
 
    {
