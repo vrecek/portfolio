@@ -1,1 +1,90 @@
-main.contact-page{min-height:100vh;display:flex;justify-content:space-around;align-items:center;padding-top:83.6px}main.contact-page section.contact-text section.contact-text{width:100%}main.contact-page section.contact-text section.contact-text h2{margin-bottom:1em}main.contact-page section.contact-text section.contact-text.social h4{font-size:.9rem;font-weight:600;margin-bottom:.1em;transition:.3s;color:#a0a0a0}main.contact-page section.contact-text section.contact-text.social div{position:relative}main.contact-page section.contact-text section.contact-text.social div span{position:absolute;right:0;bottom:0;display:block;height:25px;width:25px;cursor:pointer;transition:.3s}main.contact-page section.contact-text section.contact-text.social div span svg{width:100%;height:100%}main.contact-page section.contact-text section.contact-text.social div span:hover{color:#6495ed}main.contact-page section.contact-text section.contact-text.social div h5{font-size:1rem;font-weight:500}main.contact-page section.contact-text section.contact-text.social ul{list-style:none;display:flex;justify-content:space-around;align-items:center;margin-bottom:3em}main.contact-page section.contact-text section.contact-text.social ul li{display:flex;justify-content:center;align-items:center;flex-direction:column;cursor:pointer}main.contact-page section.contact-text section.contact-text.social ul li span{display:block;height:25px;width:25px;transition:.3s}main.contact-page section.contact-text section.contact-text.social ul li span svg{width:100%;height:100%}main.contact-page section.contact-text section.contact-text.social ul li:hover h4{color:#4169e1}main.contact-page section.contact-text section.contact-text.social ul li:hover span{transform:scale(1.1)}main.contact-page section.contact-text h3{font-weight:800;margin:3em 0;font-size:1rem}@media(max-width: 480px){main.contact-page section.contact-text h3{margin:1em 0 1.5em 0}}@media(max-width: 768px){main.contact-page{flex-direction:column;padding:calc(83.6px + 2em) 1em 1em 1em}}
+main.contact-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 83.6px;
+}
+main.contact-page section.contact-text section.contact-text {
+  width: 100%;
+}
+main.contact-page section.contact-text section.contact-text h2 {
+  margin-bottom: 1em;
+}
+main.contact-page section.contact-text section.contact-text.social h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.1em;
+  transition: 0.3s;
+  color: rgb(160, 160, 160);
+}
+main.contact-page section.contact-text section.contact-text.social div {
+  position: relative;
+}
+main.contact-page section.contact-text section.contact-text.social div span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main.contact-page section.contact-text section.contact-text.social div span svg {
+  width: 100%;
+  height: 100%;
+}
+main.contact-page section.contact-text section.contact-text.social div span:hover {
+  color: cornflowerblue;
+}
+main.contact-page section.contact-text section.contact-text.social div h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+main.contact-page section.contact-text section.contact-text.social ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3em;
+}
+main.contact-page section.contact-text section.contact-text.social ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+main.contact-page section.contact-text section.contact-text.social ul li span {
+  display: block;
+  height: 25px;
+  width: 25px;
+  transition: 0.3s;
+}
+main.contact-page section.contact-text section.contact-text.social ul li span svg {
+  width: 100%;
+  height: 100%;
+}
+main.contact-page section.contact-text section.contact-text.social ul li:hover h4 {
+  color: royalblue;
+}
+main.contact-page section.contact-text section.contact-text.social ul li:hover span {
+  transform: scale(1.1);
+}
+main.contact-page section.contact-text h3 {
+  font-weight: 800;
+  margin: 3em 0;
+  font-size: 1rem;
+}
+@media (max-width: 480px) {
+  main.contact-page section.contact-text h3 {
+    margin: 1em 0 1.5em 0;
+  }
+}
+@media (max-width: 768px) {
+  main.contact-page {
+    flex-direction: column;
+    padding: calc(83.6px + 2em) 1em 1em 1em;
+  }
+}

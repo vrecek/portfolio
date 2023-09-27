@@ -5,7 +5,8 @@
    font-weight: 300;
 }
 
-div.App { overflow-x: hidden; }
+div.App,
+div#root { overflow-x: hidden; }
 
 @import './config';
 
@@ -83,6 +84,7 @@ article.project-small {
    border-radius: .5em;
    display: flex;
    flex-direction: column;
+   position: relative;
 
    div.wrap {
       @include Flex(sb, none);
@@ -181,12 +183,22 @@ article.project-small {
       width: 100%;
       aspect-ratio: 2;
       overflow: hidden;
+      z-index: 2;
 
       img {
          @include FullSize;
          object-fit: cover;
          transition: .3s;
       }
+   }
+
+   &::before {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      background: rgb(65, 105, 225, .5);
+      @include Rectangle(40px);
    }
 }
 
