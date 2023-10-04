@@ -45,6 +45,7 @@ import ytdwn from '../images/projects/ytdwn.png'
 import rapmusic from '../images/projects/rapmusic.png'
 import paint from '../images/projects/paint.png'
 import fashionista from '../images/projects/fashionista.png'
+import keytype from '../images/projects/keytype.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -70,6 +71,26 @@ import fashtiles from '../images/description/fash_tiles.png'
 import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'keytype',
+      thumbnail: keytype,
+      name: "Typing test",
+      stack: "Frontend",
+      shortPara: "Typing test to check your WPM",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Scores", icon: <MdSportsScore /> },
+         { name: "ReactJS", icon: <DiReact /> }
+      ],
+      date: 33,
+      repository: 'https://github.com/vrecek/keytype',
+      liveUrl: 'https://vrecek.github.io/keytype',
+      bugs: [],
+      description: `Check your WPM and overall typing speed on this website. It will measure your time and written words. You can also save this on the leaderboard, to keep improving your typing skill` 
+   },
+
    {
       id: 'fashionista',
       thumbnail: fashionista,
