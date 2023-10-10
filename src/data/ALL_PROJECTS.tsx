@@ -7,7 +7,7 @@ import { IoIosMan, IoLogoGameControllerB } from 'react-icons/io'
 import { GiClick, GiProgression, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
 import { MdAdminPanelSettings, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
-import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill } from 'react-icons/bs'
+import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill, BsFillKeyboardFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
 import {TiCloudStorageOutline} from 'react-icons/ti'
@@ -46,6 +46,7 @@ import rapmusic from '../images/projects/rapmusic.png'
 import paint from '../images/projects/paint.png'
 import fashionista from '../images/projects/fashionista.png'
 import keytype from '../images/projects/keytype.png'
+import platformer from '../images/projects/platformer.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -62,7 +63,6 @@ import elecbasket from '../images/description/elecbasket.png'
 import elecsearch from '../images/description/elecsearch.png'
 import vrecblogreg from '../images/description/vrecblogreg.png'
 import resizeappoutput from '../images/description/resizeappoutput.png'
-
 import fashbasket from '../images/description/fash_basket.png'
 import fashprod from '../images/description/fash_prod.png'
 import fashsearch from '../images/description/fash_search.png'
@@ -71,6 +71,26 @@ import fashtiles from '../images/description/fash_tiles.png'
 import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'platformer',
+      thumbnail: platformer,
+      name: "Platform game",
+      stack: "Frontend",
+      shortPara: "Regular JS Canvas platform game",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Game',
+      tags: [
+         { name: "Keyboard", icon: <BsFillKeyboardFill /> },
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Game", icon: <IoGameController /> }
+      ],
+      date: 34,
+      repository: 'https://github.com/vrecek/platformer',
+      liveUrl: 'https://vrecek.github.io/platformer',
+      bugs: [],
+      description: `A simple platform game, in which you need to collect points, avoid enemies and pass through the levels. Full and more detailed description available on a project's github README.md` 
+   },
+
    {
       id: 'keytype',
       thumbnail: keytype,
