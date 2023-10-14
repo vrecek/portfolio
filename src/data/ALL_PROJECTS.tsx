@@ -47,6 +47,7 @@ import paint from '../images/projects/paint.png'
 import fashionista from '../images/projects/fashionista.png'
 import keytype from '../images/projects/keytype.png'
 import platformer from '../images/projects/platformer.png'
+import slots from '../images/projects/slots.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -71,6 +72,25 @@ import fashtiles from '../images/description/fash_tiles.png'
 import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'slots',
+      thumbnail: slots,
+      name: "Casino slots",
+      stack: "Frontend",
+      shortPara: 'Play a casino slot machine',
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Game',
+      tags: [
+         { name: "Game", icon: <IoGameController /> },
+         { name: "Frontend", icon: <BiPaint /> },
+      ],
+      date: 35,
+      repository: 'https://github.com/vrecek/slots',
+      liveUrl: 'https://vrecek.github.io/slots',
+      bugs: [],
+      description: 'Win a lot of "money" playing this popular casino game'
+   },
+
    {
       id: 'platformer',
       thumbnail: platformer,
@@ -642,7 +662,7 @@ const PROJECTS: ProjectType[] = [
       date: 15,
       repository: 'https://github.com/vrecek/electronic-shop',
       // liveUrl: 'https://react-electronic-shop-heroku.herokuapp.com/',
-      bugs: ['Cookie popup do not dissapear'],
+      bugs: ['Cookie popup does not dissapear'],
       description: `E-commence shop. It offers any kind of electronics, kitchen equipment etc. Uses MongoDB. [[${elecprod}]] [[${elecbasket}]] [[${elecsearch}]]`
    },
 
