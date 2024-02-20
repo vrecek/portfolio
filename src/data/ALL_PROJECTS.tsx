@@ -20,7 +20,6 @@ import ttt from '../images/projects/tictactoe.png'
 import blackjack from '../images/projects/blackjack.png'
 import clicker from '../images/projects/clicker.png'
 import vr from '../images/projects/vr.png'
-import resize from '../images/projects/resize.png'
 import autoclicker from '../images/projects/autoclicker.png'
 import encrypt from '../images/projects/encrypt.png'
 import electronicshop from '../images/projects/electronicshop.png'
@@ -41,13 +40,15 @@ import resizeapp from '../images/projects/resizeapp.png'
 import gym from '../images/projects/gym.png'
 import clickergame from '../images/projects/clickergame.png'
 import mousecolor from '../images/projects/mousecolor.png'
-import ytdwn from '../images/projects/ytdwn.png'
 import rapmusic from '../images/projects/rapmusic.png'
 import paint from '../images/projects/paint.png'
 import fashionista from '../images/projects/fashionista.png'
 import keytype from '../images/projects/keytype.png'
 import platformer from '../images/projects/platformer.png'
 import slots from '../images/projects/slots.png'
+import newtab from '../images/projects/newtab.png'
+import viddwn from '../images/projects/viddwn.png'
+import twitchbot from '../images/projects/twitchbot.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -72,6 +73,63 @@ import fashtiles from '../images/description/fash_tiles.png'
 import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'video-downloader',
+      thumbnail: viddwn,
+      name: "Video downloader",
+      stack: "Other",
+      shortPara: "Download videos from different sites",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Download", icon: <AiOutlineDownload /> }
+      ],
+      date: 38,
+      repository: 'https://github.com/vrecek/video-downloader',
+      bugs: [],
+      description: "App that downloads videos from YouTube. It can also download videos from sites, that have a video source in the video tag. More details on Github"
+   },
+
+   {
+      id: 'mytwitchbot',
+      thumbnail: twitchbot,
+      name: "My twitch bot",
+      stack: "Other",
+      shortPara: "My twitch IRC chat bot",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Automation", icon: <GiRobotGrab /> },
+         { name: "Configurable", icon: <BiCog /> }
+      ],
+      date: 37,
+      repository: 'https://github.com/vrecek/mytwitchbot',
+      bugs: [],
+      description: "A chat bot that utilizes multiprocessing for many different things. It can read chat messages and do with them, what you want"
+   },
+
+   {
+      id: 'newtab',
+      thumbnail: newtab,
+      name: "Custom new tab",
+      stack: "Frontend",
+      shortPara: 'Custom newtab for Librewolf',
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "ReactJS", icon: <DiReact /> },
+         { name: "Helper", icon: <FaHandsHelping /> }
+      ],
+      date: 36,
+      repository: 'https://github.com/vrecek/new_tab',
+      liveUrl: 'https://vrecek.github.io/new_tab',
+      bugs: ["*Not an app error* After making a query, the browser blocks the request. This can be bypassed in the extension options, or by tweaking your browser security settings"],
+      description: 'Custom newtab for my browser. I use this with a "Custom New Tab Page" extension. I am using this in Librewolf, should probably work on other browsers too.'
+   },
+
    {
       id: 'slots',
       thumbnail: slots,
@@ -194,24 +252,6 @@ const PROJECTS: ProjectType[] = [
       liveUrl: 'https://vrecek.github.io/rapmusic',
       bugs: [],
       description: "Website about polish rap music. There are listed artists with their tracks. Also contains 'blog' with dummy articles. All artists and tracks are real and can be found on the YouTube"
-   },
-
-   {
-      id: 'yt-downloader',
-      thumbnail: ytdwn,
-      name: "YouTube downloader",
-      stack: "Other",
-      shortPara: "Download videos from the YouTube",
-      language: ["Python"],
-      type: 'App',
-      tags: [
-         { name: "Command line", icon: <BsFillTerminalFill /> },
-         { name: "Download", icon: <AiOutlineDownload /> }
-      ],
-      date: 29,
-      repository: 'https://github.com/vrecek/yt-downloader',
-      bugs: [],
-      description: "Just regular app that downloads videos from the YouTube. Uses pytube."
    },
 
    {
@@ -587,25 +627,6 @@ const PROJECTS: ProjectType[] = [
       liveUrl: 'https://vrecek.github.io/voice-recorder/',
       bugs: [],
       description: 'Record your voice. You can also save it on your device.'
-   },
-
-   {
-      id: 'resize-images',
-      thumbnail: resize,
-      name: "Image resizer",
-      stack: "Other",
-      shortPara: "Resize any images in a current directory by a percent value",
-      language: ["Python"],
-      type: 'App',
-      tags: [
-         { name: "Command line", icon: <BsFillTerminalFill /> },
-         { name: "Overwriting", icon: <TbReplace /> },
-         { name: "Automation", icon: <GiRobotGrab /> }
-      ],
-      date: 14,
-      repository: 'https://github.com/vrecek/resize-images',
-      bugs: [],
-      description: 'Python image resizer. Enter x and y and wait. Only images in a current directory will be resized. Original files will be copied to a new directory.'
    },
 
    {

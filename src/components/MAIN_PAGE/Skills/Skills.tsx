@@ -12,7 +12,7 @@ import { IoLogoElectron } from 'react-icons/io5'
 const Skills = () => {
    const languageSkills: SkillType[] = [
       {
-         percentSkill: 90,
+         percentSkill: 95,
          name: 'TypeScript',
          icon: <SiTypescript />,
          usedFor: 'Main language - websites, small games, applications',
@@ -20,7 +20,7 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 90,
+         percentSkill: 95,
          name: 'JavaScript',
          icon: <SiJavascript />,
          usedFor: 'Main language, used with TypeScript',
@@ -52,7 +52,7 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 65,
+         percentSkill: 85,
          name: 'Python',
          icon: <IoLogoPython />,
          usedFor: 'Automating tasks like resizing images; desktop apps with Tkinter',
@@ -60,7 +60,7 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 55,
+         percentSkill: 60,
          name: 'Bash',
          icon: <SiGnubash />,
          usedFor: 'Mostly for moving files',
@@ -94,7 +94,7 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 90,
+         percentSkill: 95,
          name: 'Linux',
          icon: <DiLinux />,
          usedFor: 'Ubuntu, my everyday operating system. Including terminal commands.',
@@ -102,7 +102,7 @@ const Skills = () => {
       },
 
       {
-         percentSkill: 85,
+         percentSkill: 80,
          name: 'Electron JS',
          icon: <IoLogoElectron />,
          usedFor: 'Framework for building desktop applications with Typescript/Javascript',
