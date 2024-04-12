@@ -15,7 +15,7 @@ export default interface ProjectType {
 }
 
 export type StackT = 'Frontend' | 'Backend' | 'Fullstack' | 'Other'
-export type ProjectT = 'Website' | 'Game' | 'App'
+export type ProjectT = 'Website' | 'Game' | 'App' | 'Other'
 
 export interface TagType {
    name: string 

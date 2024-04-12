@@ -135,17 +135,12 @@ main.one-project-page {
 
    section.thumbnail {
       width: 100%;
-      aspect-ratio: 2;
-      min-height: 200px;
+      @include Flex(c, c);
 
-      figure { 
-         @include FullSize; 
-         overflow: hidden;
-
-         img {
-            @include FullSize;
-            object-fit: cover;
-         }
+      figure img { 
+         max-height: 700px;
+         object-fit: cover;
+         width: 100%;
       }
    }
 

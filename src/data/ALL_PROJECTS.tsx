@@ -10,7 +10,6 @@ import { MdAdminPanelSettings, MdOutlineDesignServices, MdOutlinePlusOne, MdOutl
 import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill, BsFillKeyboardFill } from 'react-icons/bs'
 import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
-import {TiCloudStorageOutline} from 'react-icons/ti'
 import { SiNextdotjs } from 'react-icons/si'
 
 import weather from '../images/projects/weather.png'
@@ -32,7 +31,6 @@ import courses from '../images/projects/courses.png'
 import calculator from '../images/projects/calculator.png'
 import hangman from '../images/projects/hangman.png'
 import clothings from '../images/projects/clothings.png'
-import cm from '../images/projects/cm.png'
 import blog from '../images/projects/blog.png'
 import quizzes from '../images/projects/quizzes.png'
 import chat from '../images/projects/chat.png'
@@ -49,14 +47,15 @@ import slots from '../images/projects/slots.png'
 import newtab from '../images/projects/newtab.png'
 import viddwn from '../images/projects/viddwn.png'
 import twitchbot from '../images/projects/twitchbot.png'
+import ps1 from '../images/projects/ps1.png'
+import gencombo from '../images/projects/gencombo.png'
+import configs from '../images/projects/configs.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
 import blogart from '../images/description/blogarticle.png'
 import blogcont from '../images/description/blogcontact.png'
 import bloghead from '../images/description/blogheader.png'
-import cm1 from '../images/description/cm1.png'
-import cm2 from '../images/description/cm2.png'
 import clothesdaily from '../images/description/clothesdaily.png'
 import clothesprod from '../images/description/clothesprod.png'
 import clothesreg from '../images/description/clothesreg.png'
@@ -74,6 +73,62 @@ import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
    {
+      id: 'configs',
+      thumbnail: configs,
+      name: "Config files",
+      stack: "Other",
+      shortPara: "My configuration files",
+      language: ["Bash", "Typescript", "SCSS"],
+      type: 'Other',
+      tags: [
+         { name: "Configurations", icon: <BiCog /> },
+      ],
+      date: 41,
+      repository: 'https://github.com/vrecek/configs',
+      bugs: [],
+      description: "My config files for the: vim, kitty terminal, zsh, neofetch, vscodium, sysctl, etc... Also contains Typescript/SCSS main files. There is also available complete GNOME setup on Arch linux."
+   },
+
+   {
+      id: 'gen-ps1',
+      thumbnail: ps1,
+      name: "Prompt generator",
+      stack: "Frontend",
+      shortPara: "Create your own command prompt",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Frontend", icon: <BiPaint /> },
+         { name: "Configurable", icon: <BiCog /> },
+         { name: "ReactJS", icon: <DiReact /> }
+      ],
+      date: 40,
+      repository: 'https://github.com/vrecek/ps1-gen',
+      liveUrl: 'https://vrecek.github.io/ps1-gen',
+      bugs: [],
+      description: "Generate your own BASH or ZSH command prompt, or convert one to other. Simple design and visual portray made it easy."
+   },
+
+   {
+      id: 'generate-combos',
+      thumbnail: gencombo,
+      name: "Generate combinations",
+      stack: "Other",
+      shortPara: "Generate possible combinations",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Command line", icon: <BsFillTerminalFill /> },
+         { name: "Automation", icon: <GiRobotGrab /> },
+         { name: "Dangerous", icon: <AiFillWarning /> }
+      ],
+      date: 39,
+      repository: 'https://github.com/vrecek/generate-combinations',
+      bugs: [],
+      description: "Generate every possible combination, based on your input values, like: char array, minimum length, maximum length. High values may produce very heavy file and can drain RAM quickly, depending on your PC and the 'BUFFER' value"
+   },
+
+   {
       id: 'video-downloader',
       thumbnail: viddwn,
       name: "Video downloader",
@@ -88,7 +143,7 @@ const PROJECTS: ProjectType[] = [
       date: 38,
       repository: 'https://github.com/vrecek/video-downloader',
       bugs: [],
-      description: "App that downloads videos from YouTube. It can also download videos from sites, that have a video source in the video tag. More details on Github"
+      description: "App that downloads videos from YouTube. It can also download videos from sites, that have a video source in the video tag."
    },
 
    {
@@ -389,24 +444,6 @@ const PROJECTS: ProjectType[] = [
       // liveUrl: 'https://react-web-blog-heroku.herokuapp.com/',
       bugs: [],
       description: `My second blog about tutorials / news. It focuses on a programming topics. Uses MongoDB. [[${bloghead}]] [[${blogart}]] [[${blogcont}]]`
-   },
-
-   {
-      id: 'credentials-manager',
-      thumbnail: cm,
-      name: "Credentials manager",
-      stack: "Backend",
-      shortPara: 'Store and read your data objects',
-      language: ["Typescript"],
-      type: 'App',
-      tags: [
-         { name: "Command line", icon: <BsFillTerminalFill /> },
-         { name: "Database storage", icon: <TiCloudStorageOutline /> }
-      ],
-      date: 21,
-      repository: 'https://github.com/vrecek/credential-manager',
-      bugs: [],
-      description: `Create, read and delete data, presumably credentials. NO HASHING! Required MongoDB database [[${cm1}]] [[${cm2}]]`
    },
 
    {
