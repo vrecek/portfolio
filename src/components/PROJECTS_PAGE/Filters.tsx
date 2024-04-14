@@ -27,7 +27,7 @@ const Filters = ({ state }: FilterState) => {
 
          <p className="text">Filters</p>
 
-         <form className="container">
+         <form className="container filter-projects-form">
 
             {
                dropdowns.map((x, i) => (

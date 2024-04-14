@@ -8,12 +8,13 @@ import ProjectType from '../../interfaces/ProjectInterface'
 import { ILocation, ProjectState } from '../../interfaces/ProjectPageInterfaces'
 import OneProject from '../Common/Project/OneProject'
 import Filters from './Filters'
+import Searchbar from './Searchbar'
 
 const PROJECTS_PAGE = () => {
    const mainRef: Ref = React.useRef<HTMLDivElement>(null)
    const [projects, setProjects] = React.useState<ProjectState>({
       original: PROJECTS,
-      projects: shuffleArray<ProjectType>(PROJECTS)
+      projects: PROJECTS
    })
    const initialFilter: ILocation = useLocation().state as ILocation
 
@@ -22,10 +23,10 @@ const PROJECTS_PAGE = () => {
 
       if(!initialFilter) return
 
-      const filteredProjects: ProjectType[] = PROJECTS.filter(x => x.type === initialFilter)
-      const c: HTMLElement = mainRef.current!;
-
-      const inp: HTMLInputElement = c.children[0].children[1].children[1].children[0].children[0] as HTMLInputElement
+      const filteredProjects: ProjectType[] = PROJECTS.filter(x => x.type === initialFilter),
+            c:   HTMLElement = mainRef.current!,
+            inp: HTMLInputElement = c.children[0].children[2].children[1].children[1].children[0].children[0] as HTMLInputElement
+      
       inp.value = initialFilter
       inp.setAttribute('data-select', initialFilter)
 
@@ -40,7 +41,12 @@ const PROJECTS_PAGE = () => {
 
          <Filters state={ setProjects } />
 
-         <h1 className='number'>Projects ({ projects.projects.length })</h1>
+         <section className="entry-section">
+
+            <h1 className='number'>Projects ({ projects.projects.length })</h1>
+            <Searchbar state={setProjects} />
+
+         </section>
 
          <section className="project-container">
 

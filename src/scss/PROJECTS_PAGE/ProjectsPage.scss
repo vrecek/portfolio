@@ -2,14 +2,48 @@
 
 main.projects-page {
    min-height: 100vh;
-   padding-top: calc($navHeight + 3em);
+   padding: calc($navHeight + 3em) 4em 5em 4em;
    position: relative;
 
-   h1.number {
-      @include Center(90%);
-      margin-bottom: 1em;
-      font-weight: 600;
-      @include Clamp(1.5, 8, 2);
+   section.entry-section {
+      @include Flex(sb, fs);
+
+      div.searchbar {
+         width: 25%;
+         min-width: 180px;
+         position: relative;
+
+         span {
+            position: absolute;
+            right: .25em;
+            top: 50%;
+            translate: 0 -50%;
+            @include Rectangle(25px);
+
+            svg {
+               @include FullSize;
+            }
+         }  
+
+         input {
+            width: 100%;
+            padding: 1em;
+            padding-right: 3em;
+            border: 0;
+            border-radius: .25em;
+            outline: 0;
+            color: $clr-white;
+            font-weight: 400;
+            @include Clamp(.9, 4, 1);
+            background: #282828;
+         }       
+      }
+
+      h1.number {
+         margin-bottom: 1em;
+         font-weight: 600;
+         @include Clamp(1.75, 6, 2);
+      }
    }
 
    section.filter {
@@ -50,29 +84,6 @@ main.projects-page {
          &:hover { background: darken(royalblue, 10%) }
       }
 
-      div.filter-text {
-         @include Flex(none, c);
-         width: max-content;
-         // margin-bottom: .5em;
-         padding-left: .5em;
-         cursor: pointer;
-
-         h1,span.icon { pointer-events: none; }
-
-         h1 {
-            font-size: 1.25rem;
-            font-weight: 500;
-         }
-
-         span.icon {
-            @include Rectangle(30px);
-            // display: none;
-            transition: .3s;
-
-            svg { @include FullSize; }
-         }
-      }
-
       form.container {
          transition: .3s;
 
@@ -85,7 +96,7 @@ main.projects-page {
             width: 100%;
             position: relative;
             border-radius: .2em;
-            border: 1px solid grey;
+            border: 1px solid rgb(49, 49, 49);
             background: #202020;
             margin-bottom: 1.5em;
 
@@ -124,8 +135,8 @@ main.projects-page {
                transition: .3s;
                height: 0;
                overflow: hidden;
-               background: #101010;
-               border: 1px solid grey;
+               background: #151515;
+               border: 1px solid rgb(49, 49, 49);
                border-top: 0;
                border-radius: 0 0 .15em .15em;
                z-index: 9;
@@ -158,13 +169,15 @@ main.projects-page {
       @include Flex(sa, c);
       flex-wrap: wrap;
       align-items: stretch;
-      @include Center(90%);
       padding: 2em 1em;
       background: #202020;
+   }
 
-      @media (max-width: 480px) {
-         width: 100%;
-         padding: 2em 0;
+   @media (max-width: 480px) {
+      padding: calc($navHeight + 3em) 1em 5em 1em;
+
+      section.project-container {
+         padding: 2em 0em;
       }
    }
 }
