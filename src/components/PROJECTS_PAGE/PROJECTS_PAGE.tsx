@@ -21,7 +21,7 @@ const PROJECTS_PAGE = () => {
    React.useEffect(() => {
       window.scrollTo(0, 0)
 
-      if(!initialFilter) return
+      if (!initialFilter) return
 
       const filteredProjects: ProjectType[] = PROJECTS.filter(x => x.type === initialFilter),
             c:   HTMLElement = mainRef.current!,
@@ -36,6 +36,7 @@ const PROJECTS_PAGE = () => {
       })
    }, [])
 
+   
    return (
       <main ref={ mainRef } className="projects-page">
 

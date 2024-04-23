@@ -50,6 +50,7 @@ import twitchbot from '../images/projects/twitchbot.png'
 import ps1 from '../images/projects/ps1.png'
 import gencombo from '../images/projects/gencombo.png'
 import configs from '../images/projects/configs.png'
+import capture from '../images/projects/capture.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -72,6 +73,25 @@ import fashtiles from '../images/description/fash_tiles.png'
 import ProjectType from '../interfaces/ProjectInterface'
 
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'video-recorder',
+      thumbnail: capture,
+      name: "RTSP recorder",
+      stack: "Other",
+      shortPara: "RTSP stream camera recorder",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Configurable", icon: <BiCog /> },
+         { name: "Recorder", icon: <BsFillMicFill /> },
+         { name: "Saving output", icon: <AiOutlineDownload /> }
+      ],
+      date: 42,
+      repository: 'https://github.com/vrecek/video-stream',
+      bugs: [],
+      description: "Record the RTSP stream, presumably from an IP camera. Offers detection handling, saving it to an image file, detection sound, stop/resume record action, etc..."
+   },
+
    {
       id: 'configs',
       thumbnail: configs,
