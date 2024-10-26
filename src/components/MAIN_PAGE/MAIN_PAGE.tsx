@@ -6,6 +6,7 @@ import Projects from './Projects/Projects'
 import Skills from './Skills/Skills'
 import TableContents from './TableContents/TableContents'
 
+
 const MAIN_PAGE = () => {
    window.scrollTo(0, 0)
    
@@ -23,5 +24,6 @@ const MAIN_PAGE = () => {
       </main>
    )
 }
+
 
 export default MAIN_PAGE

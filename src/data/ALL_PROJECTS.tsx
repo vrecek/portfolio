@@ -787,7 +787,7 @@ const PROJECTS: ProjectType[] = [
    {
       id: 'luxury',
       thumbnail: luxury,
-      name: "Luxury clothes shop",
+      name: "Old site #3",
       stack: "Frontend",
       shortPara: "Single page, frontend website about clothing. Basic design and small.",
       language: ["HTML", 'Typescript', 'SCSS'],
@@ -807,7 +807,7 @@ const PROJECTS: ProjectType[] = [
    {
       id: 'house-services',
       thumbnail: houses,
-      name: "House services website",
+      name: "Old site #2",
       stack: "Frontend",
       shortPara: "Single page, frontend website about houses.",
       language: ["HTML", 'Typescript', 'SCSS'],
@@ -827,7 +827,7 @@ const PROJECTS: ProjectType[] = [
    {
       id: 'food-delivery',
       thumbnail: fooddelivery,
-      name: "Food delivery website",
+      name: "Old site #1",
       stack: "Frontend",
       shortPara: "Single page, frontend website about ordering food.",
       language: ["HTML", 'Javascript', 'SCSS'],

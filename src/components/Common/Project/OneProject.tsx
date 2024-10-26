@@ -3,6 +3,7 @@ import ProjectTags from './ProjectTags'
 import ProjectText from './ProjectText'
 import { PSmallType } from '../../../interfaces/ProjectInterface'
 
+
 const OneProject = ({ imgSrc, tags, title, para, id }: PSmallType) => {
    return (
       <article className="project-small">
@@ -19,5 +20,6 @@ const OneProject = ({ imgSrc, tags, title, para, id }: PSmallType) => {
       </article>
    )
 }
+
 
 export default OneProject

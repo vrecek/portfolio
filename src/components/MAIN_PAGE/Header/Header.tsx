@@ -3,6 +3,7 @@ import header from '../../../images/hdr.jpg'
 import '../../../css/Header.css'
 import LeftInformations from './LeftInformations'
 
+
 const Header = () => {
    return (
       <header className='home-header'>
@@ -13,5 +14,6 @@ const Header = () => {
       </header>
    )
 }
+
 
 export default Header

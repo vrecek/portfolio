@@ -4,8 +4,8 @@ const Author = () => {
    return (
       <section className="author">
 
-         <h1>Vrecek</h1>
-         <h2>Web / Typescript Dev</h2>
+         <h1>vrecek</h1>
+         <h2>Web, Typescript Dev</h2>
          <Paragrapgh />
 
       </section>

@@ -1,6 +1,7 @@
 import { AboutElement } from '../../../interfaces/HomepageInterfaces'
 import Chart from './Chart'
 
+
 const InfoElement = ({ date, text, chartNum, moveXPerc }: AboutElement) => {
    return (
       <article className="element">
@@ -12,5 +13,6 @@ const InfoElement = ({ date, text, chartNum, moveXPerc }: AboutElement) => {
       </article>
    )
 }
+
 
 export default InfoElement

@@ -73,136 +73,6 @@ span.background-icon {
    }
 }
 
-// PROJECT - SMALL INFO
-article.project-small {
-   background: #151515;
-   width: 25%;
-   min-width: 350px;
-   margin: 0 1em;
-   margin-bottom: 3em;
-   border-bottom: 5px solid rgba(65, 105, 225, .5);
-   border-radius: .5em;
-   display: flex;
-   flex-direction: column;
-   position: relative;
-
-   div.wrap {
-      @include Flex(sb, none);
-      padding: .75em;
-      padding-bottom: 1em;
-      flex-direction: column;
-      flex-grow: 1;
-   }
-
-   section.tags {
-      @include Flex(sb, fe);
-      margin-top: 1.75em;
-
-      button {
-         transition: .3s;
-         border-radius: .15em;
-         outline: 0;
-         border: 0;
-         background: rgb(58, 93, 200);
-         transition: .3s;
-         cursor: pointer;
-
-         label {
-            color: $clr-white;
-            font-weight: 500;
-            @include Clamp(.8, 4, .95);
-            padding: .75em 1.25em;
-            display: block;
-            font-family: 'Sora', sans-serif;
-         }
-
-         &:hover {
-            background: darken(royalblue, 15%);
-         }
-      }
-
-      ul {
-         list-style: none;
-         display: flex;
-
-         li {
-            &:not(:first-child) { margin-left: .5em; }
-            position: relative;
-
-            &::before {
-               width: max-content;
-               content: attr(data-text);
-               padding: .25em .5em;
-               font-size: .9rem;
-               background: royalblue;
-               position: absolute;
-               top: calc(100% + 2px);
-               border-radius: .25em;
-               pointer-events: none;
-               opacity: 0;
-               transition: .5s;
-               left: 50%;
-               transform: translateX(-50%);
-            }
-
-            span {
-               @include Rectangle(clamp(23px, 7vw, 35px));
-               @include Flex(c, c);
-               border-radius: 50%;
-               border: 1px solid $clr-white;
-               transition: .5s;
-
-               svg { @include FullSize(80%); }
-            }
-
-            &:hover {
-               &::before { opacity: 1; }
-
-               span {
-                  background: $clr-white;
-
-                  svg { color: $clr-black; }
-               }
-            }
-         }
-      }
-   }
-
-   h2 {
-      font-weight: 600;
-      margin: .2em 0;
-      @include Clamp(1, 6, 1.75);
-   }
-
-   p {
-      @include Clamp(.8, 4, .95);
-      font-weight: 300;
-   }
-
-   figure {
-      width: 100%;
-      aspect-ratio: 2;
-      overflow: hidden;
-      z-index: 2;
-
-      img {
-         @include FullSize;
-         object-fit: cover;
-         transition: .3s;
-      }
-   }
-
-   &::before {
-      content: '';
-      position: absolute;
-      right: -4px;
-      top: -4px;
-      background: rgb(65, 105, 225, .5);
-      @include Rectangle(40px);
-   }
-}
-
-
 // CONTACT FORM AND TEXT
 form.mail-form {
    width: 57%;
@@ -229,9 +99,10 @@ form.mail-form {
       position: absolute;
       left: 0;
       text-transform: uppercase;
-      @include Clamp(.75, 4, .9);
+      @include Clamp(.75, 4, .8);
       color: grey;
       transition: .5s;
+      opacity: .5;
       pointer-events: none;
    }
 
@@ -439,7 +310,7 @@ section.contact-text {
    
    h2 {
       font-weight: 700;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       @include Clamp(1, 5, 1.5);
       text-transform: uppercase;font-family: 'Roboto Mono', monospace;
    }

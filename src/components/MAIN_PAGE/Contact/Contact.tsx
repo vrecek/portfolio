@@ -4,6 +4,7 @@ import { FiMail } from 'react-icons/fi'
 import Text from './Text'
 import Form from './Form'
 
+
 const Contact = () => {
    return (
       <section className="home-contact">
@@ -22,5 +23,6 @@ const Contact = () => {
       </section>
    )
 }
+
 
 export default Contact

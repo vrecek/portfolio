@@ -1,5 +1,6 @@
 @import '../config';
 
+
 main.about-page {
    @include Flex(sb);
    padding-top: $navHeight;

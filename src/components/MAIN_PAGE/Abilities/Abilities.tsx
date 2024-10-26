@@ -19,9 +19,9 @@ const Abilities = () => {
 
          <div className="container">
 
-            <OneAbility type='website' info='I can create websites on various topics, either frontend or fullstack. It can be single or multi page. To do this i am using Typescript (React JS and Node JS + MongoDB).' what='Web developer' icon={ <CgWebsite /> } />
+            <OneAbility type='website' info='Im able to create websites, either frontend or fullstack. To accomplish this, I use Typescript (ReactJS + NodeJS + MongoDB).' what='Web developer' icon={ <CgWebsite /> } />
 
-            <OneAbility type='program' info='I can also create small programs, most likely simple scripts to ease work, or some small apps. Both as a webpage or a standalone program.' what='Programs / Apps' icon={ <FaFileCode /> } />
+            <OneAbility type='program' info='Im also able to create small programs, most likely simple scripts to ease work, or some small apps. Both as a webpage or a standalone program.' what='Programs / Apps' icon={ <FaFileCode /> } />
 
             <BackgroundIconHandle />
 

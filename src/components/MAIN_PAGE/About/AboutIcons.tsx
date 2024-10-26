@@ -1,6 +1,7 @@
 import { BsGithub } from 'react-icons/bs'
 import { AboutIcon } from '../../../interfaces/HomepageInterfaces'
 
+
 const AboutIcons = () => {
    const icons: AboutIcon[] = [
       { icon: <BsGithub />, url: 'https://github.com/vrecek' }
@@ -20,5 +21,6 @@ const AboutIcons = () => {
       </section>
    )
 }
+
 
 export default AboutIcons

@@ -23,12 +23,17 @@ header.home-header {
       }
 
       p {
-         margin: .25em .5em 2em 0;
+         margin: .75em .5em 2em 0;
          @include Clamp(.8, 2.5, .95);
          font-weight: 400;
          animation: rightBlend 2s;
          animation-fill-mode: forwards;
          transform: translateX(200%);
+
+         span {
+            color: lightblue;
+            font-weight: 700;
+         }
 
          @keyframes rightBlend {
             0% { transform: translateX(200%); }
@@ -49,6 +54,7 @@ header.home-header {
             color: royalblue;
             font-weight: 500;
             @include Clamp(.9, 4, 1.1);
+            letter-spacing: -1px;
             font-family: 'Sora', sans-serif;
          }
 
@@ -60,8 +66,9 @@ header.home-header {
 
       div.headers {
          position: relative;
-
-         h1 {
+         
+         h1,
+         h2 {
             @include Clamp(1.75, 7, 3.5);
             font-weight: 600;
             @include Flex(none, c);
@@ -69,10 +76,6 @@ header.home-header {
             animation-fill-mode: forwards;
             transform: translateX(-200%);
    
-            &:nth-child(2) {
-               animation-delay: .5s;
-            }
-
             span {
                font-family: 'Roboto Mono', monospace;
                font-weight: 700;
@@ -85,6 +88,10 @@ header.home-header {
                @include Rectangle(clamp(23px, 6vw, 55px));
                margin-left: clamp(.1em, 1vw, .25em);
             }
+         }
+
+         h2 {
+            animation-delay: .75s;
          }
 
          @keyframes leftBlend {

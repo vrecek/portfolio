@@ -9,13 +9,14 @@ import BackgroundIcon from '../../Common/BackgroundIcon'
 import { DiLinux } from 'react-icons/di'
 import { IoLogoElectron } from 'react-icons/io5'
 
+
 const Skills = () => {
    const languageSkills: SkillType[] = [
       {
          percentSkill: 95,
          name: 'TypeScript',
          icon: <SiTypescript />,
-         usedFor: 'Main language - websites, small games, applications',
+         usedFor: 'Websites, web games, applications, HTTP servers',
          sinceWhen: 'November 2021'
       },
 
@@ -23,7 +24,7 @@ const Skills = () => {
          percentSkill: 95,
          name: 'JavaScript',
          icon: <SiJavascript />,
-         usedFor: 'Main language, used with TypeScript',
+         usedFor: 'Used with TypeScript',
          sinceWhen: 'From the start'
       },
 
@@ -31,7 +32,7 @@ const Skills = () => {
          percentSkill: 95,
          name: 'SCSS',
          icon: <IoLogoSass />,
-         usedFor: 'For styling websites',
+         usedFor: 'Styling websites',
          sinceWhen: 'November 2021'
       },
 
@@ -39,7 +40,7 @@ const Skills = () => {
          percentSkill: 95,
          name: 'CSS',
          icon: <IoLogoCss3 />,
-         usedFor: 'For styling websites, used with SCSS',
+         usedFor: 'Styling websites, used with SCSS',
          sinceWhen: 'From the start'
       },
 
@@ -47,23 +48,23 @@ const Skills = () => {
          percentSkill: 100,
          name: 'HTML',
          icon: <AiFillHtml5 />,
-         usedFor: 'For creating websites',
+         usedFor: 'Creating websites',
          sinceWhen: 'From the start'
       },
 
       {
-         percentSkill: 85,
+         percentSkill: 75,
          name: 'Python',
          icon: <IoLogoPython />,
-         usedFor: 'Automating tasks like resizing images; desktop apps with Tkinter',
+         usedFor: 'Automating tasks',
          sinceWhen: 'April 2022'
       },
 
       {
-         percentSkill: 60,
+         percentSkill: 65,
          name: 'Bash',
          icon: <SiGnubash />,
-         usedFor: 'Mostly for moving files',
+         usedFor: 'Linux system automation',
          sinceWhen: 'November 2022'
       }
    ]
@@ -73,7 +74,7 @@ const Skills = () => {
          percentSkill: 80,
          name: 'Git',
          icon: <SiGit />,
-         usedFor: 'Version control, storing all projects',
+         usedFor: 'Version control, storing projects',
          sinceWhen: 'November 2021'
       },
 
@@ -81,15 +82,15 @@ const Skills = () => {
          percentSkill: 95,
          name: 'React JS',
          icon: <SiReact />,
-         usedFor: 'Library for building websites.',
+         usedFor: 'Building websites',
          sinceWhen: 'October 2021'
       },
 
       {
-         percentSkill: 95,
+         percentSkill: 90,
          name: 'Node JS',
          icon: <SiNodedotjs />,
-         usedFor: 'Creating server side applications and desktop apps with Electron',
+         usedFor: 'Creating server side applications',
          sinceWhen: 'December 2021'
       },
 
@@ -97,19 +98,20 @@ const Skills = () => {
          percentSkill: 95,
          name: 'Linux',
          icon: <DiLinux />,
-         usedFor: 'Ubuntu, my everyday operating system. Including terminal commands.',
+         usedFor: 'Daily-drive OS (Archlinux)',
          sinceWhen: 'October 2022'
       },
 
       {
-         percentSkill: 80,
+         percentSkill: 70,
          name: 'Electron JS',
          icon: <IoLogoElectron />,
-         usedFor: 'Framework for building desktop applications with Typescript/Javascript',
+         usedFor: 'For building desktop applications',
          sinceWhen: 'December 2022'
       }
    ]
 
+   
    return (
       <section className="home-skills">
 
@@ -125,5 +127,6 @@ const Skills = () => {
       </section>
    )
 }
+
 
 export default Skills

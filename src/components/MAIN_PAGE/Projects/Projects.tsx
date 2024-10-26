@@ -7,6 +7,7 @@ import ProjectType from '../../../interfaces/ProjectInterface'
 import BackgroundIcon from '../../Common/BackgroundIcon'
 import EntryText from './EntryText'
 
+
 const Projects = () => {
    return (
       <section className="home-projects">
@@ -27,18 +28,6 @@ const Projects = () => {
                   />
                ))
             }
-            {/* {
-               PROJECTS.slice(0, 6).map(x => (
-                  <OneProject 
-                     key={ x.id }
-                     imgSrc={ x.thumbnail }
-                     tags={ x.tags }
-                     id={ x.id }
-                     title={ x.name }
-                     para={ x.shortPara }
-                  />
-               ))
-            } */}
 
          </section>
 
@@ -47,5 +36,6 @@ const Projects = () => {
       </section>
    )
 }
+
 
 export default Projects

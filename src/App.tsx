@@ -8,6 +8,7 @@ import ABOUT_PAGE from './components/ABOUT_PAGE/ABOUT_PAGE'
 import PROJECTS_PAGE from './components/PROJECTS_PAGE/PROJECTS_PAGE'
 import ONE_PROJECT_PAGE from './components/ONE_PROJECT_PAGE/ONE_PROJECT_PAGE'
 import './css/index.css'
+import './css/SmallProject.css'
 
 
 function App() {

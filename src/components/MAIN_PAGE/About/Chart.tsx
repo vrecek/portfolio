@@ -9,12 +9,12 @@ const Chart = ({ num, moveXPerc }: ChartType) => {
    React.useEffect(() => {
       const curr: HTMLElement = barRef.current!
 
-      if(!moveXPerc) return
+      if (!moveXPerc) return
 
       const attr: number = parseInt(curr.getAttribute('data-num')!)
       const next: HTMLElement | null = Array.from(curr.parentElement!.parentElement!.children)[attr + 1] as HTMLElement ?? null 
 
-      if(!next) return
+      if (!next) return
 
       const getPercentValue = (number: number): number => (number / 100) * moveXPerc
       const changeSize = (): void => {
@@ -27,6 +27,7 @@ const Chart = ({ num, moveXPerc }: ChartType) => {
       window.addEventListener('resize', () => changeSize())
    }, [])
 
+   
    return (
       <div className="chart">
 

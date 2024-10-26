@@ -1,5 +1,6 @@
 import Slider from './Slider'
 
+
 const Timeline = () => {
    return (
       <section className="timeline">
@@ -11,5 +12,6 @@ const Timeline = () => {
       </section>
    )
 }
+
 
 export default Timeline
