@@ -1,5 +1,6 @@
-import DropDown from "../functions/DropdownClass";
+import DropDown from "@/utils/DropdownClass";
 import ProjectType from "./ProjectInterface";
+
 
 type FilterDropdowns = {
    dd: DropDown
