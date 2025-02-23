@@ -1,17 +1,17 @@
 export default interface ProjectType {
-   id: string,
-   thumbnail: string,
-   name: string,
-   stack: StackT,
-   shortPara: string,
-   language: string[],
-   tags: TagType[],
-   type: ProjectT,
-   date: number,
-   repository: string,
-   liveUrl?: string,
-   bugs: string[],
+   id:          string,
+   thumbnail:   string,
+   name:        string,
+   shortPara:   string,
+   repository:  string,
+   liveUrl?:    string,
    description: string
+   date:        number,
+   language:    string[],
+   bugs:        string[],
+   tags:        TagType[],
+   type:        ProjectT,
+   stack:       StackT,
 }
 
 export type StackT = 'Frontend' | 'Backend' | 'Fullstack' | 'Other'

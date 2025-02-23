@@ -1,14 +1,16 @@
-import { PSmallText } from '../../../interfaces/ProjectInterface'
+import { PSmallText } from '@/interfaces/ProjectInterface'
+
 
 const ProjectText = ({ title, para }: PSmallText) => {
    return (
       <section className="text">
 
-         <h2>{ title }</h2>
-         <p>{ para }</p>
+         <p className='header'>{title}</p>
+         <p className='para'>{para}</p>
 
       </section>
    )
 }
+
 
 export default ProjectText

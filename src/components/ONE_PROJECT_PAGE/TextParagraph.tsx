@@ -1,34 +1,33 @@
+import { Ref } from '@/interfaces/CommonInterfaces'
 import React from 'react'
 
+
 const TextParagraph = ({text}: {text: string | JSX.Element}) => {
-    const paragraphRef = React.useRef<HTMLDivElement>(null)
+    const paraRef: Ref = React.useRef<HTMLDivElement>(null)
 
     React.useEffect(() => {
-        const c: HTMLElement | null = paragraphRef?.current
+        const c: HTMLElement | null = paraRef?.current
 
-        if(!c || typeof text !== 'string') return
+        if (!c || typeof text !== 'string') 
+            return
 
-        const start: number[] = Array.from(text.matchAll(/\[\[/g)).map(x => x.index!),
-              end: number[] = Array.from(text.matchAll(/\]\]/g)).map(x => x.index!)
+        const start: number[] = [...text.matchAll(/\[\[/g)].map(x => x.index!),
+              end:   number[] = [...text.matchAll(/\]\]/g)].map(x => x.index!)
 
 
-        if(
-            start.length <= 0 ||
-            (start.length !== end.length)
-        ) {
+        if (start.length <= 0 || (start.length !== end.length))
+        {
             c.innerHTML = text
-
             return
         }
 
-
         let textCopy: string = text
 
-        for(let i = 0; i < start.length; i++) {
-            const src: string = text.slice(start[i] + 2, end[i]),
-                  figure = `<figure><img src='${src}' alt='Image' /></figure>`
+        for (let i = 0; i < start.length; i++)
+        {
+            const src:    string = text.slice(start[i] + 2, end[i]),
+                  figure: string = `<figure> <img src='${src}' alt='Image'> </figure>`
 
-                  
             textCopy = textCopy.replace(`[[${src}`, figure)
                                .replace(']]', '')
         }
@@ -37,9 +36,10 @@ const TextParagraph = ({text}: {text: string | JSX.Element}) => {
 
     }, [])
 
+
     return (
         typeof text === 'string'
-                ? <p ref={paragraphRef}></p>
+                ? <p className='para' ref={paraRef}></p>
                 : text
     )
 }

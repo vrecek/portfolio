@@ -1,13 +1,17 @@
 @import '../config';
 
+
 section.home-contact {
-   @include TopSeparator;
-   padding: 2em 0 6em 0;
+   @include ContactStyle;
+   padding-bottom: 6em;
+   
+   &:not(.contact-page) {
+      padding-top: 2em;
+      @include TopSeparator;
+   }
 
    section.contact-text { 
       position: relative; 
-      @include Flex(sb, none);
-      flex-direction: column;
 
       span.background-icon {
          width: 80%;
@@ -38,11 +42,5 @@ section.home-contact {
          padding: 0 .5em;
          margin-top: 1em;
       }
-   }
-
-   div.entry-info {
-      font-family: 'Roboto Mono', monospace;
-
-      svg { @include FullSize; }
    }
 }

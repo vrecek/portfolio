@@ -1,3 +1,6 @@
+@import './config';
+
+
 * {
    box-sizing: border-box;
    padding: 0;
@@ -8,56 +11,41 @@
 div.App,
 div#root { overflow-x: hidden; }
 
-@import './config';
-
 body {
    min-height: 100vh;
    width: 100vw;
    overflow-x: hidden;
-   color: white;
+   color: #fff;
    font-family: 'Sora', sans-serif;
    background: #181818;
    scroll-behavior: smooth;
 
-   &::-webkit-scrollbar {
-      width: 4px;
-      background: #303030;
+   @font-face {
+      font-family: 'Sora';
+      src: url('../data/Sora.ttf');
    }
 
-   &::-webkit-scrollbar-thumb {
-      width: 100%;
-      background: royalblue;
+   @font-face {
+      font-family: 'Roboto Mono';
+      src: url('../data/RobotoMono.ttf');
    }
 }
 
-div.layout-arrow-top {
+svg { @include Rectangle; }
+
+span.layout-arrow-top {
    position: fixed;
    bottom: 5px;
    right: 5px;
-   @include Rectangle(35px);
-   background: royalblue;
+   @include Rectangle(30px);
+   background: $clr-blued;
    z-index: 99;
-   border-radius: .2em;
    @include Flex(c, c);
-   cursor: pointer;
-   transition: .3s;
    opacity: 0;
    pointer-events: none;
+   @include HoverBG(250ms, $clr-bluedr);
 
-   span {
-      transition: .3s;
-      @include FullSize(80%);
-      @include Flex(c, c);
-      transform: rotate(270deg) rotateX(180deg);
-
-      svg { @include FullSize; }
-   }
-
-   &:hover {
-      background: rgb(80, 135, 238);
-
-      span { transform: scale(.8) rotate(270deg) rotateX(180deg); }
-   }
+   svg { @include Rectangle(65%); }
 }
 
 span.background-icon {
@@ -68,281 +56,5 @@ span.background-icon {
    svg {
       color: #303030;
       opacity: .1;
-      
-      @include FullSize;
-   }
-}
-
-// CONTACT FORM AND TEXT
-form.mail-form {
-   width: 57%;
-   border-radius: .2em;
-   border: 1px solid #303030;
-   padding: 2em;
-   height: max-content;
-
-   textarea,
-   input {
-      width: 100%;
-      background: none;
-      border: 0;
-      outline: 0;
-      padding: .5em;
-      color: $clr-white;
-      font-family: 'Roboto Mono', monospace;
-      font-weight: 400;
-      transition: .3s;
-      @include Clamp(.75, 4, 1);
-   }
-
-   label.input-label {
-      position: absolute;
-      left: 0;
-      text-transform: uppercase;
-      @include Clamp(.75, 4, .8);
-      color: grey;
-      transition: .5s;
-      opacity: .5;
-      pointer-events: none;
-   }
-
-   button {
-      width: 180px;
-      height: 55px;
-      outline: 0;
-      margin-top: 1.5em;
-      background: #181818;
-      border: 2px solid rgb(56, 91, 196);
-      cursor: pointer;
-      position: relative;
-
-      &, & > * { transition: .3s; }
-
-      &::before,
-      &::after {
-         content: '';
-         position: absolute;
-         z-index: 2;
-         background: #181818;
-         transition: .3s;
-      }
-
-      &::before {
-         width: 70%;
-         height: calc(100% + 4px);
-         top: -2px;
-         left: 50%;
-         transform: translateX(-50%);
-      }
-
-      &::after {
-         width: calc(100% + 4px);
-         height: 60%;
-         top: 50%;
-         left: -2px;
-         transform: translateY(-50%);
-      }
-
-      label {
-         @include Clamp(.85, 4, 1);
-         font-family: 'Sora', sans-serif;
-         font-weight: 400;
-         color: rgb(81, 122, 247);
-         position: absolute;
-         left: 0;
-         top: 0;
-         width: 100%;
-         @include Flex(c, c);
-         z-index: 4;
-         height: 100%;
-         background: #181818;
-      }
-
-      &:hover {
-         background: rgb(56, 91, 196);
-
-         label { 
-            color: $clr-white; 
-            background: transparent;
-         }
-
-         &::before { transform: translateX(-50%) scaleX(0); }
-         &::after { transform: translateY(-50%) scaleY(0); }
-      }
-   }
-
-   h6.error {
-      color: rgb(230, 10, 10);
-      position: absolute;
-      width: max-content;
-      font-size: .75rem;
-      font-weight: 400;
-      animation: anim .25s;
-      animation-delay: 1.75s;
-
-      @keyframes anim {
-         0% { opacity: 1; }
-         100% { opacity: 0; }
-      }
-   }
-
-   div.textarea {
-      position: relative;
-      margin-top: 3em;
-      height: 250px;
-      background: #151515;
-      border-radius: .15em;
-
-      h6.error {
-         bottom: 100%;
-         right: 0;
-      }
-
-      label {
-         top: .5em;
-         left: .5em;
-      }
-
-      textarea {
-         width: 100%;  
-         height: 100%;
-         resize: none;
-      }
-   }
-
-   div.input-div {
-      position: relative;
-
-      span.error {
-         top: 110%;
-         left: 0;
-      }
-
-      label {
-         top: 50%;
-         transform: translateY(-50%);
-      }
-
-      input {
-         border-bottom: 1px solid royalblue;
-      }
-   }
-
-   div.div-wrap {
-      @include Flex(sb, none);
-      margin-bottom: 3em;
-
-      div.input-div { width: 45% }
-   }
-}
-section.contact-text {
-   width: 28%;
-   @include Flex(sb);
-   flex-direction: column;
-   height: 100%;
-
-   section.mail-info {
-      margin-top: 4em;
-
-      p {
-         @include Clamp(1, 5, 1.2);
-
-         &.mail-header {
-            font-weight: 800;
-            margin-bottom: .5em;
-            color: $clr-white;
-
-            span {
-               font-size: .95rem;
-               color: #909090;
-            }
-         }
-
-         &.mail-text {
-            font-family: 'Roboto Mono', monospace;
-            padding: .5em;
-            background: #252525;
-            border-radius: .25em;
-            color: rgba(245, 245, 245, .6);
-         }
-      }
-   }
-
-   section.socials {
-      @include Flex(sa, c);
-
-      span {
-         cursor: pointer;
-         width: 15%;
-         min-width: 60px;
-         aspect-ratio: 1;
-         border-radius: .25em;
-         border: 2px solid grey;
-         @include Flex(c, c);
-         transition: .3s;
-         
-         svg {
-            @include FullSize(70%);
-            pointer-events: none;
-            transition: .3s;
-         }
-
-         &:hover {
-            rotate: 45deg;
-
-            svg {
-               rotate: -45deg;
-            }
-         }
-      }
-   }
-
-   h6 {
-      color: red;
-      font-size: .9rem;
-   }
-
-   p {
-      font-weight: 400;
-      @include Clamp(.85, 4, .95);
-      color: rgb(207, 207, 207);
-   }
-   
-   h2 {
-      font-weight: 700;
-      margin-bottom: 1em;
-      @include Clamp(1, 5, 1.5);
-      text-transform: uppercase;font-family: 'Roboto Mono', monospace;
-   }
-}
-
-@media (max-width: 768px) {
-   section.contact-text,
-   form.mail-form { width: 100%; margin-bottom: 2em; }
-
-   section.contact-text {
-      margin-bottom: 2em;
-
-      section.mail-info {
-         margin-bottom: 2em;
-      }
-   }
-}
-
-@media (max-width: 480px) {
-   form.mail-form {
-      padding: 1.5em .5em;
-
-      div.div-wrap {
-         flex-direction: column;
-         margin-bottom: 0;
-
-         div.input-div { width: 100%; margin-bottom: 2.2em; }
-      }
-   }
-
-   article.project-small {
-      width: 100%;
-      min-width: auto;
    }
 }

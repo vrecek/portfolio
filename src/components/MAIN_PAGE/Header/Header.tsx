@@ -1,6 +1,6 @@
 import FigureImage from '../../Common/FigureImage'
-import header from '../../../images/hdr.jpg'
-import '../../../css/Header.css'
+import header from '@/images/hdr.webp'
+import '@/css/Header.css'
 import LeftInformations from './LeftInformations'
 
 
@@ -9,7 +9,7 @@ const Header = () => {
       <header className='home-header'>
 
          <LeftInformations />
-         <FigureImage source={ header } altTxt='background' />
+         <FigureImage source={header} altTxt='background' />
 
       </header>
    )

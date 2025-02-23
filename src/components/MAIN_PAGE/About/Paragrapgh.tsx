@@ -1,5 +1,6 @@
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 
+
 const Paragrapgh = () => {
    return (
       <section className="paragraph">
@@ -15,5 +16,6 @@ const Paragrapgh = () => {
       </section>
    )
 }
+
 
 export default Paragrapgh

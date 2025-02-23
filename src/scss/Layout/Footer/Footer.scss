@@ -1,75 +1,59 @@
 @import '../../config';
 
+
 footer.layout-footer {
    background: #121212;
    @include Flex(c, c);
-   padding: clamp(4em, 15vw, 8em) 0;
+   padding: clamp(4em, 15vw, 8em);
    flex-direction: column;
    color: rgb(141, 141, 141);
 
-   div,
+   section.icons-section,
    section.text-section {
-      @include Center(1050px);
-      max-width: 90%;
+      width: 100%;
    }
-   
-   div {
+
+   section.socials {
+      display: flex;
+      
+      span {
+         @include Rectangle(35px);         
+         margin: 0 .5em;
+         color: $clr-whitel;
+         @include HoverBG(300ms, none, none);
+      }
+   }
+
+   section.icons-section {
       @include Flex(c, c);
-      color: $clr-white;
+      color: $clr-whitel;
       border-top: 2px solid grey;
       padding-top: 2em;
 
       span.icon {
          margin: 0 .5em;
-         @include Rectangle(clamp(28px, 6vw, 35px));
+         @include Rectangle(35px);
          cursor: pointer;
-         transition: .3s;
          position: relative;
 
-         svg {
-            @include FullSize;
-            pointer-events: none;
-            transition: .3s;
+         svg { 
+            @include HoverBG(300ms, auto, $clr-bluel);
+            @include Rectangle; 
          }
 
-         &:not(.mail)::before,
-         &.mail span {
+         p {
             padding: .2em .4em;
             background: #303030;
-            border-radius: .15em;
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            translate: -50% 100%;
             pointer-events: none;
             font-size: .8rem;
-            top: 0;
+            bottom: 0;
+            min-width: max-content;
+            transition: 250ms;
             opacity: 0;
-            transition: .3s;
             font-weight: 400;
-         }
-
-         &:not(.mail) {
-            &::before { content: attr(data-txt); }
-
-            &:hover {
-               &::before {
-                  opacity: 1;
-                  top: 110%;
-               }
-            }
-         }
-
-         &.mail {
-            span { white-space: nowrap; }
-
-            &:hover span {
-               opacity: 1;
-               top: 110%;
-            }
-         }
-
-         &:hover {
-            svg { color: rgb(92, 133, 255); }
          }
       }
    }
@@ -78,8 +62,8 @@ footer.layout-footer {
       @include Flex(sb, c);
       margin-bottom: 2em;
 
-      h1 {
-         @include Clamp(.8, 3, 1);
+      p.header {
+         @include Clamp(.9, 4, 1.5);
          font-weight: 700;
          text-transform: uppercase;
       }
@@ -95,16 +79,13 @@ footer.layout-footer {
                @include Clamp(.9, 4, 1.5);
                font-weight: 500;
                font-family: 'Roboto Mono', monospace;
-               &:first-child { margin-bottom: .5em; }
-               cursor: pointer;
-               transition: .3s;
+               @include HoverBG(.3s, auto, $clr-bluel);
 
-               &:hover {
-                  color: royalblue;
-               }
+               &:first-child { margin-bottom: .5em; }
             }
          }
       }
+
 
       @media (max-width: 480px) {
          flex-direction: column;

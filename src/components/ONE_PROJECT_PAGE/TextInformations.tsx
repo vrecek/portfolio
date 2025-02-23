@@ -1,16 +1,18 @@
 import { ProjectText } from '../../interfaces/OneProjectPageInterfaces'
 import TextParagraph from './TextParagraph'
 
+
 const TextInformations = ({header, text}: ProjectText) => {
     return (
         <div className="wrap">
 
-            <h2>{ header }</h2>
+            <p className='header'>{header}</p>
 
             <TextParagraph text={text} />
 
-         </div>
+        </div>
     )
 }
+
 
 export default TextInformations

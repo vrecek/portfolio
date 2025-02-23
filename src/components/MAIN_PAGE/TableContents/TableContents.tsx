@@ -1,38 +1,40 @@
-import '../../../css/TableContents.css'
-import { AsideTable } from '../../../interfaces/HomepageInterfaces'
+import TableContentsObject from '@/data/TABLE_CONTENTS'
+import '@/css/TableContents.css'
 import ExpandArrow from './ExpandArrow'
 import { scroller } from 'react-scroll'
+import Socials from '../Contact/Socials/Socials'
+import toggleTable from '@/utils/asideTableToggler'
+
 
 const TableContents = () => {
-   const links: AsideTable[] = [
-      { urlClass: 'home-header', name: 'Header intro' },
-      { urlClass: 'home-abilities', name: 'Abilities' },
-      { urlClass: 'home-projects', name: 'My projects' },
-      { urlClass: 'home-skills', name: 'My skills' },
-      { urlClass: 'home-about', name: 'About me' },
-      { urlClass: 'home-contact', name: 'Contact me' },
-      { urlClass: 'layout-footer', name: 'Footer' },
-   ]
+   const select_fn = (e: React.MouseEvent, id: string): void => {
+      scroller.scrollTo(id, {})
+      toggleTable(e.currentTarget.parentElement!.parentElement!.children[3] as HTMLElement)
+   }
+
 
    return (
       <aside className="table-contents">
 
-         <h1>Table of contents</h1>
+         <p className='header'>Table of contents</p>
 
          <ul>
             {
-               links.map((x, i) => (
-                  <li onClick={ () => scroller.scrollTo(x.urlClass, {}) } key={ i }>
-                     { x.name }
+               TableContentsObject.map((x, i) => (
+                  <li onClick={(e) => select_fn(e, x.urlClass)} key={i}>
+                     {x.name}
                   </li>
                ))
             }
          </ul>
+
+         <Socials />
 
          <ExpandArrow />
 
       </aside>
    )
 }
+
 
 export default TableContents

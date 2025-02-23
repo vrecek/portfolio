@@ -19,6 +19,7 @@ const MAIN_PAGE = () => {
          <Skills />
          <About />
          <Contact />
+         
          <TableContents />
 
       </main>

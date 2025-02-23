@@ -1,18 +1,21 @@
-import { AbilityType } from '../../../interfaces/HomepageInterfaces'
+import Icon from '@/components/Common/Icon'
+import { IAbilityType } from '../../../interfaces/HomepageInterfaces'
 import RedirectType from './RedirectType'
 
-const OneAbility = ({ icon, what, info, type }: AbilityType) => {
+
+const OneAbility = ({ icon, what, info, type }: IAbilityType) => {
    return (
       <article className="ability">
 
-         <span className="icon">{ icon }</span>
-         <h2>{ what }</h2>
-         <p>{ info }</p>
+         <Icon cname='icon' icon={icon!} />
+         <p className='what'>{what}</p>
+         <p className='info'>{info}</p>
 
-         <RedirectType type={ type } />
+         <RedirectType type={type} />
 
       </article>
    )
 }
+
 
 export default OneAbility

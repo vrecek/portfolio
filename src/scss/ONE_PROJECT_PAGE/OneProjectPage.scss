@@ -1,13 +1,15 @@
 @import '../config';
 
+
 main.one-project-page {
    padding: 1em 0 4em 0;
    min-height: 100vh;
-   @include Center(70%);
+   width: 70%;
+   margin: $navHeight auto 0 auto;
    margin-top: $navHeight;
 
    article.container {
-      h2 {
+      p.header {
          text-transform: uppercase;
          font-weight: 600;
          font-size: .9rem;
@@ -23,14 +25,14 @@ main.one-project-page {
 
          span.icon {
             @include Rectangle(clamp(30px, 8vw, 60px));
-            svg { @include FullSize; }
+            svg { @include Rectangle; }
          }
 
          &.description p {
             white-space: pre-line;
          }
 
-         p {
+         p.para {
             @include Clamp(.85, 4, .95);
             font-weight: 400;
 
@@ -109,12 +111,12 @@ main.one-project-page {
                   transition: .3s;
                }
 
-               svg { @include FullSize(65%); transition: .3s; }
+               svg { @include Rectangle(65%); transition: .3s; }
 
                &:nth-child(2) {
                   margin-left: .75em;
 
-                  svg { @include FullSize(55%); }
+                  svg { @include Rectangle(55%); }
                }
 
                &:hover {
@@ -135,14 +137,15 @@ main.one-project-page {
 
    section.thumbnail {
       width: 100%;
+      max-height: 550px;
       @include Flex(c, c);
+      overflow: hidden;
 
       figure img { 
-         max-height: 700px;
-         object-fit: cover;
          width: 100%;
       }
    }
+   
 
    @media (max-width: 768px) {
       width: 95%;

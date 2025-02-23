@@ -1,19 +1,18 @@
 import React from 'react'
 import { FilterSelect } from '../../interfaces/ProjectPageInterfaces'
 import FilterSelectContainer from './FilterSelectContainer'
-import filterFn from '../../functions/filterFn'
+import filterFn from '@/utils/filterFn'
 
 
 const FilterType = ({ initialTxt, options, dd, state, allDds }: FilterSelect) => {
    const changeFilter = (e: React.MouseEvent, str: string): void => {
-      const t:    HTMLElement = e.currentTarget as HTMLElement,
-            inp:  HTMLInputElement = t.parentElement!.parentElement!.children[0].children[0] as HTMLInputElement
+      const t:   HTMLElement      = e.currentTarget as HTMLElement,
+            inp: HTMLInputElement = t.parentElement!.parentElement!.children[0].children[0] as HTMLInputElement
 
-      // Set clicked input's filter text and set it to an attribute 
+
       inp.value = str
       inp.setAttribute('data-select', str)
 
-      // Shrink menu if clicked
       dd.switchActive()
       dd.shrinkMenu(.3)
 

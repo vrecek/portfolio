@@ -35,7 +35,7 @@ article.project-small {
          cursor: pointer;
 
          label {
-            color: $clr-white;
+            color: $clr-whitel;
             font-weight: 500;
             @include Clamp(.8, 4, .95);
             padding: .75em 1.25em;
@@ -76,44 +76,43 @@ article.project-small {
                @include Rectangle(clamp(23px, 7vw, 35px));
                @include Flex(c, c);
                border-radius: 50%;
-               border: 1px solid $clr-white;
+               border: 1px solid $clr-whitel;
                transition: .5s;
 
-               svg { @include FullSize(80%); }
+               svg { @include Rectangle(80%); }
             }
 
             &:hover {
                &::before { opacity: 1; }
 
                span {
-                  background: $clr-white;
+                  background: $clr-whitel;
 
-                  svg { color: $clr-black; }
+                  svg { color: $clr-blackl; }
                }
             }
          }
       }
    }
 
-   h2 {
+   p.header {
       font-weight: 600;
       margin: .2em 0;
       @include Clamp(1, 6, 1.75);
    }
 
-   p {
+   p.para {
       @include Clamp(.8, 4, .9);
       font-weight: 300;
    }
 
    figure {
-      width: 100%;
       aspect-ratio: 2;
       overflow: hidden;
       z-index: 2;
 
       img {
-         @include FullSize;
+         @include Rectangle;
          object-fit: cover;
          transition: .3s;
       }

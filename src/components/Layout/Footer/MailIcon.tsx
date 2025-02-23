@@ -1,29 +1,30 @@
 import React from 'react'
 import { ImMail4 } from 'react-icons/im'
-import MAIL_ADDRESS from '../../../data/MAIL_ADDRESS'
+import MAIL_ADDRESS from '@/data/MAIL_ADDRESS'
+import Icon from '@/components/Common/Icon'
+
 
 const MailIcon = () => {
    const copyMail = (e: React.MouseEvent): void => {
-      const t = e.target as HTMLElement
-      const text: HTMLElement = t.children[1] as HTMLElement
+      const t:    HTMLElement = e.currentTarget as HTMLElement,
+            text: HTMLElement = t.parentElement!.children[1] as HTMLElement
 
       window.navigator.clipboard.writeText(MAIL_ADDRESS)
-      text.textContent = 'Copied!'
+      text.style.opacity = '1'
 
-      t.style.transform = 'scale(.85)'
-
-      setTimeout(() => t.style.transform = 'scale(1)', 300);
-      setTimeout(() => text.textContent = 'Copy mail', 1500)
+      setTimeout(() => text.style.opacity = '0', 1500)
    }
    
-   return (
-      <span onClick={ copyMail } className='icon mail'>
 
-         <ImMail4 />
-         <span>Copy mail</span>
+   return (
+      <span className='icon'>
+
+         <Icon clickfn={copyMail} cname='mail' icon={<ImMail4 />} />
+         <p>Copied</p>
 
       </span>
    )
 }
+
 
 export default MailIcon

@@ -1,7 +1,7 @@
 import { BsLaptop } from 'react-icons/bs'
 
 
-export const HeaderText = () => {
+const HeaderText = () => {
    return (
       <div className="headers">
 
@@ -11,3 +11,6 @@ export const HeaderText = () => {
       </div>
    )
 }
+
+
+export default HeaderText

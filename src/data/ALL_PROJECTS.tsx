@@ -12,45 +12,47 @@ import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
 import { SiNextdotjs } from 'react-icons/si'
 
-import weather from '../images/projects/weather.png'
-import poker from '../images/projects/poker.png'
+import weather from '../images/projects/weather.webp'
+import poker from '../images/projects/poker.webp'
 import chess from '../images/projects/chess.png'
-import ttt from '../images/projects/tictactoe.png'
-import blackjack from '../images/projects/blackjack.png'
-import clicker from '../images/projects/clicker.png'
+import ttt from '../images/projects/tictactoe.webp'
+import blackjack from '../images/projects/blackjack.webp'
+import clicker from '../images/projects/clicker.webp'
 import vr from '../images/projects/vr.png'
 import autoclicker from '../images/projects/autoclicker.png'
 import encrypt from '../images/projects/encrypt.png'
 import electronicshop from '../images/projects/electronicshop.png'
 import myblog from '../images/projects/myblog.png'
-import foodshop from '../images/projects/foodshop.png'
+import foodshop from '../images/projects/foodshop.webp'
 import luxury from '../images/projects/luxury.png'
-import houses from '../images/projects/houses.png'
-import fooddelivery from '../images/projects/fooddelivery.png'
+import houses from '../images/projects/houses.webp'
+import fooddelivery from '../images/projects/fooddelivery.webp'
 import courses from '../images/projects/courses.png'
 import calculator from '../images/projects/calculator.png'
 import hangman from '../images/projects/hangman.png'
 import clothings from '../images/projects/clothings.png'
-import blog from '../images/projects/blog.png'
+import blog from '../images/projects/blog.webp'
 import quizzes from '../images/projects/quizzes.png'
 import chat from '../images/projects/chat.png'
 import resizeapp from '../images/projects/resizeapp.png'
-import gym from '../images/projects/gym.png'
-import clickergame from '../images/projects/clickergame.png'
+import gym from '../images/projects/gym.webp'
+import clickergame from '../images/projects/clickergame.webp'
 import mousecolor from '../images/projects/mousecolor.png'
-import rapmusic from '../images/projects/rapmusic.png'
+import rapmusic from '../images/projects/rapmusic.webp'
 import paint from '../images/projects/paint.png'
-import fashionista from '../images/projects/fashionista.png'
+import fashionista from '../images/projects/fashionista.webp'
 import keytype from '../images/projects/keytype.png'
 import platformer from '../images/projects/platformer.png'
 import slots from '../images/projects/slots.png'
-import newtab from '../images/projects/newtab.png'
-import viddwn from '../images/projects/viddwn.png'
+import newtab from '../images/projects/newtab.webp'
+import ytdwn from '../images/projects/ytdwn.png'
 import twitchbot from '../images/projects/twitchbot.png'
 import ps1 from '../images/projects/ps1.png'
 import gencombo from '../images/projects/gencombo.png'
 import configs from '../images/projects/configs.png'
 import capture from '../images/projects/capture.png'
+import discordbot from '../images/projects/discordbot.png'
+import cloudstorage from '../images/projects/cloudstorage.png'
 
 import chatreg from '../images/description/chatregister.png'
 import chatadd from '../images/description/chatadd.png'
@@ -69,10 +71,34 @@ import fashbasket from '../images/description/fash_basket.png'
 import fashprod from '../images/description/fash_prod.png'
 import fashsearch from '../images/description/fash_search.png'
 import fashtiles from '../images/description/fash_tiles.png'
+import cloudlog from '../images/description/cloudlog.png'
+import clouddir from '../images/description/clouddir.png'
+import ytdwn_config from '@/images/description/ytdwn_config.png'
+
 
 import ProjectType from '../interfaces/ProjectInterface'
 
+
 const PROJECTS: ProjectType[] = [
+   {
+      id: 'cloud-storage',
+      thumbnail: cloudstorage,
+      name: "Cloud storage",
+      stack: "Fullstack",
+      shortPara: "A private storage for the files",
+      language: ["Typescript", "SCSS", "HTML"],
+      type: 'Website',
+      tags: [
+         { name: "Saving output", icon: <AiOutlineDownload /> },
+         { name: "Fullstack", icon: <AiOutlineCloudServer /> },
+         { name: "Full system", icon: <MdAdminPanelSettings /> }
+      ],
+      date: 44,
+      repository: 'https://github.com/vrecek/hosting',
+      bugs: [],
+      description: `Cloud storage for storing different types of files. Uses the MongoDB as a database and the Express as a server framework [[${clouddir}]] [[${cloudlog}]]` 
+   },
+
    {
       id: 'video-recorder',
       thumbnail: capture,
@@ -86,10 +112,10 @@ const PROJECTS: ProjectType[] = [
          { name: "Recorder", icon: <BsFillMicFill /> },
          { name: "Saving output", icon: <AiOutlineDownload /> }
       ],
-      date: 42,
+      date: 43,
       repository: 'https://github.com/vrecek/video-stream',
       bugs: [],
-      description: "Record the RTSP stream, presumably from an IP camera. Offers detection handling, saving it to an image file, detection sound, stop/resume record action, etc..."
+      description: "Record the RTSP stream, presumably from an IP camera. Offers detection handling, saving it to a file, detection sound, stop/resume record action, etc..."
    },
 
    {
@@ -103,10 +129,28 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "Configurations", icon: <BiCog /> },
       ],
-      date: 41,
+      date: 42,
       repository: 'https://github.com/vrecek/configs',
       bugs: [],
       description: "My config files for the: vim, kitty terminal, zsh, neofetch, vscodium, sysctl, etc... Also contains Typescript/SCSS main files. There is also available complete GNOME setup on Arch linux."
+   },
+
+   {
+      id: 'discord-bot',
+      thumbnail: discordbot,
+      name: "My discord bot",
+      stack: "Other",
+      shortPara: "My all-purpose discord bot",
+      language: ["Python"],
+      type: 'App',
+      tags: [
+         { name: "Automation", icon: <GiRobotGrab /> },
+         { name: "Interactivity", icon: <GiClick /> }
+      ],
+      date: 41,
+      repository: 'https://github.com/vrecek/mydiscordbot',
+      bugs: [],
+      description: "A discord bot that is responsible for various things. Main task is to play music files, as well as sending files"
    },
 
    {
@@ -126,7 +170,7 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/ps1-gen',
       liveUrl: 'https://vrecek.github.io/ps1-gen',
       bugs: [],
-      description: "Generate your own BASH or ZSH command prompt, or convert one to other. Simple design and visual portray made it easy."
+      description: "Generate your own BASH or ZSH command prompt, or convert one to another. Simple design and visual portray made it easy."
    },
 
    {
@@ -149,21 +193,21 @@ const PROJECTS: ProjectType[] = [
    },
 
    {
-      id: 'video-downloader',
-      thumbnail: viddwn,
-      name: "Video downloader",
+      id: 'yt-downloader',
+      thumbnail: ytdwn,
+      name: "YT downloader",
       stack: "Other",
-      shortPara: "Download videos from different sites",
-      language: ["Python"],
+      shortPara: "Download videos from YouTube",
+      language: ["C"],
       type: 'App',
       tags: [
          { name: "Command line", icon: <BsFillTerminalFill /> },
          { name: "Download", icon: <AiOutlineDownload /> }
       ],
       date: 38,
-      repository: 'https://github.com/vrecek/video-downloader',
+      repository: 'https://github.com/vrecek/yt-dwn-ncurses',
       bugs: [],
-      description: "App that downloads videos from YouTube. It can also download videos from sites, that have a video source in the video tag."
+      description: `App that downloads videos from YouTube. Uses 'ncurses' and 'yt-dlp' [[${ytdwn_config}]]`
    },
 
    {
@@ -190,7 +234,7 @@ const PROJECTS: ProjectType[] = [
       thumbnail: newtab,
       name: "Custom new tab",
       stack: "Frontend",
-      shortPara: 'Custom newtab for Librewolf',
+      shortPara: 'Custom newtab for browsers',
       language: ["Typescript", "SCSS", "HTML"],
       type: 'Website',
       tags: [
@@ -201,8 +245,8 @@ const PROJECTS: ProjectType[] = [
       date: 36,
       repository: 'https://github.com/vrecek/new_tab',
       liveUrl: 'https://vrecek.github.io/new_tab',
-      bugs: ["*Not an app error* After making a query, the browser blocks the request. This can be bypassed in the extension options, or by tweaking your browser security settings"],
-      description: 'Custom newtab for my browser. I use this with a "Custom New Tab Page" extension. I am using this in Librewolf, should probably work on other browsers too.'
+      bugs: ["*Not an app error* Browser may block the search request. This can be bypassed in the extension options, or by tweaking your browser security settings"],
+      description: 'Custom new tab for a browser. I use this with a "Custom New Tab Page" extension. Allows for customization'
    },
 
    {
@@ -461,7 +505,6 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 22,
       repository: 'https://github.com/vrecek/blog',
-      // liveUrl: 'https://react-web-blog-heroku.herokuapp.com/',
       bugs: [],
       description: `My second blog about tutorials / news. It focuses on a programming topics. Uses MongoDB. [[${bloghead}]] [[${blogart}]] [[${blogcont}]]`
    },
@@ -597,7 +640,7 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "Game", icon: <IoGameController /> },
          { name: "Frontend", icon: <BiPaint /> },
-         { name: "One screen", icon: <IoIosMan /> }
+         { name: "Single screen", icon: <IoIosMan /> }
       ],
       date: 4,
       repository: 'https://github.com/vrecek/chess',
@@ -617,7 +660,7 @@ const PROJECTS: ProjectType[] = [
       tags: [
          { name: "Game", icon: <IoGameController /> },
          { name: "Frontend", icon: <BiPaint /> },
-         { name: "One screen", icon: <IoIosMan /> }
+         { name: "Single screen", icon: <IoIosMan /> }
       ],
       date: 5,
       repository: 'https://github.com/vrecek/TicTacToe',
@@ -739,7 +782,6 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 15,
       repository: 'https://github.com/vrecek/electronic-shop',
-      // liveUrl: 'https://react-electronic-shop-heroku.herokuapp.com/',
       bugs: ['Cookie popup does not dissapear'],
       description: `E-commence shop. It offers any kind of electronics, kitchen equipment etc. Uses MongoDB. [[${elecprod}]] [[${elecbasket}]] [[${elecsearch}]]`
    },
@@ -759,7 +801,6 @@ const PROJECTS: ProjectType[] = [
       ],
       date: 9,
       repository: 'https://github.com/vrecek/vrec-blog',
-      // liveUrl: 'https://react-vrec-blog-heroku.herokuapp.com/',
       bugs: [],
       description: `Online, fullstack blog. It focuses on a programming topics. Uses MongoDB. [[${vrecblogreg}]]`
    },
@@ -846,6 +887,7 @@ const PROJECTS: ProjectType[] = [
 ]
 
 const PROJECTS_LEN: number = PROJECTS.length
+
 
 export default PROJECTS
 export { PROJECTS_LEN }

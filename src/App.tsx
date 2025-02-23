@@ -9,9 +9,10 @@ import PROJECTS_PAGE from './components/PROJECTS_PAGE/PROJECTS_PAGE'
 import ONE_PROJECT_PAGE from './components/ONE_PROJECT_PAGE/ONE_PROJECT_PAGE'
 import './css/index.css'
 import './css/SmallProject.css'
+import './css/HeaderInfo.css'
 
 
-function App() {
+function App() { // REMOVE MAIL FORM AND ITS "DEPENDENCIES": AppendText.tsx, STYLES
     return (
         <>
 

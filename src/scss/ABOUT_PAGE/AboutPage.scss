@@ -2,12 +2,5 @@
 
 
 main.about-page {
-   @include Flex(sb);
    padding-top: $navHeight;
-   margin-top: 2em;
-   @include AboutStyle;
-
-   @media (max-width: 768px) {
-      margin-top: 6em;
-   }
 }

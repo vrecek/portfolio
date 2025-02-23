@@ -1,16 +1,18 @@
 import React from 'react'
 import { AiFillSetting } from 'react-icons/ai'
+import Icon from '../Common/Icon'
 
 
 const FiltersDropdown = () => {
    const toggleFilter = (e: React.MouseEvent): void => {
-      const t: HTMLElement = e.currentTarget as HTMLElement,
+      const t:      HTMLElement = e.currentTarget as HTMLElement,
             parent: HTMLElement = t.parentElement! as HTMLElement
 
       
       t.classList.toggle('active')
 
-      if (t.classList.contains('active')) {
+      if (t.classList.contains('active'))
+      {
          parent.style.translate = '0 0'
          t.style.translate = '-100% 0'
          t.style.top = '0'
@@ -25,11 +27,7 @@ const FiltersDropdown = () => {
 
 
    return (
-      <span onClick={ toggleFilter } className="filter-icon">
-
-         <AiFillSetting />
-
-      </span>
+      <Icon clickfn={toggleFilter} cname='filter-icon' icon={<AiFillSetting />} />
    )
 }
 

@@ -3,13 +3,14 @@ import { AiFillBug } from 'react-icons/ai'
 import { BsFileRichtext, BsStack } from 'react-icons/bs'
 import { FaSitemap } from 'react-icons/fa'
 import { MdLanguage } from 'react-icons/md'
-import { NavigateFunction, useLocation, useNavigate, useParams } from 'react-router-dom'
-import '../../css/OneProjectPage.css'
+import { Location, NavigateFunction, useLocation, useNavigate, useParams } from 'react-router-dom'
 import PROJECTS from '../../data/ALL_PROJECTS'
 import ProjectType from '../../interfaces/ProjectInterface'
 import NameAndLinks from './NameAndLinks'
 import ProjectInfo from './ProjectInfo'
 import Thumbnail from './Thumbnail'
+import '@/css/OneProjectPage.css'
+
 
 const ONE_PROJECT_PAGE = () => {
    window.scrollTo(0, 0)
@@ -18,20 +19,19 @@ const ONE_PROJECT_PAGE = () => {
 
    const {id} = useParams(),
          n: NavigateFunction = useNavigate(),
-         l = useLocation()
+         l: Location = useLocation()
 
          
    React.useEffect(() => {
-      if (!PROJECTS.some(x => x.id === id)) {
-         n('/', { replace: true })
-         return
-      }
+      if (PROJECTS.every(x => x.id !== id))
+         return n('/', { replace: true })
 
       setProject(PROJECTS.filter(x => x.id === id)[0])
    }, [l])
 
    
-   if (project) {
+   if (project)
+   {
       const displayBugs = (): JSX.Element => {
          return (
             <ul>
@@ -39,10 +39,10 @@ const ONE_PROJECT_PAGE = () => {
                   project.bugs.length
                   ?
                      project.bugs.map((x, i) => (
-                        <li key={ i }>{ x }</li>
+                        <li key={i}>{x}</li>
                      ))
                   :
-                      <li className="clear">No problems found</li>
+                     <li className="clear">No problems found</li>
                }
             </ul>
          )
@@ -53,7 +53,7 @@ const ONE_PROJECT_PAGE = () => {
             <ul>
                {
                   project.language.map((x, i) => (
-                     <li key={ i }>{ x }</li>
+                     <li key={i}>{x}</li>
                   ))
                }
             </ul>
@@ -63,44 +63,44 @@ const ONE_PROJECT_PAGE = () => {
       return (
          <main className="one-project-page">
    
-            <Thumbnail src={ project.thumbnail } />
+            <Thumbnail src={project.thumbnail} />
             
             <article className="container">
    
-               <NameAndLinks repo={ project.repository } liveUrl={ project.liveUrl } name={ project.name } />
+               <NameAndLinks repo={project.repository} liveUrl={project.liveUrl} name={project.name} />
    
                <ProjectInfo 
                   header='Type'
-                  text={ project.type }
-                  icon={ <FaSitemap /> }
+                  text={project.type}
+                  icon={<FaSitemap />}
                   cname='type'
                />
    
                <ProjectInfo 
                   header='Stack'
-                  text={ project.stack }
-                  icon={ <BsStack /> }
+                  text={project.stack}
+                  icon={<BsStack />}
                   cname='stack'
                />
    
                <ProjectInfo 
                   header='Languages'
-                  text={ displayLanguages() }
-                  icon={ <MdLanguage /> }
+                  text={displayLanguages()}
+                  icon={<MdLanguage />}
                   cname='languages'
                />
    
                <ProjectInfo 
                   header='Description'
-                  text={ project.description }
-                  icon={ <BsFileRichtext /> }
+                  text={project.description}
+                  icon={<BsFileRichtext />}
                   cname='description'
                />
 
                <ProjectInfo 
                   header='Known problems'
-                  text={ displayBugs() }
-                  icon={ <AiFillBug /> }
+                  text={displayBugs()}
+                  icon={<AiFillBug />}
                   cname='bugs'
                />
    
@@ -112,5 +112,6 @@ const ONE_PROJECT_PAGE = () => {
 
    return <></>
 }
+
 
 export default ONE_PROJECT_PAGE

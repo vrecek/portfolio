@@ -45,6 +45,8 @@ export interface ChartType {
    moveXPerc?: number
 }
 
-export interface AbilityType extends SkillDivType {
-   type: string
+export type AbilityType = {
+   type: 'program' | 'website'
 }
+
+export type IAbilityType = SkillDivType & AbilityType

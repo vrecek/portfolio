@@ -1,53 +1,25 @@
-import { CSSProperties } from 'react'
 import { HeaderType } from '../../interfaces/CommonInterfaces'
+import Icon from './Icon'
 
-const HeaderInfo = ({ children, icon, cname }: HeaderType) => {
-   const dStyle: CSSProperties = {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '2em 0'
-   }
 
-   const hStyle: CSSProperties = {
-      fontSize: 'clamp(.95rem, 4vw, 1.2rem)',
-      fontWeight: '700',
-      letterSpacing: '1px'
-   }
-
-   const sStyle: CSSProperties = {
-      width: '23px',
-      height: '23px',
-      marginLeft: '.75em',
-      color: 'rgb(85, 85, 85)'
-   }
-
-   const signStyle: CSSProperties = {
-      fontSize: '.9rem',
-      color: 'rgb(85, 85, 85)',
-      fontWeight: '700'
-   }
-
+const HeaderInfo = ({ children, icon }: HeaderType) => {
    return (
-      <div style={ dStyle } className={ cname ?? '' }>
+      <div className='header-info'>
 
-         <h1 style={ hStyle }>
-
-            <span style={ signStyle }>&#60;</span>
-            { children }
-            <span style={ signStyle }>/&#62;</span>
-
-         </h1>
+         <p>
+            <span>&#60;</span>
+            {children}
+            <span>/&#62;</span>
+         </p>
 
          { 
             icon && 
-            <span style={ sStyle }>
-               { icon }
-            </span> 
+            <Icon icon={icon} cname='icon' />
          }
 
       </div>
    )
 }
+
 
 export default HeaderInfo

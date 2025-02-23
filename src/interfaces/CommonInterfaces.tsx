@@ -1,27 +1,37 @@
+import React from "react"
+
+
 export interface FigureType {
-   source: string,
-   altTxt?: string,
-   cname?: string
+   source:     string,
+   altTxt?:    string,
+   cname?:     string
+   reference?: Ref
 }
 
-export interface ButtonType {
+export type IconType = {
+   icon:       JSX.Element
+   cname?:     string
+   reference?: Ref
+   clickfn?:   (e: React.MouseEvent) => void
+}
+
+export type ButtonType = {
    text: string, 
    action?: React.MouseEventHandler, 
    additional?: JSX.Element | string | number, 
    cname?: string
 }
 
-export interface HeaderType {
+export type HeaderType = {
    children: any,
-   icon?: JSX.Element,
-   cname?: string
+   icon?:    JSX.Element,
 }
 
-export interface Text {
+export type Text = {
    children: string
 }
 
-export interface ViewportHandlerType {
+export type ViewportHandlerType = {
    forwardedRef: any,
    inViewport: boolean,
 }

@@ -5,7 +5,7 @@ const Timeline = () => {
    return (
       <section className="timeline">
 
-         <h3>Timeline</h3>
+         <p className='timeline'>Timeline</p>
          
          <Slider />
 

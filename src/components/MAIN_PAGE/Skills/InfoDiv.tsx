@@ -1,16 +1,16 @@
 import { SkillDivType } from '../../../interfaces/HomepageInterfaces'
 
+
 const InfoDiv = ({ what, info }: SkillDivType) => {
    return (
       <div className="info">
-
-         <h4>
+         <p>
             <span>{ what }</span>
             { info }
-         </h4>
-
+         </p>
       </div>
    )
 }
+
 
 export default InfoDiv

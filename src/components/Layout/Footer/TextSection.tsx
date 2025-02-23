@@ -1,15 +1,17 @@
 import List from './List'
 
+
 const TextSection = () => {
    return (
       <section className="text-section">
 
-         <h1>Portfolio</h1>
+         <p className="header">Portfolio</p>
 
          <List />
 
       </section>
    ) 
 }
+
 
 export default TextSection

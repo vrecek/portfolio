@@ -44,7 +44,7 @@ class AppendResult {
       this.timeout = setTimeout( () => {
          elem.remove()
          this.nullProperties()
-      }, removeAfterSeconds * 1000 )
+      }, removeAfterSeconds * 1000 ) as any
    }
 
 

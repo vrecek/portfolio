@@ -1,16 +1,19 @@
 import { InfoType } from '../../interfaces/OneProjectPageInterfaces'
+import Icon from '../Common/Icon'
 import TextInformations from './TextInformations'
+
 
 const ProjectInfo = ({ cname, header, text, icon }: InfoType) => {
    return (
-      <section className={ cname }>
+      <section className={cname}>
 
          <TextInformations text={text} header={header} />
 
-         <span className='icon'>{ icon }</span>
+         <Icon cname='icon' icon={icon} />
 
       </section>
    )
 }
+
 
 export default ProjectInfo

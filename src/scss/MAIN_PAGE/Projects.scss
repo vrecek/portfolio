@@ -6,7 +6,7 @@ section.home-projects {
    @include TopSeparator;
 
    div.text-wrap {
-      @include Flex(sb, fe);
+      @include Flex(sb, c);
       padding: 0 clamp(1em, 7vw, 5em);
       margin-bottom: 3.5em;
       margin-top: 1.5em;
@@ -14,8 +14,6 @@ section.home-projects {
       div.entry-info {
          font-family: 'Roboto Mono', monospace;
          padding: 2em 0 .5em 0 !important;
-   
-         svg { @include FullSize; }
       }
 
       button {
@@ -32,7 +30,7 @@ section.home-projects {
             font-weight: 600;
             letter-spacing: 1px;
             font-family: 'Sora', sans-serif;
-            color: $clr-white;
+            color: $clr-whitel;
             @include Clamp(.75, 4, .9);
          }
 

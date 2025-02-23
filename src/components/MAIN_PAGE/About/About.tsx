@@ -1,30 +1,31 @@
 import HeaderInfo from '../../Common/HeaderInfo'
 import { FcAbout } from 'react-icons/fc'
-import '../../../css/About.css'
+import '@/css/About.css'
 import ArticleText from './ArticleText'
 import ImageHandler from './ImageHandler'
 import handleViewport from 'react-in-viewport'
 
-const About = () => {
+
+const About = ({ cname }: {cname?: string}) => {
    const AuthorImage = handleViewport(ImageHandler)
 
+   
    return (
-      <section className="home-about">
+      <section className={`home-about ${cname}`}>
 
-         <HeaderInfo icon={ <FcAbout /> } cname='entry-info'>
+         <HeaderInfo icon={<FcAbout />}>
             About me
          </HeaderInfo>
 
-         <div className="wrap first-info">
-
+         <section className="wrap">
             <AuthorImage />
             
             <ArticleText />
-
-         </div>
+         </section>
 
       </section>
    )
 }
+
 
 export default About

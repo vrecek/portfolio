@@ -1,12 +1,13 @@
-import { SkillSectionType } from '../../../interfaces/HomepageInterfaces'
+import { SkillSectionType } from '@/interfaces/HomepageInterfaces'
 import OneSkill from './OneSkill'
 import SkillHeader from './SkillHeader'
 
+
 const SkillSection = ({ title, list }: SkillSectionType) => {
    return (
-      <div className='wrap'>
+      <section className='wrap'>
 
-         <SkillHeader>{ title }</SkillHeader>
+         <SkillHeader>{title}</SkillHeader>
          
          <section className="container">
             {
@@ -23,8 +24,9 @@ const SkillSection = ({ title, list }: SkillSectionType) => {
             }
          </section>
          
-      </div>
+      </section>
    )
 }
+
 
 export default SkillSection

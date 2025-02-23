@@ -6,9 +6,9 @@ const InfoElement = ({ date, text, chartNum, moveXPerc }: AboutElement) => {
    return (
       <article className="element">
 
-         <h2>{ date }</h2>
-         <p>{ text }</p>
-         <Chart moveXPerc={ moveXPerc } num={ chartNum } />
+         <p className='date'>{date}</p>
+         <p className='text'>{text}</p>
+         <Chart moveXPerc={moveXPerc} num={chartNum} />
 
       </article>
    )

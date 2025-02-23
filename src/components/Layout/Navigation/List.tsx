@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { NavigationList } from '../../../interfaces/NavigationInterfaces'
 
+
 const List = () => {
    const n = useNavigate()
 
@@ -10,19 +11,19 @@ const List = () => {
       { name: 'Projects', url: '/projects', cname: 'mark' }
    ]
 
+
    return (
       <ul>
-            
          {
             list.map((x, i) => (
-               <li onClick={ () => n(x.url) } key={ i } className={ x.cname ?? '' }>
-                  { x.name }
+               <li onClick={() => n(x.url)} key={i} className={x.cname ?? ''}>
+                  {x.name}
                </li>
             ))
          }
-
       </ul>
    )
 }
+
 
 export default List

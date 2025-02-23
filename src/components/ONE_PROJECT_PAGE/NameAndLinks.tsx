@@ -1,12 +1,13 @@
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { GoRepo } from 'react-icons/go'
-import { TitleAndLinks } from '../../interfaces/OneProjectPageInterfaces'
+import { TitleAndLinks } from '@/interfaces/OneProjectPageInterfaces'
+
 
 const NameAndLinks = ({ name, liveUrl, repo }: TitleAndLinks) => {
    const livePreview = (): JSX.Element => {
       return liveUrl 
       ?
-         <span onClick={ () => window.open(liveUrl, '_blank') } data-text='Live preview' className='icon'>
+         <span onClick={() => window.open(liveUrl, '_blank')} data-text='Live preview' className='icon'>
             <AiFillEye />
          </span>
       
@@ -16,16 +17,17 @@ const NameAndLinks = ({ name, liveUrl, repo }: TitleAndLinks) => {
          </span>
    }
 
+
    return (
       <section className="title-links">
 
-         <h1>{ name }</h1>
+         <h1>{name}</h1>
 
          <div className="links">
 
-            { livePreview() }
+            {livePreview()}
 
-            <span onClick={ () => window.open(repo, '_blank') } data-text='Repository' className='icon'>
+            <span onClick={() => window.open(repo, '_blank')} data-text='Repository' className='icon'>
                <GoRepo />
             </span>
 
@@ -34,5 +36,6 @@ const NameAndLinks = ({ name, liveUrl, repo }: TitleAndLinks) => {
       </section>
    )
 }
+
 
 export default NameAndLinks

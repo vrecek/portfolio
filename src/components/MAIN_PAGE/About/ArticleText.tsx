@@ -1,19 +1,19 @@
-import AboutIcons from './AboutIcons'
+import Socials from '../Contact/Socials/Socials'
 import Author from './Author'
 import Timeline from './Timeline'
+
 
 const ArticleText = () => {
    return (
       <article className="text">
                   
          <Author />
-
          <Timeline />
-
-         <AboutIcons />
+         <Socials />
 
       </article>
    )
 }
+
 
 export default ArticleText

@@ -1,21 +1,22 @@
 import { FilterDropdownContainer } from '../../interfaces/ProjectPageInterfaces'
 import CurrentFilter from './CurrentFilter'
 
+
 const FilterSelectContainer = ({dd, allDds, initialTxt, options, changeFilter}: FilterDropdownContainer) => {
     return (
         <div className="select">
 
             <CurrentFilter 
-                dd={ dd } 
+                dd={dd} 
                 allDds={allDds}
-                text={ initialTxt } 
+                text={initialTxt} 
             />
 
             <ul>
                 {
                     options.map((x, i) => (
-                        <li onClick={ (e) => changeFilter(e, x) } key={ i }>
-                            { x }
+                        <li onClick={(e) => changeFilter(e, x)} key={i}>
+                            {x}
                         </li>
                     ))
                 }
@@ -24,5 +25,6 @@ const FilterSelectContainer = ({dd, allDds, initialTxt, options, changeFilter}: 
         </div>
     )
 }
+
 
 export default FilterSelectContainer

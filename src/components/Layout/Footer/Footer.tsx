@@ -1,17 +1,18 @@
-import '../../../css/Footer.css'
-import Icons from './Icons'
+import Socials from '@/components/MAIN_PAGE/Contact/Socials/Socials'
+import '@/css/Footer.css'
 import TextSection from './TextSection'
+
 
 const Footer = () => {
    return (
       <footer className="layout-footer">
 
          <TextSection />
-
-         <Icons />
+         <Socials />
 
       </footer>
    )
 }
+
 
 export default Footer

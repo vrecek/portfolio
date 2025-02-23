@@ -1,5 +1,6 @@
 @import '../config';
 
+
 main.projects-page {
    min-height: 100vh;
    padding: calc($navHeight + 3em) 4em 5em 4em;
@@ -19,10 +20,6 @@ main.projects-page {
             top: 50%;
             translate: 0 -50%;
             @include Rectangle(25px);
-
-            svg {
-               @include FullSize;
-            }
          }  
 
          input {
@@ -32,7 +29,7 @@ main.projects-page {
             border: 0;
             border-radius: .25em;
             outline: 0;
-            color: $clr-white;
+            color: $clr-whitel;
             font-weight: 400;
             @include Clamp(.9, 4, 1);
             background: #282828;
@@ -58,6 +55,8 @@ main.projects-page {
       left: 0;
       top: 0;
       padding: 2em 1.5em;
+      display: flex;
+      flex-direction: column;
 
       p.text {
          font-size: 2rem;
@@ -77,15 +76,15 @@ main.projects-page {
          top: 50%;
          translate: 0 -50%;
 
-         svg {
-            @include FullSize(60%);
-         }
+         svg { @include Rectangle(60%); }
 
          &:hover { background: darken(royalblue, 10%) }
       }
 
       form.container {
          transition: .3s;
+         overflow: scroll;
+         flex-grow: 1;
 
          p.by-info {
             margin-bottom: .25em;
@@ -114,13 +113,13 @@ main.projects-page {
                   border: 0;
                   width: 80%;
                   pointer-events: none;
-                  color: $clr-white;
+                  color: $clr-whitel;
                }
 
                span {
                   @include Rectangle(25px);
                   transition: .3s;
-                  svg { @include FullSize; }
+                  svg { @include Rectangle; }
                }
 
                input, span { pointer-events: none; }
@@ -134,7 +133,6 @@ main.projects-page {
                display: none;
                transition: .3s;
                height: 0;
-               overflow: hidden;
                background: #151515;
                border: 1px solid rgb(49, 49, 49);
                border-top: 0;
@@ -146,12 +144,7 @@ main.projects-page {
                   padding: 1em .5em;
                   font-size: .9rem;
                   font-weight: 400;
-                  transition: .3s;
-                  cursor: pointer;
-
-                  &:hover {
-                     background: rgb(57, 94, 205);
-                  }
+                  @include HoverBG(.3s, $clr-bluedr);
                }
             }
          }

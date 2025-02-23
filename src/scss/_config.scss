@@ -1,44 +1,155 @@
-// font-family: 'Sora', sans-serif;
-// font-family: 'Roboto Mono', monospace;
+// # # # # # # # # # # # # # # # # # # COMMENTS # # # # # # # # # # # # # # # # # # # # #
 
-$clr-white: rgb(245, 245, 245);
-$clr-black: rgb(45, 45, 45);
+/*
+   Media queries: 1200px | 1000px | 768px | 480px
+*/
 
-$navHeight: 83.6px;
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-@mixin FullSize($size: 100%) {
-   width: $size;
-   height: $size;
+
+
+// # # # # # # # # # # # # # # # # # # # COLORS # # # # # # # # # # # # # # # # # # # # #
+
+$clr-blacklr: rgb(85, 85, 85);
+$clr-blackl: rgb(60, 60, 60);
+$clr-blackd: rgb(45, 45, 45);
+$clr-blackdr: rgb(30, 30, 30);
+
+$clr-whitelr: rgb(250, 250, 250);
+$clr-whitel: rgb(240, 240, 240);
+$clr-whited: rgb(225, 225, 225); 
+$clr-whitedr: rgb(210, 210, 210); 
+
+$clr-greylr: rgb(195, 195, 195);
+$clr-greyl: rgb(180, 180, 180);
+$clr-greyd: rgb(150, 150, 150);
+$clr-greydr: rgb(110, 110, 110);
+
+$clr-greenlr: rgb(16, 233, 77);
+$clr-greenl: rgb(26, 203, 37);
+$clr-greend: rgb(22, 174, 73);
+
+$clr-bluelr:rgb(160, 214, 255);
+$clr-bluel: rgb(109, 160, 255);
+$clr-blued: rgb(49, 85, 190);
+$clr-bluedr:rgb(45, 70, 143);
+
+$clr-purplelr: rgb(146, 54, 193);
+$clr-purplel: rgb(119, 44, 157);
+$clr-purpled: rgb(100, 38, 131);
+$clr-purpledr: rgb(79, 27, 105);
+
+$clr-redlr: rgb(234, 18, 18);
+$clr-redl: rgb(199, 11, 11);
+$clr-redd: rgb(164, 19, 19);
+$clr-reddr: rgb(131, 15, 15);
+
+$clr-orangel: rgb(255, 136, 0);
+$clr-oranged: rgb(230, 72, 15);
+
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+// # # # # # # # # # # # # # # # # # MIXINS # # # # # # # # # # # # # # # # # # # # # # # 
+
+// Darkens the element on hover
+@mixin HoverBG($transition: 250ms, $bg: auto, $color: auto) {
+   transition: $transition;
+   cursor: pointer;
+   
+   &:hover {
+      @if $bg != auto or $color != auto {
+         color: $color;
+         background: $bg;
+      }
+      @else {
+         filter: brightness(85%);
+      }
+   }
 }
 
+// Sets both width and height to $size
+@mixin Rectangle($size: 100%, $disp: block) {
+   width: $size;
+   height: $size;
+   display: $disp;
+}
+
+// Sets the minimum, current, and maximum width of a container
+@mixin SetWidth($min, $curr, $max) {
+   min-width: $min;
+   width: $curr;
+   max-width: $max;
+}
+
+// Resets the min/max width properties
+@mixin ResetWidth {
+   min-width: auto;
+   max-width: none;
+}
+
+// Sets the z-index
+@mixin Layer($zIndex: 2, $pos: relative) {
+   position: $pos;
+   z-index: $zIndex;
+}
+
+// Makes the responsive font size easier to use
 @mixin Clamp($min, $vw, $max) {
    font-size: clamp(#{$min}rem, #{$vw}vw, #{$max}rem);
 }
 
-@mixin Absolute($l: auto, $t: auto, $b: auto, $r: auto) {
-   position: absolute;
-   left: $l;
-   top: $t;
-   bottom: $b;
-   right: $r;
-}
-
-@mixin Rectangle($valPX) {
-   display: block;
-   height: $valPX;
-   width: $valPX;
-}
-
-@mixin Flex($justify: none, $align: none) {
+// Makes the flex properties easier to use
+@mixin Flex($justify: none, $align: none, $dir: none) {
    display: flex;
    justify-content: FlexFunc($justify);
    align-items: FlexFunc($align);
+   flex-direction: FlexDirFunc($dir);
 }
 
-@mixin Center($percWidth, $marginSide: 0) {
-   width: $percWidth;
-   margin: $marginSide auto;
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+// # # # # # # # # # # # # # # # HELPER FUNCTIONS # # # # # # # # # # # # # # # # # # # # #
+
+@function FlexFunc($val) {
+   $finalVal: none;
+
+   @if $val == sb { $finalVal: space-between; }
+   @else if $val == c { $finalVal: center }
+   @else if $val == sa { $finalVal: space-around; }
+   @else if $val == fe { $finalVal: flex-end; }
+   @else if $val == fs { $finalVal: flex-start; }
+   @else if $val == st { $finalVal: stretch; }
+
+   @return $finalVal;
 }
+
+@function FlexDirFunc($val) {
+   $finalVal: row;
+
+   @if $val == c { $finalVal: column; }
+   @else if $val == cr { $finalVal: column-reverse }
+   @else if $val == rr { $finalVal: row-reverse; }
+   
+   @return $finalVal;
+}
+
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+// # # # # # # # # # # # # # # # LOCAL PROJECT VARIABLES # # # # # # # # # # # # # # # # #
+
+$navHeight: 86px;
+
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+// # # # # # # # # # # # # # # # # LOCAL PROJECT MIXINS # # # # # # # # # # # # # # # # # #
 
 @mixin TopSeparator {
    position: relative;
@@ -67,21 +178,6 @@ $navHeight: 83.6px;
    }
 }
 
-// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-
-@function FlexFunc($val) {
-   $finalVal: none;
-
-   @if $val == sb { $finalVal: space-between; }
-   @else if $val == c { $finalVal: center }
-   @else if $val == sa { $finalVal: space-around; }
-   @else if $val == fe { $finalVal: flex-end; }
-   @else if $val == fs { $finalVal: flex-start; }
-   @else if $val == st { $finalVal: stretch; }
-
-   @return $finalVal;
-}
-
 @mixin AboutStyle {
    position: relative;
 
@@ -98,7 +194,7 @@ $navHeight: 83.6px;
       overflow: hidden;
 
       img {
-         @include FullSize;
+         @include Rectangle;
          transition: 3s;
          object-fit: cover;
          display: block;
@@ -108,7 +204,7 @@ $navHeight: 83.6px;
 
    section {
       &.timeline {
-         h3 {
+         p.timeline {
             text-transform: uppercase;
             font-weight: 700;
             font-size: .9rem;
@@ -122,16 +218,16 @@ $navHeight: 83.6px;
             position: relative;
 
             div.move-wrap {
-               @include FullSize;
+               @include Rectangle;
                overflow: hidden;
 
                div.moving {
-                  @include FullSize;
+                  @include Rectangle;
                   display: flex;
                   transition: .3s;
 
                   article.element {
-                     @include FullSize(100%);
+                     @include Rectangle;
                      min-height: 225px;
                      flex-shrink: 0;
                      background: rgb(29, 29, 29);
@@ -142,24 +238,26 @@ $navHeight: 83.6px;
                      overflow: hidden;
                      flex-direction: column;
 
-                     h2 {
-                        font-weight: 700;
-                        font-size: 1.25rem;
-                        border-left: 3px solid royalblue;
-                        padding-left: .4em;
-                        margin-bottom: 1em;
-                     }
-
                      p {
-                        color: whitesmoke;
-                        font-size: 1rem;
-                        font-weight: 200;
+                        &.text {
+                           color: whitesmoke;
+                           font-size: 1rem;
+                           font-weight: 200;
+                        }
+
+                        &.date {
+                           font-weight: 700;
+                           font-size: 1.25rem;
+                           border-left: 3px solid royalblue;
+                           padding-left: .4em;
+                           margin-bottom: 1em;
+                        }
                      }
 
                      div.chart {
                         width: 100%;
                         height: 3px;
-                        background: $clr-white;
+                        background: $clr-whitel;
                         @include Flex(sa, c);
                         margin-top: 3em;
                         
@@ -200,60 +298,48 @@ $navHeight: 83.6px;
                }
             }
 
-            div.buttons {
+            section.buttons {
                position: absolute;
                left: 50%;
                top: calc(100% + 20px);
-               transform: translateX(-50%);
+               translate: -50% 0;
                @include Flex(c, c);
 
                span {
                   @include Rectangle(15px);
-                  transition: .3s;
-                  cursor: pointer;
                   margin: 0 .25em;
                   border-radius: 50%;
-                  background: #aaaaaa;
+                  background: #aaa;
                   z-index: 4;
+                  @include HoverBG(300ms, #ddd);
 
                   &.active {
                      background: royalblue;
                      pointer-events: none;
-                  }
-
-                  &:hover {
-                     background: #dddddd;
                   }
                }
             }
          }
       }
 
-      &.icons {
+      &.socials {
          @include Flex(none, c);
          
          span {
             @include Rectangle(35px);
-            color: rgb(236, 236, 236);
-            transition: .3s;
-            cursor: pointer;
+            color: $clr-whitel;
             margin-right: 1em;
-
-            svg { @include FullSize; }
-
-            &:hover {
-               transform: scale(1.2);
-            }
+            @include HoverBG(300ms, none);
          }        
       }
 
       &.author {
-         h1 {
+         p.author {
             @include Clamp(2, 8, 3);
             font-weight: 800;
          }
 
-         h2 {
+         p.role {
             @include Clamp(.925, 5, 1);
             color: rgb(179, 179, 179);
             font-weight: 400;
@@ -281,7 +367,7 @@ $navHeight: 83.6px;
                span {
                   font-style: normal;
                   display: block;
-                  color: $clr-white;
+                  color: $clr-whitel;
                   margin-top: 2em;
                   letter-spacing: -1px;
                   text-transform: uppercase;
@@ -297,16 +383,12 @@ $navHeight: 83.6px;
                top: 50%;
                translate: 0 -50%;
 
-               svg { @include FullSize; }
-
                &:first-of-type {
                   translate: -100% -50%;
                   right: 5%;
                }
 
-               &:last-of-type {
-                  right: 2%;
-               }
+               &:last-of-type { right: 2%; }
             }
          }
       }
@@ -316,13 +398,15 @@ $navHeight: 83.6px;
       padding: 2em 0;
 
       figure {
-         @include Absolute(0, 0);
-         @include FullSize;
+         position: absolute;
+         left: 0;
+         top: 0;
+         @include Rectangle;
          z-index: -1;
          filter: brightness(.2);
 
          img {
-            @include FullSize;
+            @include Rectangle;
             object-fit: cover;
          }
       }
@@ -344,3 +428,74 @@ $navHeight: 83.6px;
       }
    }
 }
+
+@mixin ContactStyle {
+   section.contact-text {
+      @include SetWidth(500px, 35vw, 100%);
+      margin: 0 auto;
+      @include Flex(sb);
+      flex-direction: column;
+   
+      section.mail-info {
+         margin-top: 4em;
+   
+         p {
+            @include Clamp(1, 5, 1.2);
+   
+            &.mail-header {
+               font-weight: 800;
+               margin-bottom: .5em;
+               color: $clr-whitel;
+            }
+   
+            &.mail-text {
+               font-family: 'Roboto Mono', monospace;
+               padding: .5em;
+               font-weight: 400;
+               background: #252525;
+               border-radius: .25em;
+               color: rgba(245, 245, 245, .6);
+            }
+         }
+      }
+   
+      section.socials {
+         @include Flex(sa, c);
+   
+         span {
+            cursor: pointer;
+            width: 12%;
+            aspect-ratio: 1;
+            border-radius: .25em;
+            border: 2px solid grey;
+            @include Flex(c, c);
+            transition: .3s;
+            
+            svg {
+               @include Rectangle(70%);
+               pointer-events: none;
+               transition: .3s;
+            }
+   
+            &:hover {
+               rotate: 45deg;
+   
+               svg { rotate: -45deg; }
+            }
+         }
+      }
+   }
+   
+   @media (max-width: 768px) {
+      section.contact-text {
+         margin-bottom: 2em;
+         width: 100%;
+
+         section.mail-info {
+            margin-bottom: 2em;
+         }
+      }
+   }
+}
+
+// # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

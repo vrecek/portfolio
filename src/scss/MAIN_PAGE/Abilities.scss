@@ -14,7 +14,7 @@ section.home-abilities {
       svg { color: white; transition: 2s; }
    }
 
-   div.container {
+   section.container {
       @include Flex(sa, c);
       align-items: stretch;
       position: relative;
@@ -26,8 +26,7 @@ section.home-abilities {
          min-width: 450px;
          background: #252525;
          padding: clamp(1.5em, 6vw, 2.5em);
-         margin: 0 .5em;
-         margin-bottom: 1.5em;
+         margin: 0 .5em 1.5em .5em;
          border-radius: 1em;
          @include Flex(sb, none);
          flex-direction: column;
@@ -40,9 +39,10 @@ section.home-abilities {
             transition: .3s;
             width: max-content;
 
-            h3, span { pointer-events: none; }
+            p,
+            span { pointer-events: none; }
 
-            h3 {
+            p {
                text-transform: uppercase;
                @include Clamp(.8, 5, .9);
                font-weight: 700;
@@ -52,20 +52,18 @@ section.home-abilities {
                @include Rectangle(25px);
                margin-left: .5em;
 
-               svg { @include FullSize; }
+               svg { @include Rectangle; }
             }
 
-            &:hover {
-               transform: translateX(5%);
-            }
+            &:hover { transform: translateX(5%); }
          }
 
-         p {
+         p.info {
             font-weight: 300;
             @include Clamp(.85, 4, .95);
          }
 
-         h2 {
+         p.what {
             text-transform: uppercase;
             font-weight: 800;
             @include Clamp(1.25, 4, 1.5);
@@ -78,9 +76,7 @@ section.home-abilities {
             width: 20%;
             aspect-ratio: 1;
 
-            svg {
-               @include FullSize;
-            }
+            svg { @include Rectangle; }
          }
       }
    }
@@ -88,8 +84,9 @@ section.home-abilities {
    div.entry-info {
       font-family: 'Roboto Mono', monospace;
 
-      svg { @include FullSize; }
+      svg { @include Rectangle; }
    }
+
 
    @media (max-width: 768px) {
       div.container {
