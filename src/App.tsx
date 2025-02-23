@@ -12,7 +12,7 @@ import './css/SmallProject.css'
 import './css/HeaderInfo.css'
 
 
-function App() { // REMOVE MAIL FORM AND ITS "DEPENDENCIES": AppendText.tsx, STYLES
+function App() {
     return (
         <>
 

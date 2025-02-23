@@ -7,12 +7,14 @@ main.projects-page {
    position: relative;
 
    section.entry-section {
-      @include Flex(sb, fs);
+      @include Flex(sb, c);
+      margin-bottom: 1em;
 
       div.searchbar {
          width: 25%;
          min-width: 180px;
          position: relative;
+         margin-left: .5em;
 
          span {
             position: absolute;
@@ -37,9 +39,8 @@ main.projects-page {
       }
 
       h1.number {
-         margin-bottom: 1em;
          font-weight: 600;
-         @include Clamp(1.75, 6, 2);
+         @include Clamp(1.2, 5, 2);
       }
    }
 
@@ -139,6 +140,7 @@ main.projects-page {
                border-radius: 0 0 .15em .15em;
                z-index: 9;
                list-style: none;
+               overflow: hidden;
 
                li {
                   padding: 1em .5em;

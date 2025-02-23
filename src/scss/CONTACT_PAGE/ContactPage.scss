@@ -5,4 +5,8 @@ main.contact-page {
    height: 100vh;
    @include Flex(c, c);
    padding-top: $navHeight;
+
+   section.home-contact {
+      width: 100%;
+   }
 }

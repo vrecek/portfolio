@@ -8,7 +8,6 @@ import { GiClick, GiProgression, GiRobotGrab } from 'react-icons/gi'
 import { VscJson } from 'react-icons/vsc'
 import { MdAdminPanelSettings, MdOutlineDesignServices, MdOutlinePlusOne, MdOutlineTouchApp, MdSportsScore, MdWifiTetheringErrorRounded } from 'react-icons/md'
 import { BsFillMicFill, BsFillMouseFill, BsFillTerminalFill, BsFillKeyboardFill } from 'react-icons/bs'
-import { TbReplace } from 'react-icons/tb'
 import { ImTextColor } from 'react-icons/im'
 import { SiNextdotjs } from 'react-icons/si'
 
@@ -20,7 +19,6 @@ import blackjack from '../images/projects/blackjack.webp'
 import clicker from '../images/projects/clicker.webp'
 import vr from '../images/projects/vr.png'
 import autoclicker from '../images/projects/autoclicker.png'
-import encrypt from '../images/projects/encrypt.png'
 import electronicshop from '../images/projects/electronicshop.png'
 import myblog from '../images/projects/myblog.png'
 import foodshop from '../images/projects/foodshop.webp'
@@ -746,25 +744,6 @@ const PROJECTS: ProjectType[] = [
       repository: 'https://github.com/vrecek/auto-clicker',
       bugs: [],
       description: 'Clicker with a GUI. Select mouse click speed, hotkey and press Start.'
-   },
-
-   {
-      id: 'encryptor',
-      thumbnail: encrypt,
-      name: "File encryptor",
-      stack: "Other",
-      shortPara: "Encrypt and decrypt text files and images recursively, starting from current directory",
-      language: ["Python"],
-      type: 'App',
-      tags: [
-         { name: "Dangerous", icon: <AiFillWarning /> },
-         { name: "Overwriting", icon: <TbReplace /> },
-         { name: "Command line", icon: <BsFillTerminalFill /> },
-      ],
-      date: 10,
-      repository: 'https://github.com/vrecek/encryptor',
-      bugs: [],
-      description: 'Encrypt and decrypt your files and images. It works recursively, which means files in a directories will be changed! Do not use it if you do not know what you are doing.'
    },
 
    {
