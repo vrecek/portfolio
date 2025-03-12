@@ -10,23 +10,34 @@ import ONE_PROJECT_PAGE from './components/ONE_PROJECT_PAGE/ONE_PROJECT_PAGE'
 import './css/index.css'
 import './css/SmallProject.css'
 import './css/HeaderInfo.css'
+import React from 'react'
+import ProjectType from './interfaces/ProjectInterface'
+import { ICommitContext } from './interfaces/ProjectPageInterfaces'
+
+
+export const CommitContext = React.createContext<ICommitContext | null>(null)
 
 
 function App() {
+    const [lastCommit, setLastCommit] = React.useState<ProjectType[]>([])
+
+
     return (
         <>
 
             <Navigation />
 
-            <Routes>
+            <CommitContext.Provider value={{arr: lastCommit, fn: setLastCommit}}>
 
-                <Route path='/' element={ <MAIN_PAGE /> } />
-                <Route path='/contact' element={ <CONTACT_PAGE /> } />
-                <Route path='/about' element={ <ABOUT_PAGE /> } />
-                <Route path='/projects' element={ <PROJECTS_PAGE /> } />
-                <Route path='/project/:id' element={ <ONE_PROJECT_PAGE /> } />
+                <Routes>
+                    <Route path='/' element={ <MAIN_PAGE /> } />
+                    <Route path='/contact' element={ <CONTACT_PAGE /> } />
+                    <Route path='/about' element={ <ABOUT_PAGE /> } />
+                    <Route path='/projects' element={ <PROJECTS_PAGE /> } />
+                    <Route path='/project/:id' element={ <ONE_PROJECT_PAGE /> } />
+                </Routes>
 
-            </Routes>
+            </CommitContext.Provider>
 
             <Footer />
 

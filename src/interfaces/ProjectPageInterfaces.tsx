@@ -9,10 +9,11 @@ type FilterDropdowns = {
 
 export interface FilterSelect extends FilterState, FilterDropdowns {
    initialTxt: string
-   options: string[]
+   options:    string[]
+   cname?:     string
 }
 
-export type FilterDropdownContainer = Omit<FilterSelect, 'state'> & {
+export type FilterDropdownContainer = Omit<FilterSelect, 'update_fn'> & {
    changeFilter: (e: React.MouseEvent, str: string) => void
 }
 
@@ -22,12 +23,32 @@ export interface FilterCurrent extends FilterDropdowns {
 }
 
 export interface ProjectState {
-   original: ProjectType[],
+   original: ProjectType[]
    projects: ProjectType[]
+   lastcomm: ProjectType[]
 }
 
 export interface FilterState {
-   state: React.Dispatch<React.SetStateAction<ProjectState>>
+   update_fn: () => Promise<void>
 }
 
 export type ILocation = string | null
+
+export type RepoObject = {
+   pushed_at: string
+   html_url:  string
+}
+
+export type CommitsObject = {
+   name: string
+   commit: {
+      committer: {
+         date: string
+      }
+   }
+}
+
+export type ICommitContext = {
+   fn:  React.Dispatch<React.SetStateAction<ProjectType[]>>
+   arr: ProjectType[]
+}

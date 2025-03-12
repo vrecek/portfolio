@@ -11,30 +11,27 @@ const CurrentFilter = ({ text, dd, allDds }: FilterCurrent) => {
 
 
       for (const dropdown of allDds) 
+      {
          if (dropdown !== dd && dropdown.getActive)
          {
-            dropdown.switchActive()
-
             const arrow = dropdown.getActiveList!.parentElement!.children[0].children[1] as HTMLElement
-            dropdown.rotateArrow(arrow)
 
+            dropdown.switchActive()
+            dropdown.rotateArrow(arrow)
             dropdown.shrinkMenu(.3)
          }
-      
+      }
       
       dd.switchActive()
-      dd.getActive 
-         ? dd.expandMenu(.3, list) 
-         : dd.shrinkMenu(.3)
-
+      dd.getActive ? dd.expandMenu(.3, list) : dd.shrinkMenu(.3)
       dd.rotateArrow(arrow)
    }
 
 
    return (
-      <div onClick={expandFilters} className="current">
+      <div onClick={expandFilters} className='current'>
 
-         <input data-select='Default' type="text" disabled defaultValue={text} />
+         <input className='def' data-select='Default' type="text" disabled defaultValue={text} />
          <Icon icon={<MdOutlineKeyboardArrowDown />} />
 
       </div>

@@ -1,19 +1,9 @@
 import { FilterState } from "@/interfaces/ProjectPageInterfaces"
 import { IoSearchOutline } from "react-icons/io5";
 import Icon from "../Common/Icon";
-import filterFn from "@/utils/filterFn";
 
 
-const Searchbar = ({state}: FilterState) => {
-    const filterSearch = (): void => {
-        state(curr => {
-            curr.projects = filterFn(curr)
-
-            return {...curr}
-        })
-    }
-
-
+const Searchbar = ({update_fn}: FilterState) => {
     return (
         <div className="searchbar">
 
@@ -21,7 +11,7 @@ const Searchbar = ({state}: FilterState) => {
             
             <input 
                 className="filter-projects-searchbar"
-                onChange={filterSearch} 
+                onChange={update_fn} 
                 type="text" 
                 spellCheck='false' 
             />            

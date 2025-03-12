@@ -1,31 +1,26 @@
 import React from 'react'
 import { FilterSelect } from '../../interfaces/ProjectPageInterfaces'
 import FilterSelectContainer from './FilterSelectContainer'
-import filterFn from '@/utils/filterFn'
+import filterInputOnChange from '@/utils/filterInputOnChange'
 
 
-const FilterType = ({ initialTxt, options, dd, state, allDds }: FilterSelect) => {
-   const changeFilter = (e: React.MouseEvent, str: string): void => {
+const FilterType = ({ initialTxt, options, dd, update_fn, allDds, cname }: FilterSelect) => {
+   const changeFilter = async (e: React.MouseEvent, str: string): Promise<void> => {
       const t:   HTMLElement      = e.currentTarget as HTMLElement,
             inp: HTMLInputElement = t.parentElement!.parentElement!.children[0].children[0] as HTMLInputElement
 
-
-      inp.value = str
-      inp.setAttribute('data-select', str)
+            
+      filterInputOnChange(inp, str)
 
       dd.switchActive()
       dd.shrinkMenu(.3)
-
-      state(curr => {
-         curr.projects = filterFn(curr)
-
-         return {...curr}
-      })
+      
+      await update_fn()
    }
 
 
    return (
-      <div className="filter-wrap">
+      <div className={`filter-wrap ${cname}`}>
 
          <p className='by-info'>By {initialTxt.toLowerCase()}</p>
 

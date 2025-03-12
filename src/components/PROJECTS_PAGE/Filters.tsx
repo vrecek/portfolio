@@ -5,20 +5,16 @@ import FilterType from './FilterType'
 import DropDown from '@/utils/DropdownClass'
 
 
-const Filters = ({ state }: FilterState) => {
+const Filters = ({ update_fn }: FilterState) => {
    const [dropdowns] = React.useState<DropDown[]>([...Array(4)].map(() => new DropDown()))
-   const options: string[][] = [
-      ['Default', 'Fullstack', 'Frontend', 'Backend', 'Other'],
-      ['Default', 'Website', 'Game', 'App'],
-      ['Default', 'Javascript', 'Typescript', 'CSS', 'SCSS', 'Python', 'Bash', 'C'],
-      ['Default', 'Oldest', 'Newest']
-   ]
-   const initialTxts: string[] = [
-      'Stack', 
-      'Type', 
-      'Language', 
-      'Date'
-   ]
+
+   const initialTxts: string[]   = ['Stack', 'Type', 'Language', 'Date'],
+         options:     string[][] = [
+            ['Default', 'Fullstack', 'Frontend', 'Backend', 'Other'],
+            ['Default', 'Website', 'Game', 'App'],
+            ['Default', 'Javascript', 'Typescript', 'CSS', 'SCSS', 'Python', 'Bash', 'C'],
+            ['Default', 'Oldest', 'Newest', 'Latest commit']
+         ]
 
 
    return (
@@ -31,10 +27,11 @@ const Filters = ({ state }: FilterState) => {
          <form className="container filter-projects-form">
             {
                dropdowns.map((x, i) => (
-                  <FilterType 
+                  <FilterType
+                     cname={initialTxts[i]}
                      key={i}
                      allDds={dropdowns}
-                     state={state} 
+                     update_fn={update_fn} 
                      dd={x} 
                      options={options[i]} 
                      initialTxt={initialTxts[i]}

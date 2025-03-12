@@ -21,9 +21,9 @@ const Abilities = () => {
 
          <section className="container">
 
-            <OneAbility type='website' info='Im able to create websites, either frontend or backend. To accomplish this, I use Typescript (ReactJS + NodeJS + MongoDB)' what='Web developer' icon={ <CgWebsite /> } />
+            <OneAbility type='Website' info='Im able to create websites, either frontend or backend. To accomplish this, I use Typescript (ReactJS + NodeJS + MongoDB)' what='Web developer' icon={ <CgWebsite /> } />
 
-            <OneAbility type='program' info='Im also able to create small programs, most likely simple scripts to ease work, or some small apps' what='Programs / Apps' icon={ <FaFileCode /> } />
+            <OneAbility type='App' info='Im also able to create small programs, most likely simple scripts to ease work, or some small apps' what='Programs / Apps' icon={ <FaFileCode /> } />
 
             <BackgroundIconHandle />
 

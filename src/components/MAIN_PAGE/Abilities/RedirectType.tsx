@@ -15,16 +15,9 @@ const RedirectType = ({ type }: AbilityType) => {
       parent.style.background = type === 'hover' ? 'rgb(48, 80, 177)' : '#252525'
    }
 
-   const state: string =  type === 'website' ? 'Website' : 'App'
-   // type === 'website' 
-   //    ? 'Website'
-   //    : type === 'program' 
-   //       ? 'App'
-   //       : ''
-
 
    return (
-      <div onClick={() => n(`/projects`, {state})} onMouseEnter={(e) => mouseEv('hover', e)} onMouseLeave={(e) => mouseEv('blur', e)}>
+      <div onClick={() => n(`/projects`, {state: type})} onMouseEnter={(e) => mouseEv('hover', e)} onMouseLeave={(e) => mouseEv('blur', e)}>
 
          <p>View {type} projects</p>
 

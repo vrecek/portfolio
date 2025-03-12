@@ -5,7 +5,6 @@ import CurrentFilter from './CurrentFilter'
 const FilterSelectContainer = ({dd, allDds, initialTxt, options, changeFilter}: FilterDropdownContainer) => {
     return (
         <div className="select">
-
             <CurrentFilter 
                 dd={dd} 
                 allDds={allDds}
@@ -21,7 +20,6 @@ const FilterSelectContainer = ({dd, allDds, initialTxt, options, changeFilter}: 
                     ))
                 }
             </ul>
-
         </div>
     )
 }

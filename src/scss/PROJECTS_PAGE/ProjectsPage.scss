@@ -5,6 +5,20 @@ main.projects-page {
    min-height: 100vh;
    padding: calc($navHeight + 3em) 4em 5em 4em;
    position: relative;
+   display: flex;
+   flex-direction: column;
+
+   section.loading-projects {
+      flex-grow: 1;
+      @include Flex(c, c);
+
+      h2 {
+         font-weight: 800;
+         font-size: 2.75rem;
+         letter-spacing: -1px;
+         color: $clr-greydr;
+      }
+   }
 
    section.entry-section {
       @include Flex(sb, c);
@@ -56,7 +70,7 @@ main.projects-page {
       left: 0;
       top: 0;
       padding: 2em 1.5em;
-      display: flex;
+      display: none;
       flex-direction: column;
 
       p.text {
@@ -115,6 +129,8 @@ main.projects-page {
                   width: 80%;
                   pointer-events: none;
                   color: $clr-whitel;
+
+                  &.def { color: $clr-bluelr; }
                }
 
                span {
@@ -166,6 +182,12 @@ main.projects-page {
       align-items: stretch;
       padding: 2em 1em;
       background: #202020;
+
+      h2 {
+         color: $clr-greyd;
+         font-size: 1.5rem;
+         font-weight: 300;
+      }
    }
 
    @media (max-width: 480px) {

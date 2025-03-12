@@ -46,7 +46,7 @@ export interface ChartType {
 }
 
 export type AbilityType = {
-   type: 'program' | 'website'
+   type: 'App' | 'Website' | 'commit'
 }
 
 export type IAbilityType = SkillDivType & AbilityType
