@@ -1,1 +1,0 @@
-export default 'vmessmgr@proton.me'
